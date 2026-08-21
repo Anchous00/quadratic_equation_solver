@@ -1,19 +1,16 @@
-const double EPSILON = 1e-16;
-
-
-void clear_buffer( void );
-int is_zero( double number );
-void dont_close_console( void );
+#include "quadratic.h"
+#include "utils.h"
 
 int is_zero( double number )
 {
-    return abs(number) < EPSILON;
+    return fabs(number) < EPSILON;
 }
 
 void clear_buffer( void )
 {
-    while(getchar() != '\n');
-
+    char c = 0;
+    while((c = (char)getchar()) != '\n' && c != EOF)
+        ;
     return;
 }
 
@@ -23,4 +20,14 @@ void dont_close_console( void )
     getchar();
 
     return;
+}
+
+int is_string_empty( void )
+{
+    char c = 0;
+    while((c = (char)getchar()) == ' ')
+        ;
+    if(c == '\n' or c == EOF)
+        return SUCCESS;
+    return ERROR;
 }
