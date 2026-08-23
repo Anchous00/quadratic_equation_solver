@@ -2,30 +2,14 @@
 
 int main( void )
 {
-    quadratic_equation equation = {NAN, NAN, NAN, 1, 1, INF_ROOTS};
-    char choice = ' ';
+    quadratic_equation equations[MAX_EQUATIONS_AMOUNT] = {};
+    int equations_number = 0;
 
-    printf("Enter f for reading from file, c for reading from console, any key for exit\n");
-    choice = (char)getchar();
+    equations_number = input_equations(equations);
 
-    switch (choice)
-    {
-    case 'f':
-        input_from_file();
-        break;
+    solve_equations(equations, equations_number);
 
-    case 'c':
-        if(!input_coefficients(&equation))
-            return ERROR_DURING_READING_COEFFICIENTS;
-        solve_quadratic_equation(&equation);
-        print_answers(&equation);
-        break;
-
-    default:
-        return ESCAPE;
-        break;
-
-    }
+    output_equations(equations, equations_number);
 
     // Case styles:
     // 1) camelCase
@@ -35,4 +19,6 @@ int main( void )
 
     return SUCCESSFUL_ENDING;
 }
+
+
 

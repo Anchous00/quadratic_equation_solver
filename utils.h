@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <assert.h>
+#include <stdlib.h>
 
 #define RED "\x1b[31m"
 #define WHITE "\x1b[0m"
@@ -9,8 +10,7 @@
 enum ERROR_VALUES {
         SUCCESSFUL_ENDING = 0,
         ERROR_DURING_READING_COEFFICIENTS = 1,
-        ERROR_OCCURED_DURING_READING_FILE = 2,
-        ESCAPE = 3
+        ERROR_OCCURRED_DURING_READING_FILE = 2,
 };
 
 enum RETURN_VALUES{
@@ -20,5 +20,44 @@ enum RETURN_VALUES{
 
 void clear_buffer( void );
 bool is_zero( double number );
-void dont_close_console( void );
 bool is_string_empty( void );
+const char* error_text( enum ERROR_VALUES error_value );
+
+
+
+
+
+
+
+//TODO
+/*
+result = SolveEquation();
+
+switch (result)
+{
+case SUCCESSFUL_ENDING:
+        fprintf(f, "все хорошо");
+        break;
+
+}
+
+
+result = SolveEquation();
+
+switch (result)
+{
+case SUCCESSFUL_ENDING:
+        MakeWindow("все хорошо");
+        break;
+}
+
+
+result = SolveEquation();
+
+switch (result)
+{
+case SUCCESSFUL_ENDING:
+        printf("все хорошо");
+        break;
+}
+*/
