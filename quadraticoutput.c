@@ -1,6 +1,6 @@
 #include "quadratic.h"
 
-//TODO объединить функции и сделать красивый вывод
+
 void output_equations( quadratic_equation *equations, int equations_number )
 {
     assert(equations);
@@ -9,14 +9,19 @@ void output_equations( quadratic_equation *equations, int equations_number )
     char choice = '\0';
 
     printf("Enter f for saving in file, c for writing in console, any key for exit\n");
-    FILE *output_file = fopen(file_name, "w");
+    FILE *output_file = fopen(file_name, "w");//TODO
+
+    if (output_file == NULL)
+    {
+        printf("ERROR: cant open file");
+        return;
+    }
 
     choice = (char)getchar();
 
     switch (choice)
     {
     case 'f':
-        // TODO printf("Enter file name\n");
         save_solved_equations(equations, equations_number, output_file);
         break;
 
@@ -57,10 +62,12 @@ void fprint_equation( FILE *file, quadratic_equation equation )
     assert(equation.roots);
     assert(equation.coefficients);
 
-    fprintf(file, "%lgx^2%+lgx%+lg = 0\n",
-                    equation.coefficients[0],
+    /*fprintf(file, "%lgx^2%+lgx%+lg = 0\n",
+                    equation.coefficients[0] = 0 ?,
                     equation.coefficients[1],
-                    equation.coefficients[2]);
+                    equation.coefficients[2]);*/
+    fprint_beautiful_equation( file, equation );
+
 
     switch (equation.roots_number)
     {
@@ -85,7 +92,6 @@ void fprint_equation( FILE *file, quadratic_equation equation )
 
 }
 
-
 void print_equation( quadratic_equation equation )//дебажная фигня
 {
     printf("coefficients: %lg, %lg, %lg\n"
@@ -97,6 +103,48 @@ void print_equation( quadratic_equation equation )//дебажная фигня
         equation.roots[0],
         equation.roots[1]
     );
+
+    return;
+}
+
+void fprint_beautiful_equation( FILE *output_file, quadratic_equation equation )//дебажная фигня
+{
+    assert(output_file);//TODO попробуй объединить
+
+    if (is_zero(equation.coefficients[0]));
+
+    else if (is_zero(equation.coefficients[0] - 1))
+        fprintf(output_file, "x^2");
+
+    else
+        fprintf(output_file, "%lgx^2", equation.coefficients[0]);
+
+
+    if (is_zero(equation.coefficients[1]));
+        //fprintf(output_file, " ");
+
+    else if (is_zero(equation.coefficients[1] - 1))
+        fprintf(output_file, "+x");
+
+    else
+        fprintf(output_file, "%+lgx", equation.coefficients[1]);
+
+
+    if (is_zero(equation.coefficients[2]));
+        //fprintf(output_file, " ");
+
+    else if (is_zero(equation.coefficients[2] - 1))
+        fprintf(output_file, "+1");
+
+    else
+        fprintf(output_file, "%+lg", equation.coefficients[2]);
+
+
+
+    if (is_zero(equation.coefficients[0]) && is_zero(equation.coefficients[1]) && is_zero(equation.coefficients[2]))
+        fprintf(output_file, "0");
+
+    fprintf(output_file, " = 0\n");
 
     return;
 }

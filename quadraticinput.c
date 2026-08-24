@@ -37,13 +37,13 @@ int input_equations( quadratic_equation *equations )
 }
 
 int input_from_file( quadratic_equation *equations )
-{//TODO input file format
+{
     assert(equations);
 
-    char file_name[MAX_FILE_NAME];
+    char file_name[MAX_FILE_NAME] = "";
 
     printf("Enter file name:\n");
-    scanf("%100s", file_name);//TODO почитать про формат ввода в scanf: example scanf("{%lf}", ......)
+    scanf("%100s", file_name);
    // printf("%s%c", file_name, *(file_name + 12));
 
     FILE *input_address = fopen(file_name, "r");
@@ -54,7 +54,7 @@ int input_from_file( quadratic_equation *equations )
         return ERROR;
     }
 
-    int equations_number = read_coefficients_from_file(equations, input_address);
+    int equations_number = read_equations_from_file(equations, input_address);
     printf("successful read %d equations from file %s\n", equations_number, file_name);
 
     if (fclose(input_address) != 0)
@@ -74,7 +74,7 @@ int input_from_console( quadratic_equation *equations )
     return equations_number;
 }
 
-int read_coefficients_from_file( quadratic_equation *equations, FILE *input_address )//TODO объединить функции
+int read_coefficients_from_file( quadratic_equation *equations, FILE *input_address )
 {
     assert(equations);
     assert(input_address);
@@ -88,6 +88,7 @@ int read_coefficients_from_file( quadratic_equation *equations, FILE *input_addr
     {
         equations_number++;
         equations++;
+        printf("equations_number: %d\n", equations_number);
     }
 
     return equations_number;
@@ -110,4 +111,52 @@ int read_coefficients_from_console( quadratic_equation *equations )
     }
 
     return equations_number;
+}
+
+int read_equations_from_file( quadratic_equation *equations, FILE *input_address )
+{
+    assert(equations);
+    assert(input_address);
+
+    int equations_number = 0;
+    char roots_number[10] = "";
+
+    while((fscanf(input_address, "{%lg, %lg, %lg} {%lg, %lg, %s }\n",
+                  equations->coefficients,
+                  equations->coefficients + 1,
+                  equations->coefficients + 2,
+                  equations->roots,
+                  equations->roots + 1,
+                  roots_number) == 6))//TODO
+    {
+        //print_equation(*equations);
+        /*fprintf(stdout, "{%lg, %lg, %lg} {%lg, %lg, %s}\n",
+                  *(equations->coefficients),
+                  *(equations->coefficients + 1),
+                  *(equations->coefficients + 2),
+                  *(equations->roots),
+                  *(equations->roots + 1),
+                  roots_number);*/
+        equations->roots_number = roots_number_from_string(roots_number);
+        //printf("%s string is %d roots\n",roots_number, roots_number_from_string(roots_number));
+        //print_equation(*equations);
+        equations_number++;
+        equations++;
+    }
+
+    return equations_number;
+}
+
+enum ROOTS_NUMBER roots_number_from_string(const char *roots_number)
+{
+   // printf("string is:%s\n", roots_number);
+    if (strcmp(roots_number, "NO_ROOTS") == 0)
+        return NO_ROOTS;
+    if (strcmp(roots_number, "ONE_ROOT") == 0)
+        return ONE_ROOT;
+    if (strcmp(roots_number, "TWO_ROOTS") == 0)
+        return TWO_ROOTS;
+    if (strcmp(roots_number, "INF_ROOTS") == 0)
+        return INF_ROOTS;
+    return NO_ROOTS;
 }

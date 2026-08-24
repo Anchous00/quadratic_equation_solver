@@ -1,31 +1,53 @@
 #include "quadratic.h"
 
-const int TEST_AMOUNT = 7;
+
 //const int MAX_TEST_AMOUNT = 100;
 
 bool is_roots_equal( quadratic_equation equation1, quadratic_equation equation2 );
+int run_test( quadratic_equation *test_equations, quadratic_equation *control_equations, int equations_number);
 
-int main( void )
+int main( void )//TODO
 {
-    quadratic_equation control_equations[TEST_AMOUNT] = {{{1, -5, 6}, {3, 2},  TWO_ROOTS},
-                                                        {{0, 0, 1},   {0, 0},  NO_ROOTS},
-                                                        {{0, 2, -4},  {2, 0},  ONE_ROOT},
-                                                        {{1, 2, 1},   {-1, 0}, ONE_ROOT},
-                                                        {{1, -9, 20}, {5, 4},  TWO_ROOTS},
-                                                        {{0, 0, 0},   {0, 0},  INF_ROOTS},
-                                                        {{1, 0, 6},   {0, 0},  NO_ROOTS}};
-
-    quadratic_equation test_equations[TEST_AMOUNT]    = {{{1, -5, 6}, {0, 0}, NO_ROOTS},
-                                                        {{0, 0, 1},   {0, 0}, NO_ROOTS},
-                                                        {{0, 2, -4},  {0, 0}, NO_ROOTS},
-                                                        {{1, 2, 1},   {0, 0}, NO_ROOTS},
-                                                        {{1, -9, 20}, {0, 0}, NO_ROOTS},
-                                                        {{0, 0, 0},   {0, 0}, NO_ROOTS},
-                                                        {{1, 0, 6},   {0, 0}, NO_ROOTS}};
+    quadratic_equation control_equations[MAX_TEST_AMOUNT] = {};
+    quadratic_equation test_equations[MAX_TEST_AMOUNT]    = {};
 
     int successful_tests = 0;
+    FILE *control_file = fopen("control.txt", "r");
+    FILE *test_file = fopen("test.txt", "r");
 
-    for(int i = 0; i < TEST_AMOUNT; i++)
+    assert(test_file);
+    assert(control_file);
+
+    int equations_number = read_equations_from_file( control_equations, control_file );
+    printf("read %d test equations %d control equations\n", read_equations_from_file( test_equations, test_file ), equations_number);
+
+    successful_tests = run_test(test_equations, control_equations, equations_number);
+
+    printf(GREEN "Successful %d tests of %d\n" WHITE, successful_tests, equations_number);
+
+    assert(fclose(test_file) != EOF);
+    assert(fclose(control_file) != EOF);
+
+    return SUCCESSFUL_ENDING;
+}
+
+bool is_roots_equal( quadratic_equation equation1, quadratic_equation equation2 )
+{
+    return equation1.roots_number == equation2.roots_number &&
+            (   is_zero(equation1.roots[0] - equation2.roots[0]) || (isnan(equation1.roots[0]) && isnan(equation2.roots[0]))   ) &&
+            (   is_zero(equation1.roots[1] - equation2.roots[1]) || (isnan(equation1.roots[1]) && isnan(equation2.roots[1]))   );
+}
+
+/*enum ROOTS_NUMBER roots_number( const char *roots_number)
+{
+
+}
+*/
+
+int run_test( quadratic_equation *test_equations, quadratic_equation *control_equations, int equations_number )
+{
+    int successful_tests = 0;
+    for(int i = 0; i < equations_number; i++)
     {
         solve_quadratic_equation(&test_equations[i]);
         //print_equation(test_equations[i]);
@@ -42,14 +64,6 @@ int main( void )
             print_equation(test_equations[i]);
         }
     }
-    printf(GREEN "Successful %d tests of %d\n" WHITE, successful_tests, TEST_AMOUNT);
 
-    return SUCCESSFUL_ENDING;
-}
-
-bool is_roots_equal( quadratic_equation equation1, quadratic_equation equation2 )
-{
-    return equation1.roots_number == equation2.roots_number &&
-           is_zero(equation1.roots[0] - equation2.roots[0]) &&
-           is_zero(equation1.roots[1] - equation2.roots[1]);
+    return successful_tests;
 }

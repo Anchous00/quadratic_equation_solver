@@ -2,6 +2,7 @@
 #include <math.h>
 #include <assert.h>
 #include <stdlib.h>
+#include <string.h>
 
 #define RED "\x1b[31m"
 #define WHITE "\x1b[0m"

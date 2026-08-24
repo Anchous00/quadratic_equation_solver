@@ -1,5 +1,10 @@
 #include "quadratic.h"
 
+//----------------------------------------------------------
+//!
+//!
+//!
+//----------------------------------------------------------
 enum RETURN_VALUES solve_quadratic_equation( quadratic_equation *equation )
 {
     assert(equation);
@@ -14,12 +19,13 @@ enum RETURN_VALUES solve_quadratic_equation( quadratic_equation *equation )
         return solve_linear_equation(equation);
     }
 
-    double discriminant = equation->coefficients[1] * equation->coefficients[1] - 4 * equation->coefficients[0] * equation->coefficients[2];
+    double discriminant = equation->coefficients[1] * equation->coefficients[1]
+                    - 4 * equation->coefficients[0] * equation->coefficients[2];
 
     if (is_zero(discriminant))
     {
         equation->roots[0] = -equation->coefficients[1] / (2 * equation->coefficients[0]);
-        equation->roots[1] = 0;
+        equation->roots[1] = NAN;
         equation->roots_number = ONE_ROOT;
         return SUCCESS;
     }
@@ -27,15 +33,17 @@ enum RETURN_VALUES solve_quadratic_equation( quadratic_equation *equation )
     if (discriminant < 0)
     {
         equation->roots_number = NO_ROOTS;
-        equation->roots[0] = 0;
-        equation->roots[1] = 0;
+        equation->roots[0] = NAN;
+        equation->roots[1] = NAN;
         return SUCCESS;
     }
 
     double square_root_of_discriminant = sqrt(discriminant);
 
-    equation->roots[0] = ( -equation->coefficients[1] + square_root_of_discriminant) / (2 * equation->coefficients[0]);
-    equation->roots[1] = ( -equation->coefficients[1] - square_root_of_discriminant) / (2 * equation->coefficients[0]);
+    equation->roots[0] = ( -equation->coefficients[1] + square_root_of_discriminant)
+                     / (2 * equation->coefficients[0]);
+    equation->roots[1] = ( -equation->coefficients[1] - square_root_of_discriminant)
+                     / (2 * equation->coefficients[0]);
     equation->roots_number = TWO_ROOTS;
 
     return SUCCESS;
@@ -48,13 +56,13 @@ enum RETURN_VALUES solve_linear_equation( quadratic_equation *equation )
     if (is_zero(equation->coefficients[1]))
     {
         equation->roots_number = (is_zero((equation->coefficients)[2]) ?INF_ROOTS : NO_ROOTS);
-        equation->roots[0] = 0;
-        equation->roots[1] = 0;
+        equation->roots[0] = NAN;
+        equation->roots[1] = NAN;
 
         return SUCCESS;
     }
     equation->roots[0] = -equation->coefficients[2] / equation->coefficients[1];
-    equation->roots[1] = 0;
+    equation->roots[1] = NAN;
     equation->roots_number = ONE_ROOT;
 
     return SUCCESS;

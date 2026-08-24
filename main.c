@@ -11,12 +11,6 @@ int main( void )
 
     output_equations(equations, equations_number);
 
-    // Case styles:
-    // 1) camelCase
-    // 2) snake_case
-    // 3) PascalCase
-    // 4) kebab-case
-
     return SUCCESSFUL_ENDING;
 }
 

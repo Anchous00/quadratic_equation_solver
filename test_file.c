@@ -2,7 +2,7 @@
 
 void generate_random_equations( int equations_number );
 
-const int MAX_COEFFICIENT = 100;
+const int MAX_COEFFICIENT = 1000;
 
 int main( void )
 {
@@ -24,11 +24,11 @@ int main( void )
     fclose(input_address);
 
     for(int i = 0; i < equations_number; i++)
-        {
+    {
         solve_quadratic_equation(&test_equations[i]);
         printf("\nEquation %d: ", i + 1);
         print_equation(test_equations[i]);
-        }
+    }
 
     return SUCCESSFUL_ENDING;
 }
