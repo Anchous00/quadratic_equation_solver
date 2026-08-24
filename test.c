@@ -4,10 +4,31 @@
 //const int MAX_TEST_AMOUNT = 100;
 
 bool is_roots_equal( quadratic_equation equation1, quadratic_equation equation2 );
-int run_test( quadratic_equation *test_equations, quadratic_equation *control_equations, int equations_number);
+int run_test( quadratic_equation *test_equations, quadratic_equation *control_equations, int equations_number, bool log);
 
-int main( void )//TODO
+int main( int argc, char *argv[] )
 {
+    char arg = '\0';
+    bool test_log = false;
+    while (--argc > 0 && (*++argv)[0] == '-')
+    {
+        //printf("%s", argv[0]);
+        while ((arg = *++argv[0]))
+        {
+            switch (arg)
+            {
+                case 'z':
+                    printf("ZZZZZZZZZ");
+                    break;
+                case 'l':
+                    test_log = true;
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+
     quadratic_equation control_equations[MAX_TEST_AMOUNT] = {};
     quadratic_equation test_equations[MAX_TEST_AMOUNT]    = {};
 
@@ -21,7 +42,7 @@ int main( void )//TODO
     int equations_number = read_equations_from_file( control_equations, control_file );
     printf("read %d test equations %d control equations\n", read_equations_from_file( test_equations, test_file ), equations_number);
 
-    successful_tests = run_test(test_equations, control_equations, equations_number);
+    successful_tests = run_test(test_equations, control_equations, equations_number, test_log);
 
     printf(GREEN "Successful %d tests of %d\n" WHITE, successful_tests, equations_number);
 
@@ -44,7 +65,7 @@ bool is_roots_equal( quadratic_equation equation1, quadratic_equation equation2 
 }
 */
 
-int run_test( quadratic_equation *test_equations, quadratic_equation *control_equations, int equations_number )
+int run_test( quadratic_equation *test_equations, quadratic_equation *control_equations, int equations_number, bool log )
 {
     int successful_tests = 0;
     for(int i = 0; i < equations_number; i++)
@@ -54,6 +75,12 @@ int run_test( quadratic_equation *test_equations, quadratic_equation *control_eq
         if (is_roots_equal(test_equations[i], control_equations[i]))
         {
             successful_tests++;
+            if (log)
+            {
+                printf("successful test %d:\n", successful_tests);
+                fprint_beautiful_equation( stdout, test_equations[i] );
+
+            }
         }
         else
         {

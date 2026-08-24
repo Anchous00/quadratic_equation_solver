@@ -107,7 +107,7 @@ void print_equation( quadratic_equation equation )//дебажная фигня
     return;
 }
 
-void fprint_beautiful_equation( FILE *output_file, quadratic_equation equation )//дебажная фигня
+void fprint_beautiful_equation( FILE *output_file, quadratic_equation equation )
 {
     assert(output_file);//TODO попробуй объединить
 
