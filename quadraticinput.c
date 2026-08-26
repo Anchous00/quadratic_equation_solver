@@ -6,10 +6,9 @@ int input_equations( quadratic_equation *equations )
     assert(equations);
 
     int equations_number = 0;
-    char choice = '\0';
 
     printf("Enter f for reading from file, c for reading from console, any key for exit\n");
-    choice = (char)getchar();
+    int choice = getchar();
 
     switch (choice)
     {
@@ -23,7 +22,6 @@ int input_equations( quadratic_equation *equations )
 
     default:
         return 0;
-        break;
     }
 
     if (equations_number == 0)
@@ -44,10 +42,8 @@ int input_from_file( quadratic_equation *equations )
 
     printf("Enter file name:\n");
     scanf("%100s", file_name);
-   // printf("%s%c", file_name, *(file_name + 12));
 
     FILE *input_address = fopen(file_name, "r");
-
     if (input_address == NULL)
     {
         printf("Error occurred during reading file\n");
@@ -98,13 +94,13 @@ int read_coefficients_from_console( quadratic_equation *equations )
 {
     assert(equations);
 
-    printf("Enter coefficients a, b, c, any key for end\n");
+    printf(BLUE "Enter coefficients a, b, c, any key for end\n" WHITE);
 
     int equations_number = 0;
 
     while((scanf("%lg%lg%lg", equations->coefficients, equations->coefficients + 1, equations->coefficients + 2) == COEFFICIENTS_AMOUNT))
     {
-        printf("Enter coefficients a, b, c, any key for end\n");
+        printf(BLUE "Enter coefficients a, b, c, any key for end\n" WHITE);
 
         equations_number++;
         equations++;
@@ -127,19 +123,9 @@ int read_equations_from_file( quadratic_equation *equations, FILE *input_address
                   equations->coefficients + 2,
                   equations->roots,
                   equations->roots + 1,
-                  roots_number) == 6))//TODO
+                  roots_number) == 6))
     {
-        //print_equation(*equations);
-        /*fprintf(stdout, "{%lg, %lg, %lg} {%lg, %lg, %s}\n",
-                  *(equations->coefficients),
-                  *(equations->coefficients + 1),
-                  *(equations->coefficients + 2),
-                  *(equations->roots),
-                  *(equations->roots + 1),
-                  roots_number);*/
         equations->roots_number = roots_number_from_string(roots_number);
-        //printf("%s string is %d roots\n",roots_number, roots_number_from_string(roots_number));
-        //print_equation(*equations);
         equations_number++;
         equations++;
     }
@@ -149,7 +135,6 @@ int read_equations_from_file( quadratic_equation *equations, FILE *input_address
 
 enum ROOTS_NUMBER roots_number_from_string(const char *roots_number)
 {
-   // printf("string is:%s\n", roots_number);
     if (strcmp(roots_number, "NO_ROOTS") == 0)
         return NO_ROOTS;
     if (strcmp(roots_number, "ONE_ROOT") == 0)

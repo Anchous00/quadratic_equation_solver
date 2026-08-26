@@ -47,4 +47,13 @@ const char* error_text( enum ERROR_VALUES error_value )
     }
 }
 
+double max( double x1, double x2 )
+{
+    return x1 > x2 ? x1 : x2;
+}
+
+double min( double x1, double x2 )
+{
+    return x1 < x2 ? x1 : x2;
+}
 

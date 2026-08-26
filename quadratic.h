@@ -7,12 +7,12 @@ enum ROOTS_NUMBER {
         INF_ROOTS
 };
 
-const int COEFFICIENTS_AMOUNT = 3;
+const int COEFFICIENTS_AMOUNT  = 3;
 const int MAX_EQUATIONS_AMOUNT = 100;
-const int MAX_TEST_AMOUNT = 100;
-const int MAX_FILE_NAME = 100;
+const int MAX_TEST_AMOUNT      = 100;
+const int MAX_FILE_NAME        = 100;
 
-struct quadratic_equation{
+struct quadratic_equation {
         double coefficients[3];
         double roots[2];
         enum ROOTS_NUMBER roots_number;
@@ -31,8 +31,9 @@ enum ROOTS_NUMBER roots_number_from_string(const char *roots_number);
 void output_equations( quadratic_equation *equations, int equations_number );
 void print_equation( quadratic_equation equation );
 int save_solved_equations( quadratic_equation *equations, int equations_number, FILE *output_file );
-void fprint_equation( FILE *file, quadratic_equation equation );
+void fprint_answer( FILE *file, quadratic_equation equation );
 void fprint_beautiful_equation( FILE *output_file, quadratic_equation equation );
+void fprint_solution( FILE *file, quadratic_equation *equation );
 
 
 //quadraticsolver.h

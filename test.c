@@ -1,8 +1,6 @@
 #include "quadratic.h"
 
 
-//const int MAX_TEST_AMOUNT = 100;
-
 bool is_roots_equal( quadratic_equation equation1, quadratic_equation equation2 );
 int run_test( quadratic_equation *test_equations, quadratic_equation *control_equations, int equations_number, bool log);
 
@@ -10,20 +8,21 @@ int main( int argc, char *argv[] )
 {
     char arg = '\0';
     bool test_log = false;
+
     while (--argc > 0 && (*++argv)[0] == '-')
     {
-        //printf("%s", argv[0]);
         while ((arg = *++argv[0]))
         {
             switch (arg)
             {
                 case 'z':
-                    printf("ZZZZZZZZZ");
+                    printf("ZZZZZZZZZ\n");
                     break;
                 case 'l':
                     test_log = true;
                     break;
                 default:
+                    printf("undefined flag\n");
                     break;
             }
         }
@@ -32,7 +31,6 @@ int main( int argc, char *argv[] )
     quadratic_equation control_equations[MAX_TEST_AMOUNT] = {};
     quadratic_equation test_equations[MAX_TEST_AMOUNT]    = {};
 
-    int successful_tests = 0;
     FILE *control_file = fopen("control.txt", "r");
     FILE *test_file = fopen("test.txt", "r");
 
@@ -42,7 +40,7 @@ int main( int argc, char *argv[] )
     int equations_number = read_equations_from_file( control_equations, control_file );
     printf("read %d test equations %d control equations\n", read_equations_from_file( test_equations, test_file ), equations_number);
 
-    successful_tests = run_test(test_equations, control_equations, equations_number, test_log);
+    int successful_tests = run_test(test_equations, control_equations, equations_number, test_log);
 
     printf(GREEN "Successful %d tests of %d\n" WHITE, successful_tests, equations_number);
 
@@ -51,19 +49,6 @@ int main( int argc, char *argv[] )
 
     return SUCCESSFUL_ENDING;
 }
-
-bool is_roots_equal( quadratic_equation equation1, quadratic_equation equation2 )
-{
-    return equation1.roots_number == equation2.roots_number &&
-            (   is_zero(equation1.roots[0] - equation2.roots[0]) || (isnan(equation1.roots[0]) && isnan(equation2.roots[0]))   ) &&
-            (   is_zero(equation1.roots[1] - equation2.roots[1]) || (isnan(equation1.roots[1]) && isnan(equation2.roots[1]))   );
-}
-
-/*enum ROOTS_NUMBER roots_number( const char *roots_number)
-{
-
-}
-*/
 
 int run_test( quadratic_equation *test_equations, quadratic_equation *control_equations, int equations_number, bool log )
 {
@@ -78,10 +63,10 @@ int run_test( quadratic_equation *test_equations, quadratic_equation *control_eq
             if (log)
             {
                 printf("successful test %d:\n", successful_tests);
-                fprint_beautiful_equation( stdout, test_equations[i] );
-
+                fprint_equation(stdout, test_equations[i]);
             }
         }
+
         else
         {
             printf(RED "GOVNO on %d iteration\n" WHITE, i + 1);
@@ -93,4 +78,14 @@ int run_test( quadratic_equation *test_equations, quadratic_equation *control_eq
     }
 
     return successful_tests;
+}
+
+bool is_roots_equal( quadratic_equation equation1, quadratic_equation equation2 )
+{
+    double x11 = min(equation1.roots[0], equation1.roots[1]), x12 = min(equation2.roots[0], equation2.roots[1]);
+    double x21 = max(equation1.roots[0], equation1.roots[1]), x22 = max(equation2.roots[0], equation2.roots[1]);
+
+    return equation1.roots_number == equation2.roots_number &&
+         (is_zero(x11 - x12) || (isnan(x11) && isnan(x12))) &&
+         (is_zero(x21 - x22) || (isnan(x21) && isnan(x22)));
 }

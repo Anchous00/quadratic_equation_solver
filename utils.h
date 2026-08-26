@@ -7,6 +7,8 @@
 #define RED "\x1b[31m"
 #define WHITE "\x1b[0m"
 #define GREEN "\x1b[32m"
+#define YELLOW "\x1b[33m"
+#define BLUE "\x1b[34m"
 
 enum ERROR_VALUES {
         SUCCESSFUL_ENDING = 0,
@@ -23,42 +25,6 @@ void clear_buffer( void );
 bool is_zero( double number );
 bool is_string_empty( void );
 const char* error_text( enum ERROR_VALUES error_value );
+double max( double x1, double x2 );
+double min( double x1, double x2 );
 
-
-
-
-
-
-
-//TODO
-/*
-result = SolveEquation();
-
-switch (result)
-{
-case SUCCESSFUL_ENDING:
-        fprintf(f, "все хорошо");
-        break;
-
-}
-
-
-result = SolveEquation();
-
-switch (result)
-{
-case SUCCESSFUL_ENDING:
-        MakeWindow("все хорошо");
-        break;
-}
-
-
-result = SolveEquation();
-
-switch (result)
-{
-case SUCCESSFUL_ENDING:
-        printf("все хорошо");
-        break;
-}
-*/

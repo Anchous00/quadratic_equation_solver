@@ -1,10 +1,18 @@
 #include "quadratic.h"
 
-//----------------------------------------------------------
-//!
-//!
-//!
-//----------------------------------------------------------
+
+enum RETURN_VALUES solve_equations( quadratic_equation *equations, int equations_number )
+{
+    assert(equations);
+
+    for (int i = 0; i < equations_number; i++)
+    {
+        solve_quadratic_equation(&equations[i]);
+    }
+
+    return SUCCESS;
+}
+
 enum RETURN_VALUES solve_quadratic_equation( quadratic_equation *equation )
 {
     assert(equation);
@@ -55,7 +63,7 @@ enum RETURN_VALUES solve_linear_equation( quadratic_equation *equation )
 
     if (is_zero(equation->coefficients[1]))
     {
-        equation->roots_number = (is_zero((equation->coefficients)[2]) ?INF_ROOTS : NO_ROOTS);
+        equation->roots_number = (is_zero((equation->coefficients)[2]) ? INF_ROOTS : NO_ROOTS);
         equation->roots[0] = NAN;
         equation->roots[1] = NAN;
 
@@ -68,14 +76,4 @@ enum RETURN_VALUES solve_linear_equation( quadratic_equation *equation )
     return SUCCESS;
 }
 
-enum RETURN_VALUES solve_equations( quadratic_equation *equations, int equations_number )
-{
-    assert(equations);
 
-    for(int i = 0; i < equations_number; i++)
-    {
-        solve_quadratic_equation(&equations[i]);
-    }
-
-    return SUCCESS;
-}
