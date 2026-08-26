@@ -1,0 +1,235 @@
+\doxysection{C:/\+\+Users/\+vivan/.vscode/\+projects/\+helloworld/\+quadratic\+\_\+equation\+\_\+solver/\+utils.h File Reference}
+\hypertarget{utils_8h}{}\label{utils_8h}\index{C:/Users/vivan/.vscode/projects/helloworld/quadratic\_equation\_solver/utils.h@{C:/Users/vivan/.vscode/projects/helloworld/quadratic\_equation\_solver/utils.h}}
+
+
+заголовочный файл макросами, енамами и прототипами функций из файла \doxylink{utils_8c}{utils.\+c}  
+
+
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$math.\+h$>$}\newline
+{\ttfamily \+\#include $<$assert.\+h$>$}\newline
+{\ttfamily \+\#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \+\#include $<$string.\+h$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{utils_8h_a8d23feea868a983c8c2b661e1e16972f}{RED}}~"{}\textbackslash{}x1b\+[31m"{}
+\item 
+\+\#define \doxymbox{\hyperlink{utils_8h_a87b537f5fa5c109d3c05c13d6b18f382}{WHITE}}~"{}\textbackslash{}x1b\+[0m"{}
+\item 
+\+\#define \doxymbox{\hyperlink{utils_8h_acfbc006ea433ad708fdee3e82996e721}{GREEN}}~"{}\textbackslash{}x1b\+[32m"{}
+\item 
+\+\#define \doxymbox{\hyperlink{utils_8h_abf681265909adf3d3e8116c93c0ba179}{YELLOW}}~"{}\textbackslash{}x1b\+[33m"{}
+\item 
+\+\#define \doxymbox{\hyperlink{utils_8h_a79d10e672abb49ad63eeaa8aaef57c38}{BLUE}}~"{}\textbackslash{}x1b\+[34m"{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{utils_8h_a2f4b78f15bc7e1afc686207e01c09757}{ERROR\+\_\+\+VALUES}} \{ \doxymbox{\hyperlink{utils_8h_a2f4b78f15bc7e1afc686207e01c09757a0eabe3cce05d8eb2c22b56984141a31c}{SUCCESSFUL\+\_\+\+ENDING}} = 0
+, \doxymbox{\hyperlink{utils_8h_a2f4b78f15bc7e1afc686207e01c09757a8eefa355ceff04cda26a5ac2d3c47f0a}{ERROR\+\_\+\+DURING\+\_\+\+READING\+\_\+\+COEFFICIENTS}} = 1
+, \doxymbox{\hyperlink{utils_8h_a2f4b78f15bc7e1afc686207e01c09757a0ad3aa616f0c79212abe21b819e21af9}{ERROR\+\_\+\+OCCURRED\+\_\+\+DURING\+\_\+\+READING\+\_\+\+FILE}} = 2
+ \}
+\item 
+enum \doxymbox{\hyperlink{utils_8h_a30036d522909f271124388aa785be999}{RETURN\+\_\+\+VALUES}} \{ \doxymbox{\hyperlink{utils_8h_a30036d522909f271124388aa785be999a2fd6f336d08340583bd620a7f5694c90}{ERROR}} = 0
+, \doxymbox{\hyperlink{utils_8h_a30036d522909f271124388aa785be999ac7f69f7c9e5aea9b8f54cf02870e2bf8}{SUCCESS}} = 1
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{utils_8h_a876d5723d0511f25736dcd24ef3fd437}{clear\+\_\+buffer}} (void)
+\begin{DoxyCompactList}\small\item\em функция которая съедает все символы в буффере до новой строки \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{utils_8h_ab13b1c9485c8838473f159818dcd0be9}{is\+\_\+zero}} (double number)
+\begin{DoxyCompactList}\small\item\em функция сравнения числа с плавающей точкой с нулем \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{utils_8h_a757c0580367c71a876eac5b867381d48}{is\+\_\+string\+\_\+empty}} (void)
+\begin{DoxyCompactList}\small\item\em функция сообщающая о наличии символов в буффере \end{DoxyCompactList}\item 
+const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{utils_8h_aae519bb37e3e14b2e571996d79f83df7}{error\+\_\+text}} (enum \doxymbox{\hyperlink{utils_8h_a2f4b78f15bc7e1afc686207e01c09757}{ERROR\+\_\+\+VALUES}} error\+\_\+value)
+\item 
+double \doxymbox{\hyperlink{utils_8h_a81dfb0f24a77acf49ecc3b6e2eb44faa}{max}} (double x1, double x2)
+\begin{DoxyCompactList}\small\item\em функция, возваращающая большее из двух чисел \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{utils_8h_ac4bd06eeca25b1f7bb4de45df91666b5}{min}} (double x1, double x2)
+\begin{DoxyCompactList}\small\item\em функция, возваращающая меньшее из двух чисел \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+заголовочный файл макросами, енамами и прототипами функций из файла \doxylink{utils_8c}{utils.\+c} 
+
+
+
+\label{utils_8h_doc-define-members}
+\Hypertarget{utils_8h_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{utils_8h_a79d10e672abb49ad63eeaa8aaef57c38}\index{utils.h@{utils.h}!BLUE@{BLUE}}
+\index{BLUE@{BLUE}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{BLUE}{BLUE}}
+{\footnotesize\ttfamily \label{utils_8h_a79d10e672abb49ad63eeaa8aaef57c38} 
+\+\#define BLUE~"{}\textbackslash{}x1b\+[34m"{}}
+
+\Hypertarget{utils_8h_acfbc006ea433ad708fdee3e82996e721}\index{utils.h@{utils.h}!GREEN@{GREEN}}
+\index{GREEN@{GREEN}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{GREEN}{GREEN}}
+{\footnotesize\ttfamily \label{utils_8h_acfbc006ea433ad708fdee3e82996e721} 
+\+\#define GREEN~"{}\textbackslash{}x1b\+[32m"{}}
+
+\Hypertarget{utils_8h_a8d23feea868a983c8c2b661e1e16972f}\index{utils.h@{utils.h}!RED@{RED}}
+\index{RED@{RED}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{RED}{RED}}
+{\footnotesize\ttfamily \label{utils_8h_a8d23feea868a983c8c2b661e1e16972f} 
+\+\#define RED~"{}\textbackslash{}x1b\+[31m"{}}
+
+\Hypertarget{utils_8h_a87b537f5fa5c109d3c05c13d6b18f382}\index{utils.h@{utils.h}!WHITE@{WHITE}}
+\index{WHITE@{WHITE}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{WHITE}{WHITE}}
+{\footnotesize\ttfamily \label{utils_8h_a87b537f5fa5c109d3c05c13d6b18f382} 
+\+\#define WHITE~"{}\textbackslash{}x1b\+[0m"{}}
+
+\Hypertarget{utils_8h_abf681265909adf3d3e8116c93c0ba179}\index{utils.h@{utils.h}!YELLOW@{YELLOW}}
+\index{YELLOW@{YELLOW}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{YELLOW}{YELLOW}}
+{\footnotesize\ttfamily \label{utils_8h_abf681265909adf3d3e8116c93c0ba179} 
+\+\#define YELLOW~"{}\textbackslash{}x1b\+[33m"{}}
+
+
+
+\label{utils_8h_doc-enum-members}
+\Hypertarget{utils_8h_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{utils_8h_a2f4b78f15bc7e1afc686207e01c09757}\index{utils.h@{utils.h}!ERROR\_VALUES@{ERROR\_VALUES}}
+\index{ERROR\_VALUES@{ERROR\_VALUES}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{ERROR\_VALUES}{ERROR\_VALUES}}
+{\footnotesize\ttfamily \label{utils_8h_a2f4b78f15bc7e1afc686207e01c09757} 
+enum \doxymbox{\hyperlink{utils_8h_a2f4b78f15bc7e1afc686207e01c09757}{ERROR\+\_\+\+VALUES}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SUCCESSFUL\_ENDING@{SUCCESSFUL\_ENDING}!utils.h@{utils.h}}
+\index{utils.h@{utils.h}!SUCCESSFUL\_ENDING@{SUCCESSFUL\_ENDING}}
+}\Hypertarget{utils_8h_a2f4b78f15bc7e1afc686207e01c09757a0eabe3cce05d8eb2c22b56984141a31c}\label{utils_8h_a2f4b78f15bc7e1afc686207e01c09757a0eabe3cce05d8eb2c22b56984141a31c} 
+SUCCESSFUL\+\_\+\+ENDING&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ERROR\_DURING\_READING\_COEFFICIENTS@{ERROR\_DURING\_READING\_COEFFICIENTS}!utils.h@{utils.h}}
+\index{utils.h@{utils.h}!ERROR\_DURING\_READING\_COEFFICIENTS@{ERROR\_DURING\_READING\_COEFFICIENTS}}
+}\Hypertarget{utils_8h_a2f4b78f15bc7e1afc686207e01c09757a8eefa355ceff04cda26a5ac2d3c47f0a}\label{utils_8h_a2f4b78f15bc7e1afc686207e01c09757a8eefa355ceff04cda26a5ac2d3c47f0a} 
+ERROR\+\_\+\+DURING\+\_\+\+READING\+\_\+\+COEFFICIENTS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ERROR\_OCCURRED\_DURING\_READING\_FILE@{ERROR\_OCCURRED\_DURING\_READING\_FILE}!utils.h@{utils.h}}
+\index{utils.h@{utils.h}!ERROR\_OCCURRED\_DURING\_READING\_FILE@{ERROR\_OCCURRED\_DURING\_READING\_FILE}}
+}\Hypertarget{utils_8h_a2f4b78f15bc7e1afc686207e01c09757a0ad3aa616f0c79212abe21b819e21af9}\label{utils_8h_a2f4b78f15bc7e1afc686207e01c09757a0ad3aa616f0c79212abe21b819e21af9} 
+ERROR\+\_\+\+OCCURRED\+\_\+\+DURING\+\_\+\+READING\+\_\+\+FILE&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{utils_8h_a30036d522909f271124388aa785be999}\index{utils.h@{utils.h}!RETURN\_VALUES@{RETURN\_VALUES}}
+\index{RETURN\_VALUES@{RETURN\_VALUES}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{RETURN\_VALUES}{RETURN\_VALUES}}
+{\footnotesize\ttfamily \label{utils_8h_a30036d522909f271124388aa785be999} 
+enum \doxymbox{\hyperlink{utils_8h_a30036d522909f271124388aa785be999}{RETURN\+\_\+\+VALUES}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ERROR@{ERROR}!utils.h@{utils.h}}
+\index{utils.h@{utils.h}!ERROR@{ERROR}}
+}\Hypertarget{utils_8h_a30036d522909f271124388aa785be999a2fd6f336d08340583bd620a7f5694c90}\label{utils_8h_a30036d522909f271124388aa785be999a2fd6f336d08340583bd620a7f5694c90} 
+ERROR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SUCCESS@{SUCCESS}!utils.h@{utils.h}}
+\index{utils.h@{utils.h}!SUCCESS@{SUCCESS}}
+}\Hypertarget{utils_8h_a30036d522909f271124388aa785be999ac7f69f7c9e5aea9b8f54cf02870e2bf8}\label{utils_8h_a30036d522909f271124388aa785be999ac7f69f7c9e5aea9b8f54cf02870e2bf8} 
+SUCCESS&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{utils_8h_doc-func-members}
+\Hypertarget{utils_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{utils_8h_a876d5723d0511f25736dcd24ef3fd437}\index{utils.h@{utils.h}!clear\_buffer@{clear\_buffer}}
+\index{clear\_buffer@{clear\_buffer}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{clear\_buffer()}{clear\_buffer()}}
+{\footnotesize\ttfamily \label{utils_8h_a876d5723d0511f25736dcd24ef3fd437} 
+void clear\+\_\+buffer (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+функция которая съедает все символы в буффере до новой строки 
+
+\Hypertarget{utils_8h_aae519bb37e3e14b2e571996d79f83df7}\index{utils.h@{utils.h}!error\_text@{error\_text}}
+\index{error\_text@{error\_text}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{error\_text()}{error\_text()}}
+{\footnotesize\ttfamily \label{utils_8h_aae519bb37e3e14b2e571996d79f83df7} 
+const char \texorpdfstring{$\ast$}{*} error\+\_\+text (\begin{DoxyParamCaption}\item[{enum \doxymbox{\hyperlink{utils_8h_a2f4b78f15bc7e1afc686207e01c09757}{ERROR\+\_\+\+VALUES}}}]{error\+\_\+value}{}\end{DoxyParamCaption})}
+
+\Hypertarget{utils_8h_a757c0580367c71a876eac5b867381d48}\index{utils.h@{utils.h}!is\_string\_empty@{is\_string\_empty}}
+\index{is\_string\_empty@{is\_string\_empty}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{is\_string\_empty()}{is\_string\_empty()}}
+{\footnotesize\ttfamily \label{utils_8h_a757c0580367c71a876eac5b867381d48} 
+bool is\+\_\+string\+\_\+empty (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+функция сообщающая о наличии символов в буффере 
+
+\begin{DoxyReturn}{Returns}
+true если буффер пуст иначе false 
+\end{DoxyReturn}
+\Hypertarget{utils_8h_ab13b1c9485c8838473f159818dcd0be9}\index{utils.h@{utils.h}!is\_zero@{is\_zero}}
+\index{is\_zero@{is\_zero}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{is\_zero()}{is\_zero()}}
+{\footnotesize\ttfamily \label{utils_8h_ab13b1c9485c8838473f159818dcd0be9} 
+bool is\+\_\+zero (\begin{DoxyParamCaption}\item[{double}]{number}{}\end{DoxyParamCaption})}
+
+
+
+функция сравнения числа с плавающей точкой с нулем 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in}}  & {\em number} & число для сравнения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true если число 0 иначе false 
+\end{DoxyReturn}
+\Hypertarget{utils_8h_a81dfb0f24a77acf49ecc3b6e2eb44faa}\index{utils.h@{utils.h}!max@{max}}
+\index{max@{max}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{max()}{max()}}
+{\footnotesize\ttfamily \label{utils_8h_a81dfb0f24a77acf49ecc3b6e2eb44faa} 
+double max (\begin{DoxyParamCaption}\item[{double}]{x1}{, }\item[{double}]{x2}{}\end{DoxyParamCaption})}
+
+
+
+функция, возваращающая большее из двух чисел 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in}}  & {\em x1} & число 1 \\
+\hline
+\doxymbox{\texttt{in}}  & {\em x2} & число 2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+большее из чисел 
+\end{DoxyReturn}
+\Hypertarget{utils_8h_ac4bd06eeca25b1f7bb4de45df91666b5}\index{utils.h@{utils.h}!min@{min}}
+\index{min@{min}!utils.h@{utils.h}}
+\doxysubsubsection{\texorpdfstring{min()}{min()}}
+{\footnotesize\ttfamily \label{utils_8h_ac4bd06eeca25b1f7bb4de45df91666b5} 
+double min (\begin{DoxyParamCaption}\item[{double}]{x1}{, }\item[{double}]{x2}{}\end{DoxyParamCaption})}
+
+
+
+функция, возваращающая меньшее из двух чисел 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in}}  & {\em x1} & число 1 \\
+\hline
+\doxymbox{\texttt{in}}  & {\em x2} & число 2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+меньшее из чисел 
+\end{DoxyReturn}

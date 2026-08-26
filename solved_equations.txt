@@ -1,0 +1,48 @@
+Equation 1: x^2-5x+6 = 0
+Solution:
+coefficients: a = 1, b = -5, c = 6
+Discriminant D = b * b - 4 * a * c = -5 * -5 - 4 * 1 * 6 = 1
+D > 0, two roots:
+x1 = (-b + sqrt(D))/(2 * a) = (5 + sqrt(1))/(2 * 1)
+x2 = (-b - sqrt(D))/(2 * a) = (5 - sqrt(1))/(2 * 1)
+Roots: 3, 2
+
+Equation 2: +2 = 0
+Solution:
+No number fit in this equation
+no roots
+
+Equation 3: +2x-4 = 0
+Solution:
+linear equation, coefficients a = 2, b = -4
+root x = -b / a = 4 / 2
+Root: 2
+
+Equation 4: x^2+2x+1 = 0
+Solution:
+coefficients: a = 1, b = 2, c = 1
+Discriminant D = b * b - 4 * a * c = 2 * 2 - 4 * 1 * 1 = 0
+D = 0, one root x1 = -b / (2 * a) = -2/(2 * (1))
+Root: -1
+
+Equation 5: x^2-9x+20 = 0
+Solution:
+coefficients: a = 1, b = -9, c = 20
+Discriminant D = b * b - 4 * a * c = -9 * -9 - 4 * 1 * 20 = 1
+D > 0, two roots:
+x1 = (-b + sqrt(D))/(2 * a) = (9 + sqrt(1))/(2 * 1)
+x2 = (-b - sqrt(D))/(2 * a) = (9 - sqrt(1))/(2 * 1)
+Roots: 5, 4
+
+Equation 6: 0 = 0
+Solution:
+Any number fit in this equation
+Roots: any number
+
+Equation 7: x^2+6 = 0
+Solution:
+coefficients: a = 1, b = 0, c = 6
+Discriminant D = b * b - 4 * a * c = 0 * 0 - 4 * 1 * 6 = -24
+D < 0, equation has no roots
+no roots
+

@@ -1,6 +1,16 @@
+/*!
+* \file
+* \brief файл с функциями, отвечающими за ввод уравнений
+*/
+
 #include "quadratic.h"
 
 
+/*!
+*   \brief функция для выбора способа ввода уравнений
+*   \param [in, out] equations массив для записи уравнений
+*   \return количество записанных уравнений
+*/
 int input_equations( quadratic_equation *equations )
 {
     assert(equations);
@@ -34,6 +44,11 @@ int input_equations( quadratic_equation *equations )
     return equations_number;
 }
 
+/*!
+*   \brief функция, начинающая ввод уравнений из файла
+*   \param [in, out] equations массив для записи уравнений
+*   \return количество записанных уравнений
+*/
 int input_from_file( quadratic_equation *equations )
 {
     assert(equations);
@@ -59,6 +74,11 @@ int input_from_file( quadratic_equation *equations )
     return equations_number;
 }
 
+/*!
+*   \brief функция, начинающая ввод уравнений из консоли
+*   \param [in, out] equations массив для записи уравнений
+*   \return количество записанных уравнений
+*/
 int input_from_console( quadratic_equation *equations )
 {
     assert(equations);
@@ -70,6 +90,12 @@ int input_from_console( quadratic_equation *equations )
     return equations_number;
 }
 
+/*!
+*   \brief функция, читающая из файла коэффициенты уравнений через пробелы или пробельные символы
+*   \param [in, out] equations массив для записи уравнений
+*   \param [in] input_address файл для чтения
+*   \return количество записанных уравнений
+*/
 int read_coefficients_from_file( quadratic_equation *equations, FILE *input_address )
 {
     assert(equations);
@@ -90,6 +116,11 @@ int read_coefficients_from_file( quadratic_equation *equations, FILE *input_addr
     return equations_number;
 }
 
+/*!
+*   \brief функция, читающая из консоли коэффициенты уравнений через пробелы или пробельные символы
+*   \param [in, out] equations массив для записи уравнений
+*   \return количество записанных уравнений
+*/
 int read_coefficients_from_console( quadratic_equation *equations )
 {
     assert(equations);
@@ -109,6 +140,12 @@ int read_coefficients_from_console( quadratic_equation *equations )
     return equations_number;
 }
 
+/*!
+*   \brief функция, читающая из файла уравнения в формате {a, b, c} {root1, root2, roots_number}
+*   \param [in, out] equations массив для записи уравнений
+*   \param [in] input_address файл для чтения
+*   \return количество записанных уравнений
+*/
 int read_equations_from_file( quadratic_equation *equations, FILE *input_address )
 {
     assert(equations);
@@ -133,6 +170,11 @@ int read_equations_from_file( quadratic_equation *equations, FILE *input_address
     return equations_number;
 }
 
+/*!
+*   \brief функция расшифровывающая строку из файла в enum количества корней
+*   \param [in, out] roots_number строка
+*   \return соответствующее строке количество корней
+*/
 enum ROOTS_NUMBER roots_number_from_string(const char *roots_number)
 {
     if (strcmp(roots_number, "NO_ROOTS") == 0)

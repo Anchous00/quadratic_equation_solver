@@ -1,3 +1,8 @@
+/*!
+* \file
+* \brief файл с кодом запуска основной программы
+*/
+
 #include "quadratic.h"
 
 int main( void )

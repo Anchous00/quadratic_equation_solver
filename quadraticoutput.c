@@ -1,29 +1,40 @@
+/*!
+* \file
+* \brief файл с функциями, отвечающими за вывод уравнений
+*/
+
 #include "quadratic.h"
 
-
+//! захардкоженное имя файла для записи
 const char *output_file_name = "solved_equations.txt";
 
+/*!
+* \brief функция выбора пути вывода решенных уравнений
+* \param [in] equations уравнения для вывода
+* \param [in] equations_number количество уравнений
+*/
 void output_equations( quadratic_equation *equations, int equations_number )
 {
     assert(equations);
 
-    char choice = '\0';
-
     printf("Enter f for saving in file, c for writing in console, any key for exit\n");
-    FILE *output_file = fopen(output_file_name, "w");
 
-    if (output_file == NULL)
-    {
-        printf("ERROR: cant open file");
-        return;
-    }
-
-    choice = (char)getchar();
+    char choice = (char)getchar();
 
     switch (choice)
     {
     case 'f':
+        FILE *output_file = fopen(output_file_name, "w");
+
+        if (output_file == NULL)
+        {
+            printf("ERROR: cant open file");
+            return;
+        }
         save_solved_equations(equations, equations_number, output_file);
+
+        if (fclose(output_file) != 0)
+            printf(RED "WARNING: cant close file\n" WHITE);
         break;
 
     case 'c':
@@ -38,6 +49,13 @@ void output_equations( quadratic_equation *equations, int equations_number )
     return;
 }
 
+/*!
+* \brief функция для сохранения уравнений в файл
+* \param [in] equations уравнения для вывода
+* \param [in] equations_number количество уравнений
+* \param [in] output_file файл для записи
+* \note если выбран вывод в консоль, как output_file передается stdin
+*/
 int save_solved_equations( quadratic_equation *equations, int equations_number, FILE *output_file )
 {
     assert(equations);
@@ -45,7 +63,7 @@ int save_solved_equations( quadratic_equation *equations, int equations_number, 
 
     for(int i = 0; i < equations_number; i++)
     {
-        fprintf(output_file, "\nEquation %d: ", i + 1);
+        fprintf(output_file, "Equation %d: ", i + 1);
         fprint_beautiful_equation(output_file, equations[i]);
         fprint_solution(output_file, &equations[i]);
         fprint_answer(output_file, equations[i]);
@@ -53,38 +71,40 @@ int save_solved_equations( quadratic_equation *equations, int equations_number, 
 
     printf(GREEN "successful saved %d solved equations in %s\n" WHITE, equations_number, "solved_equations.txt");
 
-    if (fclose(output_file) != 0)
-        printf(RED "WARNING: cant close file\n" WHITE);
-
     return equations_number;
 }
 
-void fprint_answer( FILE *file, quadratic_equation equation )
+/*!
+* \brief функция для сохранения записи ответа на уравнение в файл
+* \param [in] equation уравнение для вывода
+* \param [in] output_file файл для записи
+*/
+void fprint_answer( FILE *output_file, quadratic_equation equation )
 {
-    assert(file);
+    assert(output_file);
     assert(equation.roots);
     assert(equation.coefficients);
 
     switch (equation.roots_number)
     {
         case NO_ROOTS:
-            fprintf(file, "no roots\n");
+            fprintf(output_file, "no roots\n");
             break;
         case ONE_ROOT:
-            fprintf(file, "Root: %lg\n", equation.roots[0]);
+            fprintf(output_file, "Root: %lg\n", equation.roots[0]);
             break;
         case TWO_ROOTS:
-            fprintf(file, "Roots: %lg, %lg\n", equation.roots[0], equation.roots[1]);
+            fprintf(output_file, "Roots: %lg, %lg\n", equation.roots[0], equation.roots[1]);
             break;
         case INF_ROOTS:
-            fprintf(file, "Roots: any number\n");
+            fprintf(output_file, "Roots: any number\n");
             break;
         default:
-            fprintf(file, "default\n");
+            fprintf(output_file, "default\n");
             break;
     }
 
-    fprintf(file, "\n");
+    fprintf(output_file, "\n");
 
     return;
 
@@ -105,6 +125,11 @@ void print_equation( quadratic_equation equation )//дебажная фигня
     return;
 }
 
+/*!
+* \brief функция для красивой записи условия уравнения в файл
+* \param [in] equation уравнение для вывода
+* \param [in] output_file файл для записи
+*/
 void fprint_beautiful_equation( FILE *output_file, quadratic_equation equation )
 {
     assert(output_file); // 0 1 1 -> +x+1 != x + 1
@@ -151,30 +176,34 @@ void fprint_beautiful_equation( FILE *output_file, quadratic_equation equation )
     return;
 }
 
-void fprint_solution( FILE *file, quadratic_equation *equation )
+/*!
+* \brief функция для записи решения уравнения в файл
+* \param [in] equation уравнение для вывода
+* \param [in] output_file файл для записи
+*/
+void fprint_solution( FILE *output_file, quadratic_equation *equation )
 {
-    assert(file);
+    assert(output_file);
     assert(equation);
     assert(equation->roots);
     assert(equation->coefficients);
-    assert(isfinite(equation->coefficients[0]));
-    assert(isfinite(equation->coefficients[1]));
-    assert(isfinite(equation->coefficients[2]));
 
-    fprintf(file, "Solution:\n");
+    fprintf(output_file, "Solution:\n");
 
     if (is_zero(equation->coefficients[0]))
     {
         if (is_zero(equation->coefficients[1]))
         {
-            fprintf(file, "%s", is_zero(equation->coefficients[2]) ? "Any number fit in this equation\n" : "No number fit in this equation\n");
+            fprintf(output_file, "%s", is_zero(equation->coefficients[2]) ? "Any number fit in this equation\n" : "No number fit in this equation\n");
             return;
         }
-        fprintf(file, "linear equation, root x = -c / b = %-lg / %lg\n", -equation->coefficients[2], equation->coefficients[1]);
+        fprintf(output_file, "linear equation, coefficients a = %lg, b = %lg\nroot x = -b / a = %-lg / %lg\n",
+                equation->coefficients[1], equation->coefficients[2],
+                -equation->coefficients[2], equation->coefficients[1]);
 
         return;
     }
-    fprintf(file, "coefficients: a = %lg, b = %lg, c = %lg\n",
+    fprintf(output_file, "coefficients: a = %lg, b = %lg, c = %lg\n",
             equation->coefficients[0],
             equation->coefficients[1],
             equation->coefficients[2]);
@@ -182,7 +211,7 @@ void fprint_solution( FILE *file, quadratic_equation *equation )
     double discriminant = equation->coefficients[1] * equation->coefficients[1]
                     - 4 * equation->coefficients[0] * equation->coefficients[2];
 
-    fprintf(file, "Discriminant D = b * b - 4 * a * c = %lg * %lg - 4 * %lg * %lg = %lg\n",
+    fprintf(output_file, "Discriminant D = b * b - 4 * a * c = %lg * %lg - 4 * %lg * %lg = %lg\n",
            equation->coefficients[1],
            equation->coefficients[1],
            equation->coefficients[0],
@@ -191,18 +220,18 @@ void fprint_solution( FILE *file, quadratic_equation *equation )
 
     if (is_zero(discriminant))
     {
-        fprintf(file, "D = 0, one root x1 = -b / (2 * a) = %+lg/(2 * (%lg))\n",
+        fprintf(output_file, "D = 0, one root x1 = -b / (2 * a) = %+lg/(2 * (%lg))\n",
               -equation->coefficients[1], equation->coefficients[0]);
         return;
     }
 
     if (discriminant < 0)
     {
-        fprintf(file, "D < 0, equation has no roots\n");
+        fprintf(output_file, "D < 0, equation has no roots\n");
         return;
     }
 
-    fprintf(file, "D > 0, two roots:\n"
+    fprintf(output_file, "D > 0, two roots:\n"
             "x1 = (-b + sqrt(D))/(2 * a) = (%-lg + sqrt(%lg))/(2 * %lg)\n"
             "x2 = (-b - sqrt(D))/(2 * a) = (%-lg - sqrt(%lg))/(2 * %lg)\n",
             -equation->coefficients[1],

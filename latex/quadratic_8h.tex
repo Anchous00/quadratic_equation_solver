@@ -1,0 +1,440 @@
+\doxysection{C:/\+\+Users/\+vivan/.vscode/\+projects/\+helloworld/\+quadratic\+\_\+equation\+\_\+solver/\+quadratic.h File Reference}
+\hypertarget{quadratic_8h}{}\label{quadratic_8h}\index{C:/Users/vivan/.vscode/projects/helloworld/quadratic\_equation\_solver/quadratic.h@{C:/Users/vivan/.vscode/projects/helloworld/quadratic\_equation\_solver/quadratic.h}}
+
+
+заголовочный файл макросами, енамами и прототипами функций из файлов \doxylink{quadraticsolver_8c}{quadraticsolver.\+c}, \doxylink{quadraticinput_8c}{quadraticinput.\+c}, \doxylink{quadraticoutput_8c}{quadraticoutput.\+c}  
+
+
+{\ttfamily \+\#include "{}utils.\+h"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}}
+\begin{DoxyCompactList}\small\item\em структура квадратного уравнения \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{quadratic_8h_aaebdf47879d48baf2a8ce6fcb97164ca}{ROOTS\+\_\+\+NUMBER}} \{ \doxymbox{\hyperlink{quadratic_8h_aaebdf47879d48baf2a8ce6fcb97164caab9a321da349ac1355b717745736ad90c}{NO\+\_\+\+ROOTS}} = 0
+, \doxymbox{\hyperlink{quadratic_8h_aaebdf47879d48baf2a8ce6fcb97164caa6700c0f6efd23571cb22aefd2510b1cf}{ONE\+\_\+\+ROOT}} = 1
+, \doxymbox{\hyperlink{quadratic_8h_aaebdf47879d48baf2a8ce6fcb97164caa876622d3c0b008da13a3685c64714e81}{TWO\+\_\+\+ROOTS}} = 2
+, \doxymbox{\hyperlink{quadratic_8h_aaebdf47879d48baf2a8ce6fcb97164caa5a79e9e49077da58fe5d46a98f0b5e36}{INF\+\_\+\+ROOTS}} = 3
+ \}
+\begin{DoxyCompactList}\small\item\em количество корней уравнения \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{quadratic_8h_a6b2f76a002a7d1489e69d28cff8f914f}{input\+\_\+equations}} (\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}equations)
+\begin{DoxyCompactList}\small\item\em функция для выбора способа ввода уравнений \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{quadratic_8h_a09a2063bbddb9f779426745e1fc9e10b}{input\+\_\+from\+\_\+file}} (\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}equations)
+\begin{DoxyCompactList}\small\item\em функция, начинающая ввод уравнений из файла \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{quadratic_8h_a7e6e3b79937b7c530c5160d71ab0e6f4}{input\+\_\+from\+\_\+console}} (\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}equations)
+\begin{DoxyCompactList}\small\item\em функция, начинающая ввод уравнений из консоли \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{quadratic_8h_a1af1242bbf29c022384f2ae2a8d9ce6e}{read\+\_\+coefficients\+\_\+from\+\_\+file}} (\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}equation, FILE \texorpdfstring{$\ast$}{*}input\+\_\+address)
+\begin{DoxyCompactList}\small\item\em функция, читающая из файла коэффициенты уравнений через пробелы или пробельные символы \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{quadratic_8h_a3266e07c7d96f585f03581c48b86efb6}{read\+\_\+coefficients\+\_\+from\+\_\+console}} (\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}equations)
+\begin{DoxyCompactList}\small\item\em функция, читающая из консоли коэффициенты уравнений через пробелы или пробельные символы \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{quadratic_8h_a468fa3238a2e059473a955ec39db7ee6}{read\+\_\+equations\+\_\+from\+\_\+file}} (\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}equations, FILE \texorpdfstring{$\ast$}{*}input\+\_\+address)
+\begin{DoxyCompactList}\small\item\em функция, читающая из файла уравнения в формате \{a, b, c\} \{root1, root2, roots\+\_\+number\} \end{DoxyCompactList}\item 
+enum \doxymbox{\hyperlink{quadratic_8h_aaebdf47879d48baf2a8ce6fcb97164ca}{ROOTS\+\_\+\+NUMBER}} \doxymbox{\hyperlink{quadratic_8h_abbf76d487597ca0d1cd9c565f72ceed3}{roots\+\_\+number\+\_\+from\+\_\+string}} (const char \texorpdfstring{$\ast$}{*}roots\+\_\+number)
+\begin{DoxyCompactList}\small\item\em функция расшифровывающая строку из файла в enum количества корней \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{quadratic_8h_aa09db4ffda791ee51b0cdebb1c95c491}{output\+\_\+equations}} (\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}equations, int equations\+\_\+number)
+\begin{DoxyCompactList}\small\item\em функция выбора пути вывода решенных уравнений \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{quadratic_8h_a55750c92fe097e8e44fb6c3e45c0186e}{print\+\_\+equation}} (\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} equation)
+\item 
+int \doxymbox{\hyperlink{quadratic_8h_afa9d5d329390e94eb0fe9eca4592cdfd}{save\+\_\+solved\+\_\+equations}} (\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}equations, int equations\+\_\+number, FILE \texorpdfstring{$\ast$}{*}output\+\_\+file)
+\begin{DoxyCompactList}\small\item\em функция для сохранения уравнений в файл \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{quadratic_8h_a84d30dcc1c73255ead31a930f04a4d6f}{fprint\+\_\+answer}} (FILE \texorpdfstring{$\ast$}{*}output\+\_\+file, \doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} equation)
+\begin{DoxyCompactList}\small\item\em функция для сохранения записи ответа на уравнение в файл \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{quadratic_8h_ac27b8c1fd8bb7c979f11493612673ed1}{fprint\+\_\+beautiful\+\_\+equation}} (FILE \texorpdfstring{$\ast$}{*}output\+\_\+file, \doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} equation)
+\begin{DoxyCompactList}\small\item\em функция для красивой записи условия уравнения в файл \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{quadratic_8h_a0133e7e5dc41a951755aadc4160d7bbd}{fprint\+\_\+solution}} (FILE \texorpdfstring{$\ast$}{*}output\+\_\+file, \doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}equation)
+\begin{DoxyCompactList}\small\item\em функция для записи решения уравнения в файл \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{quadratic_8h_abb157156609f7acff598c57f1d4b4d82}{solve\+\_\+quadratic\+\_\+equation}} (\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}equation)
+\begin{DoxyCompactList}\small\item\em функция, решающая одно квадратное уравнение \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{quadratic_8h_aae7c3e6aee106bb62eafee5f0b01c008}{solve\+\_\+linear\+\_\+equation}} (\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}equation)
+\begin{DoxyCompactList}\small\item\em функция, решающая линейный случай квадратного уравнения \end{DoxyCompactList}\item 
+enum \doxymbox{\hyperlink{utils_8h_a30036d522909f271124388aa785be999}{RETURN\+\_\+\+VALUES}} \doxymbox{\hyperlink{quadratic_8h_a59d28998f68df71388fe6ddbfe07d309}{solve\+\_\+equations}} (\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}equations, int equations\+\_\+number)
+\begin{DoxyCompactList}\small\item\em функция, решающая массив квадратных уравнений \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \doxymbox{\hyperlink{quadratic_8h_a045579972d89633bbc854b01a8745b2a}{COEFFICIENTS\+\_\+\+AMOUNT}} = 3
+\begin{DoxyCompactList}\small\item\em количество коэффициентов уравнения \end{DoxyCompactList}\item 
+const int \doxymbox{\hyperlink{quadratic_8h_a0fe54279a3446a8fe57620b4a495421c}{MAX\+\_\+\+EQUATIONS\+\_\+\+AMOUNT}} = 100
+\begin{DoxyCompactList}\small\item\em максимальное количество уравнений которое может ввести пользователь \end{DoxyCompactList}\item 
+const int \doxymbox{\hyperlink{quadratic_8h_ad74b98f2f2ecdcc0f7be30ba94b2adbf}{MAX\+\_\+\+TEST\+\_\+\+AMOUNT}} = 100
+\begin{DoxyCompactList}\small\item\em максимальное количество тестовых уравнений \end{DoxyCompactList}\item 
+const int \doxymbox{\hyperlink{quadratic_8h_a136e97a062adb82233ef0dad7545e6bd}{MAX\+\_\+\+FILE\+\_\+\+NAME}} = 100
+\begin{DoxyCompactList}\small\item\em максимальная длина имени файла \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+заголовочный файл макросами, енамами и прототипами функций из файлов \doxylink{quadraticsolver_8c}{quadraticsolver.\+c}, \doxylink{quadraticinput_8c}{quadraticinput.\+c}, \doxylink{quadraticoutput_8c}{quadraticoutput.\+c} 
+
+
+
+\label{quadratic_8h_doc-enum-members}
+\Hypertarget{quadratic_8h_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{quadratic_8h_aaebdf47879d48baf2a8ce6fcb97164ca}\index{quadratic.h@{quadratic.h}!ROOTS\_NUMBER@{ROOTS\_NUMBER}}
+\index{ROOTS\_NUMBER@{ROOTS\_NUMBER}!quadratic.h@{quadratic.h}}
+\doxysubsubsection{\texorpdfstring{ROOTS\_NUMBER}{ROOTS\_NUMBER}}
+{\footnotesize\ttfamily \label{quadratic_8h_aaebdf47879d48baf2a8ce6fcb97164ca} 
+enum \doxymbox{\hyperlink{quadratic_8h_aaebdf47879d48baf2a8ce6fcb97164ca}{ROOTS\+\_\+\+NUMBER}}}
+
+
+
+количество корней уравнения 
+
+\begin{DoxyNote}{Note}
+3 это бесконечность 
+\end{DoxyNote}
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NO\_ROOTS@{NO\_ROOTS}!quadratic.h@{quadratic.h}}
+\index{quadratic.h@{quadratic.h}!NO\_ROOTS@{NO\_ROOTS}}
+}\Hypertarget{quadratic_8h_aaebdf47879d48baf2a8ce6fcb97164caab9a321da349ac1355b717745736ad90c}\label{quadratic_8h_aaebdf47879d48baf2a8ce6fcb97164caab9a321da349ac1355b717745736ad90c} 
+NO\+\_\+\+ROOTS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ONE\_ROOT@{ONE\_ROOT}!quadratic.h@{quadratic.h}}
+\index{quadratic.h@{quadratic.h}!ONE\_ROOT@{ONE\_ROOT}}
+}\Hypertarget{quadratic_8h_aaebdf47879d48baf2a8ce6fcb97164caa6700c0f6efd23571cb22aefd2510b1cf}\label{quadratic_8h_aaebdf47879d48baf2a8ce6fcb97164caa6700c0f6efd23571cb22aefd2510b1cf} 
+ONE\+\_\+\+ROOT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TWO\_ROOTS@{TWO\_ROOTS}!quadratic.h@{quadratic.h}}
+\index{quadratic.h@{quadratic.h}!TWO\_ROOTS@{TWO\_ROOTS}}
+}\Hypertarget{quadratic_8h_aaebdf47879d48baf2a8ce6fcb97164caa876622d3c0b008da13a3685c64714e81}\label{quadratic_8h_aaebdf47879d48baf2a8ce6fcb97164caa876622d3c0b008da13a3685c64714e81} 
+TWO\+\_\+\+ROOTS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INF\_ROOTS@{INF\_ROOTS}!quadratic.h@{quadratic.h}}
+\index{quadratic.h@{quadratic.h}!INF\_ROOTS@{INF\_ROOTS}}
+}\Hypertarget{quadratic_8h_aaebdf47879d48baf2a8ce6fcb97164caa5a79e9e49077da58fe5d46a98f0b5e36}\label{quadratic_8h_aaebdf47879d48baf2a8ce6fcb97164caa5a79e9e49077da58fe5d46a98f0b5e36} 
+INF\+\_\+\+ROOTS&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{quadratic_8h_doc-func-members}
+\Hypertarget{quadratic_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{quadratic_8h_a84d30dcc1c73255ead31a930f04a4d6f}\index{quadratic.h@{quadratic.h}!fprint\_answer@{fprint\_answer}}
+\index{fprint\_answer@{fprint\_answer}!quadratic.h@{quadratic.h}}
+\doxysubsubsection{\texorpdfstring{fprint\_answer()}{fprint\_answer()}}
+{\footnotesize\ttfamily \label{quadratic_8h_a84d30dcc1c73255ead31a930f04a4d6f} 
+void fprint\+\_\+answer (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{output\+\_\+file}{, }\item[{\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}}}]{equation}{}\end{DoxyParamCaption})}
+
+
+
+функция для сохранения записи ответа на уравнение в файл 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in}}  & {\em equation} & уравнение для вывода \\
+\hline
+\doxymbox{\texttt{in}}  & {\em output\+\_\+file} & файл для записи \\
+\hline
+\end{DoxyParams}
+\Hypertarget{quadratic_8h_ac27b8c1fd8bb7c979f11493612673ed1}\index{quadratic.h@{quadratic.h}!fprint\_beautiful\_equation@{fprint\_beautiful\_equation}}
+\index{fprint\_beautiful\_equation@{fprint\_beautiful\_equation}!quadratic.h@{quadratic.h}}
+\doxysubsubsection{\texorpdfstring{fprint\_beautiful\_equation()}{fprint\_beautiful\_equation()}}
+{\footnotesize\ttfamily \label{quadratic_8h_ac27b8c1fd8bb7c979f11493612673ed1} 
+void fprint\+\_\+beautiful\+\_\+equation (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{output\+\_\+file}{, }\item[{\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}}}]{equation}{}\end{DoxyParamCaption})}
+
+
+
+функция для красивой записи условия уравнения в файл 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in}}  & {\em equation} & уравнение для вывода \\
+\hline
+\doxymbox{\texttt{in}}  & {\em output\+\_\+file} & файл для записи \\
+\hline
+\end{DoxyParams}
+\Hypertarget{quadratic_8h_a0133e7e5dc41a951755aadc4160d7bbd}\index{quadratic.h@{quadratic.h}!fprint\_solution@{fprint\_solution}}
+\index{fprint\_solution@{fprint\_solution}!quadratic.h@{quadratic.h}}
+\doxysubsubsection{\texorpdfstring{fprint\_solution()}{fprint\_solution()}}
+{\footnotesize\ttfamily \label{quadratic_8h_a0133e7e5dc41a951755aadc4160d7bbd} 
+void fprint\+\_\+solution (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{output\+\_\+file}{, }\item[{\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}}]{equation}{}\end{DoxyParamCaption})}
+
+
+
+функция для записи решения уравнения в файл 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in}}  & {\em equation} & уравнение для вывода \\
+\hline
+\doxymbox{\texttt{in}}  & {\em output\+\_\+file} & файл для записи \\
+\hline
+\end{DoxyParams}
+\Hypertarget{quadratic_8h_a6b2f76a002a7d1489e69d28cff8f914f}\index{quadratic.h@{quadratic.h}!input\_equations@{input\_equations}}
+\index{input\_equations@{input\_equations}!quadratic.h@{quadratic.h}}
+\doxysubsubsection{\texorpdfstring{input\_equations()}{input\_equations()}}
+{\footnotesize\ttfamily \label{quadratic_8h_a6b2f76a002a7d1489e69d28cff8f914f} 
+int input\+\_\+equations (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}}]{equations}{}\end{DoxyParamCaption})}
+
+
+
+функция для выбора способа ввода уравнений 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in,out}}  & {\em equations} & массив для записи уравнений \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+количество записанных уравнений 
+\end{DoxyReturn}
+\Hypertarget{quadratic_8h_a7e6e3b79937b7c530c5160d71ab0e6f4}\index{quadratic.h@{quadratic.h}!input\_from\_console@{input\_from\_console}}
+\index{input\_from\_console@{input\_from\_console}!quadratic.h@{quadratic.h}}
+\doxysubsubsection{\texorpdfstring{input\_from\_console()}{input\_from\_console()}}
+{\footnotesize\ttfamily \label{quadratic_8h_a7e6e3b79937b7c530c5160d71ab0e6f4} 
+int input\+\_\+from\+\_\+console (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}}]{equations}{}\end{DoxyParamCaption})}
+
+
+
+функция, начинающая ввод уравнений из консоли 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in,out}}  & {\em equations} & массив для записи уравнений \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+количество записанных уравнений 
+\end{DoxyReturn}
+\Hypertarget{quadratic_8h_a09a2063bbddb9f779426745e1fc9e10b}\index{quadratic.h@{quadratic.h}!input\_from\_file@{input\_from\_file}}
+\index{input\_from\_file@{input\_from\_file}!quadratic.h@{quadratic.h}}
+\doxysubsubsection{\texorpdfstring{input\_from\_file()}{input\_from\_file()}}
+{\footnotesize\ttfamily \label{quadratic_8h_a09a2063bbddb9f779426745e1fc9e10b} 
+int input\+\_\+from\+\_\+file (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}}]{equations}{}\end{DoxyParamCaption})}
+
+
+
+функция, начинающая ввод уравнений из файла 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in,out}}  & {\em equations} & массив для записи уравнений \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+количество записанных уравнений 
+\end{DoxyReturn}
+\Hypertarget{quadratic_8h_aa09db4ffda791ee51b0cdebb1c95c491}\index{quadratic.h@{quadratic.h}!output\_equations@{output\_equations}}
+\index{output\_equations@{output\_equations}!quadratic.h@{quadratic.h}}
+\doxysubsubsection{\texorpdfstring{output\_equations()}{output\_equations()}}
+{\footnotesize\ttfamily \label{quadratic_8h_aa09db4ffda791ee51b0cdebb1c95c491} 
+void output\+\_\+equations (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}}]{equations}{, }\item[{int}]{equations\+\_\+number}{}\end{DoxyParamCaption})}
+
+
+
+функция выбора пути вывода решенных уравнений 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in}}  & {\em equations} & уравнения для вывода \\
+\hline
+\doxymbox{\texttt{in}}  & {\em equations\+\_\+number} & количество уравнений \\
+\hline
+\end{DoxyParams}
+\Hypertarget{quadratic_8h_a55750c92fe097e8e44fb6c3e45c0186e}\index{quadratic.h@{quadratic.h}!print\_equation@{print\_equation}}
+\index{print\_equation@{print\_equation}!quadratic.h@{quadratic.h}}
+\doxysubsubsection{\texorpdfstring{print\_equation()}{print\_equation()}}
+{\footnotesize\ttfamily \label{quadratic_8h_a55750c92fe097e8e44fb6c3e45c0186e} 
+void print\+\_\+equation (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}}}]{equation}{}\end{DoxyParamCaption})}
+
+\Hypertarget{quadratic_8h_a3266e07c7d96f585f03581c48b86efb6}\index{quadratic.h@{quadratic.h}!read\_coefficients\_from\_console@{read\_coefficients\_from\_console}}
+\index{read\_coefficients\_from\_console@{read\_coefficients\_from\_console}!quadratic.h@{quadratic.h}}
+\doxysubsubsection{\texorpdfstring{read\_coefficients\_from\_console()}{read\_coefficients\_from\_console()}}
+{\footnotesize\ttfamily \label{quadratic_8h_a3266e07c7d96f585f03581c48b86efb6} 
+int read\+\_\+coefficients\+\_\+from\+\_\+console (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}}]{equations}{}\end{DoxyParamCaption})}
+
+
+
+функция, читающая из консоли коэффициенты уравнений через пробелы или пробельные символы 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in,out}}  & {\em equations} & массив для записи уравнений \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+количество записанных уравнений 
+\end{DoxyReturn}
+\Hypertarget{quadratic_8h_a1af1242bbf29c022384f2ae2a8d9ce6e}\index{quadratic.h@{quadratic.h}!read\_coefficients\_from\_file@{read\_coefficients\_from\_file}}
+\index{read\_coefficients\_from\_file@{read\_coefficients\_from\_file}!quadratic.h@{quadratic.h}}
+\doxysubsubsection{\texorpdfstring{read\_coefficients\_from\_file()}{read\_coefficients\_from\_file()}}
+{\footnotesize\ttfamily \label{quadratic_8h_a1af1242bbf29c022384f2ae2a8d9ce6e} 
+int read\+\_\+coefficients\+\_\+from\+\_\+file (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}}]{equations}{, }\item[{FILE \texorpdfstring{$\ast$}{*}}]{input\+\_\+address}{}\end{DoxyParamCaption})}
+
+
+
+функция, читающая из файла коэффициенты уравнений через пробелы или пробельные символы 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in,out}}  & {\em equations} & массив для записи уравнений \\
+\hline
+\doxymbox{\texttt{in}}  & {\em input\+\_\+address} & файл для чтения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+количество записанных уравнений 
+\end{DoxyReturn}
+\Hypertarget{quadratic_8h_a468fa3238a2e059473a955ec39db7ee6}\index{quadratic.h@{quadratic.h}!read\_equations\_from\_file@{read\_equations\_from\_file}}
+\index{read\_equations\_from\_file@{read\_equations\_from\_file}!quadratic.h@{quadratic.h}}
+\doxysubsubsection{\texorpdfstring{read\_equations\_from\_file()}{read\_equations\_from\_file()}}
+{\footnotesize\ttfamily \label{quadratic_8h_a468fa3238a2e059473a955ec39db7ee6} 
+int read\+\_\+equations\+\_\+from\+\_\+file (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}}]{equations}{, }\item[{FILE \texorpdfstring{$\ast$}{*}}]{input\+\_\+address}{}\end{DoxyParamCaption})}
+
+
+
+функция, читающая из файла уравнения в формате \{a, b, c\} \{root1, root2, roots\+\_\+number\} 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in,out}}  & {\em equations} & массив для записи уравнений \\
+\hline
+\doxymbox{\texttt{in}}  & {\em input\+\_\+address} & файл для чтения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+количество записанных уравнений 
+\end{DoxyReturn}
+\Hypertarget{quadratic_8h_abbf76d487597ca0d1cd9c565f72ceed3}\index{quadratic.h@{quadratic.h}!roots\_number\_from\_string@{roots\_number\_from\_string}}
+\index{roots\_number\_from\_string@{roots\_number\_from\_string}!quadratic.h@{quadratic.h}}
+\doxysubsubsection{\texorpdfstring{roots\_number\_from\_string()}{roots\_number\_from\_string()}}
+{\footnotesize\ttfamily \label{quadratic_8h_abbf76d487597ca0d1cd9c565f72ceed3} 
+enum \doxymbox{\hyperlink{quadratic_8h_aaebdf47879d48baf2a8ce6fcb97164ca}{ROOTS\+\_\+\+NUMBER}} roots\+\_\+number\+\_\+from\+\_\+string (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{roots\+\_\+number}{}\end{DoxyParamCaption})}
+
+
+
+функция расшифровывающая строку из файла в enum количества корней 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in,out}}  & {\em roots\+\_\+number} & строка \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+соответствующее строке количество корней 
+\end{DoxyReturn}
+\Hypertarget{quadratic_8h_afa9d5d329390e94eb0fe9eca4592cdfd}\index{quadratic.h@{quadratic.h}!save\_solved\_equations@{save\_solved\_equations}}
+\index{save\_solved\_equations@{save\_solved\_equations}!quadratic.h@{quadratic.h}}
+\doxysubsubsection{\texorpdfstring{save\_solved\_equations()}{save\_solved\_equations()}}
+{\footnotesize\ttfamily \label{quadratic_8h_afa9d5d329390e94eb0fe9eca4592cdfd} 
+int save\+\_\+solved\+\_\+equations (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}}]{equations}{, }\item[{int}]{equations\+\_\+number}{, }\item[{FILE \texorpdfstring{$\ast$}{*}}]{output\+\_\+file}{}\end{DoxyParamCaption})}
+
+
+
+функция для сохранения уравнений в файл 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in}}  & {\em equations} & уравнения для вывода \\
+\hline
+\doxymbox{\texttt{in}}  & {\em equations\+\_\+number} & количество уравнений \\
+\hline
+\doxymbox{\texttt{in}}  & {\em output\+\_\+file} & файл для записи \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+если выбран вывод в консоль, как output\+\_\+file передается stdin 
+\end{DoxyNote}
+\Hypertarget{quadratic_8h_a59d28998f68df71388fe6ddbfe07d309}\index{quadratic.h@{quadratic.h}!solve\_equations@{solve\_equations}}
+\index{solve\_equations@{solve\_equations}!quadratic.h@{quadratic.h}}
+\doxysubsubsection{\texorpdfstring{solve\_equations()}{solve\_equations()}}
+{\footnotesize\ttfamily \label{quadratic_8h_a59d28998f68df71388fe6ddbfe07d309} 
+enum \doxymbox{\hyperlink{utils_8h_a30036d522909f271124388aa785be999}{RETURN\+\_\+\+VALUES}} solve\+\_\+equations (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}}]{equations}{, }\item[{int}]{equations\+\_\+number}{}\end{DoxyParamCaption})}
+
+
+
+функция, решающая массив квадратных уравнений 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in,out}}  & {\em equations} & Уравнения для решения \\
+\hline
+\doxymbox{\texttt{in}}  & {\em equations\+\_\+number} & количество уравнений \\
+\hline
+\end{DoxyParams}
+\Hypertarget{quadratic_8h_aae7c3e6aee106bb62eafee5f0b01c008}\index{quadratic.h@{quadratic.h}!solve\_linear\_equation@{solve\_linear\_equation}}
+\index{solve\_linear\_equation@{solve\_linear\_equation}!quadratic.h@{quadratic.h}}
+\doxysubsubsection{\texorpdfstring{solve\_linear\_equation()}{solve\_linear\_equation()}}
+{\footnotesize\ttfamily \label{quadratic_8h_aae7c3e6aee106bb62eafee5f0b01c008} 
+void solve\+\_\+linear\+\_\+equation (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}}]{equation}{}\end{DoxyParamCaption})}
+
+
+
+функция, решающая линейный случай квадратного уравнения 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in,out}}  & {\em equation} & Уравнение для решения \\
+\hline
+\end{DoxyParams}
+\Hypertarget{quadratic_8h_abb157156609f7acff598c57f1d4b4d82}\index{quadratic.h@{quadratic.h}!solve\_quadratic\_equation@{solve\_quadratic\_equation}}
+\index{solve\_quadratic\_equation@{solve\_quadratic\_equation}!quadratic.h@{quadratic.h}}
+\doxysubsubsection{\texorpdfstring{solve\_quadratic\_equation()}{solve\_quadratic\_equation()}}
+{\footnotesize\ttfamily \label{quadratic_8h_abb157156609f7acff598c57f1d4b4d82} 
+void solve\+\_\+quadratic\+\_\+equation (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}}]{equation}{}\end{DoxyParamCaption})}
+
+
+
+функция, решающая одно квадратное уравнение 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in,out}}  & {\em equation} & Уравнение для решения \\
+\hline
+\end{DoxyParams}
+
+
+\label{quadratic_8h_doc-var-members}
+\Hypertarget{quadratic_8h_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{quadratic_8h_a045579972d89633bbc854b01a8745b2a}\index{quadratic.h@{quadratic.h}!COEFFICIENTS\_AMOUNT@{COEFFICIENTS\_AMOUNT}}
+\index{COEFFICIENTS\_AMOUNT@{COEFFICIENTS\_AMOUNT}!quadratic.h@{quadratic.h}}
+\doxysubsubsection{\texorpdfstring{COEFFICIENTS\_AMOUNT}{COEFFICIENTS\_AMOUNT}}
+{\footnotesize\ttfamily \label{quadratic_8h_a045579972d89633bbc854b01a8745b2a} 
+const int COEFFICIENTS\+\_\+\+AMOUNT = 3}
+
+
+
+количество коэффициентов уравнения 
+
+\Hypertarget{quadratic_8h_a0fe54279a3446a8fe57620b4a495421c}\index{quadratic.h@{quadratic.h}!MAX\_EQUATIONS\_AMOUNT@{MAX\_EQUATIONS\_AMOUNT}}
+\index{MAX\_EQUATIONS\_AMOUNT@{MAX\_EQUATIONS\_AMOUNT}!quadratic.h@{quadratic.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_EQUATIONS\_AMOUNT}{MAX\_EQUATIONS\_AMOUNT}}
+{\footnotesize\ttfamily \label{quadratic_8h_a0fe54279a3446a8fe57620b4a495421c} 
+const int MAX\+\_\+\+EQUATIONS\+\_\+\+AMOUNT = 100}
+
+
+
+максимальное количество уравнений которое может ввести пользователь 
+
+\Hypertarget{quadratic_8h_a136e97a062adb82233ef0dad7545e6bd}\index{quadratic.h@{quadratic.h}!MAX\_FILE\_NAME@{MAX\_FILE\_NAME}}
+\index{MAX\_FILE\_NAME@{MAX\_FILE\_NAME}!quadratic.h@{quadratic.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_FILE\_NAME}{MAX\_FILE\_NAME}}
+{\footnotesize\ttfamily \label{quadratic_8h_a136e97a062adb82233ef0dad7545e6bd} 
+const int MAX\+\_\+\+FILE\+\_\+\+NAME = 100}
+
+
+
+максимальная длина имени файла 
+
+\Hypertarget{quadratic_8h_ad74b98f2f2ecdcc0f7be30ba94b2adbf}\index{quadratic.h@{quadratic.h}!MAX\_TEST\_AMOUNT@{MAX\_TEST\_AMOUNT}}
+\index{MAX\_TEST\_AMOUNT@{MAX\_TEST\_AMOUNT}!quadratic.h@{quadratic.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_TEST\_AMOUNT}{MAX\_TEST\_AMOUNT}}
+{\footnotesize\ttfamily \label{quadratic_8h_ad74b98f2f2ecdcc0f7be30ba94b2adbf} 
+const int MAX\+\_\+\+TEST\+\_\+\+AMOUNT = 100}
+
+
+
+максимальное количество тестовых уравнений 
+

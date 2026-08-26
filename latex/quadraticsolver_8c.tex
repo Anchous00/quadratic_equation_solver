@@ -1,0 +1,74 @@
+\doxysection{C:/\+\+Users/\+vivan/.vscode/\+projects/\+helloworld/\+quadratic\+\_\+equation\+\_\+solver/\+quadraticsolver.c File Reference}
+\hypertarget{quadraticsolver_8c}{}\label{quadraticsolver_8c}\index{C:/Users/vivan/.vscode/projects/helloworld/quadratic\_equation\_solver/quadraticsolver.c@{C:/Users/vivan/.vscode/projects/helloworld/quadratic\_equation\_solver/quadraticsolver.c}}
+
+
+файл с функциями, отвечающими за решение уравнений  
+
+
+{\ttfamily \+\#include "{}quadratic.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{utils_8h_a30036d522909f271124388aa785be999}{RETURN\+\_\+\+VALUES}} \doxymbox{\hyperlink{quadraticsolver_8c_a59d28998f68df71388fe6ddbfe07d309}{solve\+\_\+equations}} (\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}equations, int equations\+\_\+number)
+\begin{DoxyCompactList}\small\item\em функция, решающая массив квадратных уравнений \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{quadraticsolver_8c_abb157156609f7acff598c57f1d4b4d82}{solve\+\_\+quadratic\+\_\+equation}} (\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}equation)
+\begin{DoxyCompactList}\small\item\em функция, решающая одно квадратное уравнение \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{quadraticsolver_8c_aae7c3e6aee106bb62eafee5f0b01c008}{solve\+\_\+linear\+\_\+equation}} (\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}equation)
+\begin{DoxyCompactList}\small\item\em функция, решающая линейный случай квадратного уравнения \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+файл с функциями, отвечающими за решение уравнений 
+
+
+
+\label{quadraticsolver_8c_doc-func-members}
+\Hypertarget{quadraticsolver_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{quadraticsolver_8c_a59d28998f68df71388fe6ddbfe07d309}\index{quadraticsolver.c@{quadraticsolver.c}!solve\_equations@{solve\_equations}}
+\index{solve\_equations@{solve\_equations}!quadraticsolver.c@{quadraticsolver.c}}
+\doxysubsubsection{\texorpdfstring{solve\_equations()}{solve\_equations()}}
+{\footnotesize\ttfamily \label{quadraticsolver_8c_a59d28998f68df71388fe6ddbfe07d309} 
+enum \doxymbox{\hyperlink{utils_8h_a30036d522909f271124388aa785be999}{RETURN\+\_\+\+VALUES}} solve\+\_\+equations (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}}]{equations}{, }\item[{int}]{equations\+\_\+number}{}\end{DoxyParamCaption})}
+
+
+
+функция, решающая массив квадратных уравнений 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in,out}}  & {\em equations} & Уравнения для решения \\
+\hline
+\doxymbox{\texttt{in}}  & {\em equations\+\_\+number} & количество уравнений \\
+\hline
+\end{DoxyParams}
+\Hypertarget{quadraticsolver_8c_aae7c3e6aee106bb62eafee5f0b01c008}\index{quadraticsolver.c@{quadraticsolver.c}!solve\_linear\_equation@{solve\_linear\_equation}}
+\index{solve\_linear\_equation@{solve\_linear\_equation}!quadraticsolver.c@{quadraticsolver.c}}
+\doxysubsubsection{\texorpdfstring{solve\_linear\_equation()}{solve\_linear\_equation()}}
+{\footnotesize\ttfamily \label{quadraticsolver_8c_aae7c3e6aee106bb62eafee5f0b01c008} 
+void solve\+\_\+linear\+\_\+equation (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}}]{equation}{}\end{DoxyParamCaption})}
+
+
+
+функция, решающая линейный случай квадратного уравнения 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in,out}}  & {\em equation} & Уравнение для решения \\
+\hline
+\end{DoxyParams}
+\Hypertarget{quadraticsolver_8c_abb157156609f7acff598c57f1d4b4d82}\index{quadraticsolver.c@{quadraticsolver.c}!solve\_quadratic\_equation@{solve\_quadratic\_equation}}
+\index{solve\_quadratic\_equation@{solve\_quadratic\_equation}!quadraticsolver.c@{quadraticsolver.c}}
+\doxysubsubsection{\texorpdfstring{solve\_quadratic\_equation()}{solve\_quadratic\_equation()}}
+{\footnotesize\ttfamily \label{quadraticsolver_8c_abb157156609f7acff598c57f1d4b4d82} 
+void solve\+\_\+quadratic\+\_\+equation (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}}]{equation}{}\end{DoxyParamCaption})}
+
+
+
+функция, решающая одно квадратное уравнение 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in,out}}  & {\em equation} & Уравнение для решения \\
+\hline
+\end{DoxyParams}

@@ -1,3 +1,8 @@
+/*!
+* \file
+* \brief заголовочный файл макросами, енамами и прототипами функций из файла utils.c
+*/
+
 #include <stdio.h>
 #include <math.h>
 #include <assert.h>

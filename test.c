@@ -1,3 +1,8 @@
+/*!
+* \file
+* \brief файл с кодом запуска теста
+*/
+
 #include "quadratic.h"
 
 
@@ -8,7 +13,7 @@ int main( int argc, char *argv[] )
 {
     char arg = '\0';
     bool test_log = false;
-
+//TODO getopt
     while (--argc > 0 && (*++argv)[0] == '-')
     {
         while ((arg = *++argv[0]))
@@ -63,7 +68,7 @@ int run_test( quadratic_equation *test_equations, quadratic_equation *control_eq
             if (log)
             {
                 printf("successful test %d:\n", successful_tests);
-                fprint_equation(stdout, test_equations[i]);
+                fprint_answer(stdout, test_equations[i]);
             }
         }
 

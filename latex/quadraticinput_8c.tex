@@ -1,0 +1,165 @@
+\doxysection{C:/\+\+Users/\+vivan/.vscode/\+projects/\+helloworld/\+quadratic\+\_\+equation\+\_\+solver/\+quadraticinput.c File Reference}
+\hypertarget{quadraticinput_8c}{}\label{quadraticinput_8c}\index{C:/Users/vivan/.vscode/projects/helloworld/quadratic\_equation\_solver/quadraticinput.c@{C:/Users/vivan/.vscode/projects/helloworld/quadratic\_equation\_solver/quadraticinput.c}}
+
+
+файл с функциями, отвечающими за ввод уравнений  
+
+
+{\ttfamily \+\#include "{}quadratic.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{quadraticinput_8c_a6b2f76a002a7d1489e69d28cff8f914f}{input\+\_\+equations}} (\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}equations)
+\begin{DoxyCompactList}\small\item\em функция для выбора способа ввода уравнений \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{quadraticinput_8c_a09a2063bbddb9f779426745e1fc9e10b}{input\+\_\+from\+\_\+file}} (\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}equations)
+\begin{DoxyCompactList}\small\item\em функция, начинающая ввод уравнений из файла \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{quadraticinput_8c_a7e6e3b79937b7c530c5160d71ab0e6f4}{input\+\_\+from\+\_\+console}} (\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}equations)
+\begin{DoxyCompactList}\small\item\em функция, начинающая ввод уравнений из консоли \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{quadraticinput_8c_a29b3b42071540c54557a6785ff65187c}{read\+\_\+coefficients\+\_\+from\+\_\+file}} (\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}equations, FILE \texorpdfstring{$\ast$}{*}input\+\_\+address)
+\begin{DoxyCompactList}\small\item\em функция, читающая из файла коэффициенты уравнений через пробелы или пробельные символы \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{quadraticinput_8c_a3266e07c7d96f585f03581c48b86efb6}{read\+\_\+coefficients\+\_\+from\+\_\+console}} (\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}equations)
+\begin{DoxyCompactList}\small\item\em функция, читающая из консоли коэффициенты уравнений через пробелы или пробельные символы \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{quadraticinput_8c_a468fa3238a2e059473a955ec39db7ee6}{read\+\_\+equations\+\_\+from\+\_\+file}} (\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}equations, FILE \texorpdfstring{$\ast$}{*}input\+\_\+address)
+\begin{DoxyCompactList}\small\item\em функция, читающая из файла уравнения в формате \{a, b, c\} \{root1, root2, roots\+\_\+number\} \end{DoxyCompactList}\item 
+enum \doxymbox{\hyperlink{quadratic_8h_aaebdf47879d48baf2a8ce6fcb97164ca}{ROOTS\+\_\+\+NUMBER}} \doxymbox{\hyperlink{quadraticinput_8c_abbf76d487597ca0d1cd9c565f72ceed3}{roots\+\_\+number\+\_\+from\+\_\+string}} (const char \texorpdfstring{$\ast$}{*}roots\+\_\+number)
+\begin{DoxyCompactList}\small\item\em функция расшифровывающая строку из файла в enum количества корней \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+файл с функциями, отвечающими за ввод уравнений 
+
+
+
+\label{quadraticinput_8c_doc-func-members}
+\Hypertarget{quadraticinput_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{quadraticinput_8c_a6b2f76a002a7d1489e69d28cff8f914f}\index{quadraticinput.c@{quadraticinput.c}!input\_equations@{input\_equations}}
+\index{input\_equations@{input\_equations}!quadraticinput.c@{quadraticinput.c}}
+\doxysubsubsection{\texorpdfstring{input\_equations()}{input\_equations()}}
+{\footnotesize\ttfamily \label{quadraticinput_8c_a6b2f76a002a7d1489e69d28cff8f914f} 
+int input\+\_\+equations (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}}]{equations}{}\end{DoxyParamCaption})}
+
+
+
+функция для выбора способа ввода уравнений 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in,out}}  & {\em equations} & массив для записи уравнений \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+количество записанных уравнений 
+\end{DoxyReturn}
+\Hypertarget{quadraticinput_8c_a7e6e3b79937b7c530c5160d71ab0e6f4}\index{quadraticinput.c@{quadraticinput.c}!input\_from\_console@{input\_from\_console}}
+\index{input\_from\_console@{input\_from\_console}!quadraticinput.c@{quadraticinput.c}}
+\doxysubsubsection{\texorpdfstring{input\_from\_console()}{input\_from\_console()}}
+{\footnotesize\ttfamily \label{quadraticinput_8c_a7e6e3b79937b7c530c5160d71ab0e6f4} 
+int input\+\_\+from\+\_\+console (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}}]{equations}{}\end{DoxyParamCaption})}
+
+
+
+функция, начинающая ввод уравнений из консоли 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in,out}}  & {\em equations} & массив для записи уравнений \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+количество записанных уравнений 
+\end{DoxyReturn}
+\Hypertarget{quadraticinput_8c_a09a2063bbddb9f779426745e1fc9e10b}\index{quadraticinput.c@{quadraticinput.c}!input\_from\_file@{input\_from\_file}}
+\index{input\_from\_file@{input\_from\_file}!quadraticinput.c@{quadraticinput.c}}
+\doxysubsubsection{\texorpdfstring{input\_from\_file()}{input\_from\_file()}}
+{\footnotesize\ttfamily \label{quadraticinput_8c_a09a2063bbddb9f779426745e1fc9e10b} 
+int input\+\_\+from\+\_\+file (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}}]{equations}{}\end{DoxyParamCaption})}
+
+
+
+функция, начинающая ввод уравнений из файла 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in,out}}  & {\em equations} & массив для записи уравнений \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+количество записанных уравнений 
+\end{DoxyReturn}
+\Hypertarget{quadraticinput_8c_a3266e07c7d96f585f03581c48b86efb6}\index{quadraticinput.c@{quadraticinput.c}!read\_coefficients\_from\_console@{read\_coefficients\_from\_console}}
+\index{read\_coefficients\_from\_console@{read\_coefficients\_from\_console}!quadraticinput.c@{quadraticinput.c}}
+\doxysubsubsection{\texorpdfstring{read\_coefficients\_from\_console()}{read\_coefficients\_from\_console()}}
+{\footnotesize\ttfamily \label{quadraticinput_8c_a3266e07c7d96f585f03581c48b86efb6} 
+int read\+\_\+coefficients\+\_\+from\+\_\+console (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}}]{equations}{}\end{DoxyParamCaption})}
+
+
+
+функция, читающая из консоли коэффициенты уравнений через пробелы или пробельные символы 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in,out}}  & {\em equations} & массив для записи уравнений \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+количество записанных уравнений 
+\end{DoxyReturn}
+\Hypertarget{quadraticinput_8c_a29b3b42071540c54557a6785ff65187c}\index{quadraticinput.c@{quadraticinput.c}!read\_coefficients\_from\_file@{read\_coefficients\_from\_file}}
+\index{read\_coefficients\_from\_file@{read\_coefficients\_from\_file}!quadraticinput.c@{quadraticinput.c}}
+\doxysubsubsection{\texorpdfstring{read\_coefficients\_from\_file()}{read\_coefficients\_from\_file()}}
+{\footnotesize\ttfamily \label{quadraticinput_8c_a29b3b42071540c54557a6785ff65187c} 
+int read\+\_\+coefficients\+\_\+from\+\_\+file (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}}]{equations}{, }\item[{FILE \texorpdfstring{$\ast$}{*}}]{input\+\_\+address}{}\end{DoxyParamCaption})}
+
+
+
+функция, читающая из файла коэффициенты уравнений через пробелы или пробельные символы 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in,out}}  & {\em equations} & массив для записи уравнений \\
+\hline
+\doxymbox{\texttt{in}}  & {\em input\+\_\+address} & файл для чтения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+количество записанных уравнений 
+\end{DoxyReturn}
+\Hypertarget{quadraticinput_8c_a468fa3238a2e059473a955ec39db7ee6}\index{quadraticinput.c@{quadraticinput.c}!read\_equations\_from\_file@{read\_equations\_from\_file}}
+\index{read\_equations\_from\_file@{read\_equations\_from\_file}!quadraticinput.c@{quadraticinput.c}}
+\doxysubsubsection{\texorpdfstring{read\_equations\_from\_file()}{read\_equations\_from\_file()}}
+{\footnotesize\ttfamily \label{quadraticinput_8c_a468fa3238a2e059473a955ec39db7ee6} 
+int read\+\_\+equations\+\_\+from\+\_\+file (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}}]{equations}{, }\item[{FILE \texorpdfstring{$\ast$}{*}}]{input\+\_\+address}{}\end{DoxyParamCaption})}
+
+
+
+функция, читающая из файла уравнения в формате \{a, b, c\} \{root1, root2, roots\+\_\+number\} 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in,out}}  & {\em equations} & массив для записи уравнений \\
+\hline
+\doxymbox{\texttt{in}}  & {\em input\+\_\+address} & файл для чтения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+количество записанных уравнений 
+\end{DoxyReturn}
+\Hypertarget{quadraticinput_8c_abbf76d487597ca0d1cd9c565f72ceed3}\index{quadraticinput.c@{quadraticinput.c}!roots\_number\_from\_string@{roots\_number\_from\_string}}
+\index{roots\_number\_from\_string@{roots\_number\_from\_string}!quadraticinput.c@{quadraticinput.c}}
+\doxysubsubsection{\texorpdfstring{roots\_number\_from\_string()}{roots\_number\_from\_string()}}
+{\footnotesize\ttfamily \label{quadraticinput_8c_abbf76d487597ca0d1cd9c565f72ceed3} 
+enum \doxymbox{\hyperlink{quadratic_8h_aaebdf47879d48baf2a8ce6fcb97164ca}{ROOTS\+\_\+\+NUMBER}} roots\+\_\+number\+\_\+from\+\_\+string (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{roots\+\_\+number}{}\end{DoxyParamCaption})}
+
+
+
+функция расшифровывающая строку из файла в enum количества корней 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in,out}}  & {\em roots\+\_\+number} & строка \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+соответствующее строке количество корней 
+\end{DoxyReturn}

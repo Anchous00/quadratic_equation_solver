@@ -1,0 +1,8 @@
+var searchData=
+[
+  ['read_5fcoefficients_5ffrom_5fconsole_0',['read_coefficients_from_console',['../quadratic_8h.html#a3266e07c7d96f585f03581c48b86efb6',1,'read_coefficients_from_console(quadratic_equation *equations):&#160;quadraticinput.c'],['../quadraticinput_8c.html#a3266e07c7d96f585f03581c48b86efb6',1,'read_coefficients_from_console(quadratic_equation *equations):&#160;quadraticinput.c']]],
+  ['read_5fcoefficients_5ffrom_5ffile_1',['read_coefficients_from_file',['../quadratic_8h.html#a1af1242bbf29c022384f2ae2a8d9ce6e',1,'read_coefficients_from_file(quadratic_equation *equation, FILE *input_address):&#160;quadraticinput.c'],['../quadraticinput_8c.html#a29b3b42071540c54557a6785ff65187c',1,'read_coefficients_from_file(quadratic_equation *equations, FILE *input_address):&#160;quadraticinput.c']]],
+  ['read_5fequations_5ffrom_5ffile_2',['read_equations_from_file',['../quadratic_8h.html#a468fa3238a2e059473a955ec39db7ee6',1,'read_equations_from_file(quadratic_equation *equations, FILE *input_address):&#160;quadraticinput.c'],['../quadraticinput_8c.html#a468fa3238a2e059473a955ec39db7ee6',1,'read_equations_from_file(quadratic_equation *equations, FILE *input_address):&#160;quadraticinput.c']]],
+  ['roots_5fnumber_5ffrom_5fstring_3',['roots_number_from_string',['../quadratic_8h.html#abbf76d487597ca0d1cd9c565f72ceed3',1,'roots_number_from_string(const char *roots_number):&#160;quadraticinput.c'],['../quadraticinput_8c.html#abbf76d487597ca0d1cd9c565f72ceed3',1,'roots_number_from_string(const char *roots_number):&#160;quadraticinput.c']]],
+  ['run_5ftest_4',['run_test',['../test_8c.html#ae96e9f2d46f1681c62e9b88b16a85036',1,'test.c']]]
+];

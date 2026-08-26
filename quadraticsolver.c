@@ -1,6 +1,16 @@
+/*!
+* \file
+* \brief файл с функциями, отвечающими за решение уравнений
+*/
+
 #include "quadratic.h"
 
 
+/*!
+*   \brief функция, решающая массив квадратных уравнений
+*   \param [in, out] equations Уравнения для решения
+*   \param [in] equations_number количество уравнений
+*/
 enum RETURN_VALUES solve_equations( quadratic_equation *equations, int equations_number )
 {
     assert(equations);
@@ -13,7 +23,11 @@ enum RETURN_VALUES solve_equations( quadratic_equation *equations, int equations
     return SUCCESS;
 }
 
-enum RETURN_VALUES solve_quadratic_equation( quadratic_equation *equation )
+/*!
+*   \brief функция, решающая одно квадратное уравнение
+*   \param [in, out] equation Уравнение для решения
+*/
+void solve_quadratic_equation( quadratic_equation *equation )
 {
     assert(equation);
     assert(equation->roots);
@@ -57,7 +71,12 @@ enum RETURN_VALUES solve_quadratic_equation( quadratic_equation *equation )
     return SUCCESS;
 }
 
-enum RETURN_VALUES solve_linear_equation( quadratic_equation *equation )
+
+/*!
+*   \brief функция, решающая линейный случай квадратного уравнения
+*   \param [in, out] equation Уравнение для решения
+*/
+void solve_linear_equation( quadratic_equation *equation )
 {
     assert(equation);
 
@@ -67,13 +86,13 @@ enum RETURN_VALUES solve_linear_equation( quadratic_equation *equation )
         equation->roots[0] = NAN;
         equation->roots[1] = NAN;
 
-        return SUCCESS;
+        return;
     }
     equation->roots[0] = -equation->coefficients[2] / equation->coefficients[1];
     equation->roots[1] = NAN;
     equation->roots_number = ONE_ROOT;
 
-    return SUCCESS;
+    return;
 }
 
 

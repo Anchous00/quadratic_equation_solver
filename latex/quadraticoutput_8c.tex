@@ -1,0 +1,149 @@
+\doxysection{C:/\+\+Users/\+vivan/.vscode/\+projects/\+helloworld/\+quadratic\+\_\+equation\+\_\+solver/\+quadraticoutput.c File Reference}
+\hypertarget{quadraticoutput_8c}{}\label{quadraticoutput_8c}\index{C:/Users/vivan/.vscode/projects/helloworld/quadratic\_equation\_solver/quadraticoutput.c@{C:/Users/vivan/.vscode/projects/helloworld/quadratic\_equation\_solver/quadraticoutput.c}}
+
+
+файл с функциями, отвечающими за вывод уравнений  
+
+
+{\ttfamily \+\#include "{}quadratic.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{quadraticoutput_8c_aa09db4ffda791ee51b0cdebb1c95c491}{output\+\_\+equations}} (\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}equations, int equations\+\_\+number)
+\begin{DoxyCompactList}\small\item\em функция выбора пути вывода решенных уравнений \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{quadraticoutput_8c_afa9d5d329390e94eb0fe9eca4592cdfd}{save\+\_\+solved\+\_\+equations}} (\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}equations, int equations\+\_\+number, FILE \texorpdfstring{$\ast$}{*}output\+\_\+file)
+\begin{DoxyCompactList}\small\item\em функция для сохранения уравнений в файл \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{quadraticoutput_8c_a84d30dcc1c73255ead31a930f04a4d6f}{fprint\+\_\+answer}} (FILE \texorpdfstring{$\ast$}{*}output\+\_\+file, \doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} equation)
+\begin{DoxyCompactList}\small\item\em функция для сохранения записи ответа на уравнение в файл \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{quadraticoutput_8c_a55750c92fe097e8e44fb6c3e45c0186e}{print\+\_\+equation}} (\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} equation)
+\item 
+void \doxymbox{\hyperlink{quadraticoutput_8c_ac27b8c1fd8bb7c979f11493612673ed1}{fprint\+\_\+beautiful\+\_\+equation}} (FILE \texorpdfstring{$\ast$}{*}output\+\_\+file, \doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} equation)
+\begin{DoxyCompactList}\small\item\em функция для красивой записи условия уравнения в файл \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{quadraticoutput_8c_a0133e7e5dc41a951755aadc4160d7bbd}{fprint\+\_\+solution}} (FILE \texorpdfstring{$\ast$}{*}output\+\_\+file, \doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}equation)
+\begin{DoxyCompactList}\small\item\em функция для записи решения уравнения в файл \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{quadraticoutput_8c_ad736e6a2274548011d4e3febd07093e2}{output\+\_\+file\+\_\+name}} = "{}solved\+\_\+equations.\+txt"{}
+\begin{DoxyCompactList}\small\item\em захардкоженное имя файла для записи \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+файл с функциями, отвечающими за вывод уравнений 
+
+
+
+\label{quadraticoutput_8c_doc-func-members}
+\Hypertarget{quadraticoutput_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{quadraticoutput_8c_a84d30dcc1c73255ead31a930f04a4d6f}\index{quadraticoutput.c@{quadraticoutput.c}!fprint\_answer@{fprint\_answer}}
+\index{fprint\_answer@{fprint\_answer}!quadraticoutput.c@{quadraticoutput.c}}
+\doxysubsubsection{\texorpdfstring{fprint\_answer()}{fprint\_answer()}}
+{\footnotesize\ttfamily \label{quadraticoutput_8c_a84d30dcc1c73255ead31a930f04a4d6f} 
+void fprint\+\_\+answer (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{output\+\_\+file}{, }\item[{\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}}}]{equation}{}\end{DoxyParamCaption})}
+
+
+
+функция для сохранения записи ответа на уравнение в файл 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in}}  & {\em equation} & уравнение для вывода \\
+\hline
+\doxymbox{\texttt{in}}  & {\em output\+\_\+file} & файл для записи \\
+\hline
+\end{DoxyParams}
+\Hypertarget{quadraticoutput_8c_ac27b8c1fd8bb7c979f11493612673ed1}\index{quadraticoutput.c@{quadraticoutput.c}!fprint\_beautiful\_equation@{fprint\_beautiful\_equation}}
+\index{fprint\_beautiful\_equation@{fprint\_beautiful\_equation}!quadraticoutput.c@{quadraticoutput.c}}
+\doxysubsubsection{\texorpdfstring{fprint\_beautiful\_equation()}{fprint\_beautiful\_equation()}}
+{\footnotesize\ttfamily \label{quadraticoutput_8c_ac27b8c1fd8bb7c979f11493612673ed1} 
+void fprint\+\_\+beautiful\+\_\+equation (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{output\+\_\+file}{, }\item[{\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}}}]{equation}{}\end{DoxyParamCaption})}
+
+
+
+функция для красивой записи условия уравнения в файл 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in}}  & {\em equation} & уравнение для вывода \\
+\hline
+\doxymbox{\texttt{in}}  & {\em output\+\_\+file} & файл для записи \\
+\hline
+\end{DoxyParams}
+\Hypertarget{quadraticoutput_8c_a0133e7e5dc41a951755aadc4160d7bbd}\index{quadraticoutput.c@{quadraticoutput.c}!fprint\_solution@{fprint\_solution}}
+\index{fprint\_solution@{fprint\_solution}!quadraticoutput.c@{quadraticoutput.c}}
+\doxysubsubsection{\texorpdfstring{fprint\_solution()}{fprint\_solution()}}
+{\footnotesize\ttfamily \label{quadraticoutput_8c_a0133e7e5dc41a951755aadc4160d7bbd} 
+void fprint\+\_\+solution (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{output\+\_\+file}{, }\item[{\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}}]{equation}{}\end{DoxyParamCaption})}
+
+
+
+функция для записи решения уравнения в файл 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in}}  & {\em equation} & уравнение для вывода \\
+\hline
+\doxymbox{\texttt{in}}  & {\em output\+\_\+file} & файл для записи \\
+\hline
+\end{DoxyParams}
+\Hypertarget{quadraticoutput_8c_aa09db4ffda791ee51b0cdebb1c95c491}\index{quadraticoutput.c@{quadraticoutput.c}!output\_equations@{output\_equations}}
+\index{output\_equations@{output\_equations}!quadraticoutput.c@{quadraticoutput.c}}
+\doxysubsubsection{\texorpdfstring{output\_equations()}{output\_equations()}}
+{\footnotesize\ttfamily \label{quadraticoutput_8c_aa09db4ffda791ee51b0cdebb1c95c491} 
+void output\+\_\+equations (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}}]{equations}{, }\item[{int}]{equations\+\_\+number}{}\end{DoxyParamCaption})}
+
+
+
+функция выбора пути вывода решенных уравнений 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in}}  & {\em equations} & уравнения для вывода \\
+\hline
+\doxymbox{\texttt{in}}  & {\em equations\+\_\+number} & количество уравнений \\
+\hline
+\end{DoxyParams}
+\Hypertarget{quadraticoutput_8c_a55750c92fe097e8e44fb6c3e45c0186e}\index{quadraticoutput.c@{quadraticoutput.c}!print\_equation@{print\_equation}}
+\index{print\_equation@{print\_equation}!quadraticoutput.c@{quadraticoutput.c}}
+\doxysubsubsection{\texorpdfstring{print\_equation()}{print\_equation()}}
+{\footnotesize\ttfamily \label{quadraticoutput_8c_a55750c92fe097e8e44fb6c3e45c0186e} 
+void print\+\_\+equation (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}}}]{equation}{}\end{DoxyParamCaption})}
+
+\Hypertarget{quadraticoutput_8c_afa9d5d329390e94eb0fe9eca4592cdfd}\index{quadraticoutput.c@{quadraticoutput.c}!save\_solved\_equations@{save\_solved\_equations}}
+\index{save\_solved\_equations@{save\_solved\_equations}!quadraticoutput.c@{quadraticoutput.c}}
+\doxysubsubsection{\texorpdfstring{save\_solved\_equations()}{save\_solved\_equations()}}
+{\footnotesize\ttfamily \label{quadraticoutput_8c_afa9d5d329390e94eb0fe9eca4592cdfd} 
+int save\+\_\+solved\+\_\+equations (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structquadratic__equation}{quadratic\+\_\+equation}} \texorpdfstring{$\ast$}{*}}]{equations}{, }\item[{int}]{equations\+\_\+number}{, }\item[{FILE \texorpdfstring{$\ast$}{*}}]{output\+\_\+file}{}\end{DoxyParamCaption})}
+
+
+
+функция для сохранения уравнений в файл 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\doxymbox{\texttt{in}}  & {\em equations} & уравнения для вывода \\
+\hline
+\doxymbox{\texttt{in}}  & {\em equations\+\_\+number} & количество уравнений \\
+\hline
+\doxymbox{\texttt{in}}  & {\em output\+\_\+file} & файл для записи \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+если выбран вывод в консоль, как output\+\_\+file передается stdin 
+\end{DoxyNote}
+
+
+\label{quadraticoutput_8c_doc-var-members}
+\Hypertarget{quadraticoutput_8c_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{quadraticoutput_8c_ad736e6a2274548011d4e3febd07093e2}\index{quadraticoutput.c@{quadraticoutput.c}!output\_file\_name@{output\_file\_name}}
+\index{output\_file\_name@{output\_file\_name}!quadraticoutput.c@{quadraticoutput.c}}
+\doxysubsubsection{\texorpdfstring{output\_file\_name}{output\_file\_name}}
+{\footnotesize\ttfamily \label{quadraticoutput_8c_ad736e6a2274548011d4e3febd07093e2} 
+const char\texorpdfstring{$\ast$}{*} output\+\_\+file\+\_\+name = "{}solved\+\_\+equations.\+txt"{}}
+
+
+
+захардкоженное имя файла для записи 
+
