@@ -1,100 +1,100 @@
-41 467 334 
-500 169 724 
-478 358 962 
-464 705 145 
-281 827 961 
-491 995 942 
-827 436 391 
-604 902 153 
-292 382 421 
-716 718 895 
-447 726 771 
-538 869 912 
-667 299 35 
-894 703 811 
-322 333 673 
-664 141 711 
-253 868 547 
-644 662 757 
-37 859 723 
-741 529 778 
-316 35 190 
-842 288 106 
-40 942 264 
-648 446 805 
-890 729 370 
-350 6 101 
-393 548 629 
-623 84 954 
-756 840 966 
-376 931 308 
-944 439 626 
-323 537 538 
-118 82 929 
-541 833 115 
-639 658 704 
-930 977 306 
-673 386 21 
-745 924 72 
-270 829 777 
-573 97 512 
-986 290 161 
-636 355 767 
-655 574 31 
-52 350 150 
-941 724 966 
-430 107 191 
-7 337 457 
-287 753 383 
-945 909 209 
-758 221 588 
-422 946 506 
-30 413 168 
-900 591 762 
-655 410 359 
-624 537 548 
-483 595 41 
-602 350 291 
-836 374 20 
-596 21 348 
-199 668 484 
-281 734 53 
-999 418 938 
-900 788 127 
-467 728 893 
-648 483 807 
-421 310 617 
-813 514 309 
-616 935 451 
-600 249 519 
-556 798 303 
-224 8 844 
-609 989 702 
-195 485 93 
-343 523 587 
-314 503 448 
-200 458 618 
-580 796 798 
-281 589 798 
-9 157 472 
-622 538 292 
-38 179 190 
-657 958 191 
-815 888 156 
-511 202 634 
-272 55 328 
-646 362 886 
-875 433 869 
-142 844 416 
-881 998 322 
-651 21 699 
-557 476 892 
-389 75 712 
-600 510 3 
-869 861 688 
-401 789 255 
-423 2 585 
-182 285 88 
-426 617 757 
-832 932 169 
-154 721 189 
+{   1,    0,    0}  {NAN, NAN, NO_ROOTS } 
+{  -8,    2,    5}  {NAN, NAN, NO_ROOTS } 
+{  -1,    1,    5}  {NAN, NAN, NO_ROOTS } 
+{  -7,   -1,   -2}  {NAN, NAN, NO_ROOTS } 
+{   0,    1,    8}  {NAN, NAN, NO_ROOTS } 
+{  -7,   -1,    0}  {NAN, NAN, NO_ROOTS } 
+{   0,   -5,   -3}  {NAN, NAN, NO_ROOTS } 
+{  -2,    3,    0}  {NAN, NAN, NO_ROOTS } 
+{   0,    7,   -2}  {NAN, NAN, NO_ROOTS } 
+{   0,   -3,    0}  {NAN, NAN, NO_ROOTS } 
+{   6,    0,    0}  {NAN, NAN, NO_ROOTS } 
+{   0,    0,   -6}  {NAN, NAN, NO_ROOTS } 
+{   0,    0,   -6}  {NAN, NAN, NO_ROOTS } 
+{   3,    9,    0}  {NAN, NAN, NO_ROOTS } 
+{   6,    6,    0}  {NAN, NAN, NO_ROOTS } 
+{  -4,    0,    0}  {NAN, NAN, NO_ROOTS } 
+{  -8,    9,    3}  {NAN, NAN, NO_ROOTS } 
+{  -9,   -4,    7}  {NAN, NAN, NO_ROOTS } 
+{  -3,    1,    0}  {NAN, NAN, NO_ROOTS } 
+{   0,   -7,   -7}  {NAN, NAN, NO_ROOTS } 
+{  -6,   -1,    5}  {NAN, NAN, NO_ROOTS } 
+{   0,    0,    0}  {NAN, NAN, NO_ROOTS } 
+{   0,    0,    7}  {NAN, NAN, NO_ROOTS } 
+{  -7,    7,   -3}  {NAN, NAN, NO_ROOTS } 
+{   5,    9,   -1}  {NAN, NAN, NO_ROOTS } 
+{   0,    0,    3}  {NAN, NAN, NO_ROOTS } 
+{   0,    2,    0}  {NAN, NAN, NO_ROOTS } 
+{   4,   -8,   -5}  {NAN, NAN, NO_ROOTS } 
+{   2,    1,    0}  {NAN, NAN, NO_ROOTS } 
+{  -6,   -8,    0}  {NAN, NAN, NO_ROOTS } 
+{  -1,    0,    8}  {NAN, NAN, NO_ROOTS } 
+{   0,    7,    0}  {NAN, NAN, NO_ROOTS } 
+{   0,   -7,    0}  {NAN, NAN, NO_ROOTS } 
+{   0,    9,   -5}  {NAN, NAN, NO_ROOTS } 
+{   0,    9,   -8}  {NAN, NAN, NO_ROOTS } 
+{   0,    4,    9}  {NAN, NAN, NO_ROOTS } 
+{   0,   -3,   -3}  {NAN, NAN, NO_ROOTS } 
+{   4,   -8,   -8}  {NAN, NAN, NO_ROOTS } 
+{   0,    8,    9}  {NAN, NAN, NO_ROOTS } 
+{   0,   -2,    0}  {NAN, NAN, NO_ROOTS } 
+{   8,    0,    8}  {NAN, NAN, NO_ROOTS } 
+{   0,   -6,   -2}  {NAN, NAN, NO_ROOTS } 
+{  -2,    8,    2}  {NAN, NAN, NO_ROOTS } 
+{   5,   -9,   -4}  {NAN, NAN, NO_ROOTS } 
+{  -1,   -2,    1}  {NAN, NAN, NO_ROOTS } 
+{  -7,    2,    5}  {NAN, NAN, NO_ROOTS } 
+{   0,    0,   -1}  {NAN, NAN, NO_ROOTS } 
+{  -1,    0,    0}  {NAN, NAN, NO_ROOTS } 
+{   0,    0,   -7}  {NAN, NAN, NO_ROOTS } 
+{   2,   -9,    1}  {NAN, NAN, NO_ROOTS } 
+{  -6,   -8,    0}  {NAN, NAN, NO_ROOTS } 
+{   0,    1,   -5}  {NAN, NAN, NO_ROOTS } 
+{  -8,   -9,    0}  {NAN, NAN, NO_ROOTS } 
+{   0,    0,    0}  {NAN, NAN, NO_ROOTS } 
+{   3,    0,    0}  {NAN, NAN, NO_ROOTS } 
+{   0,   -5,    0}  {NAN, NAN, NO_ROOTS } 
+{   0,    6,    0}  {NAN, NAN, NO_ROOTS } 
+{   0,    2,    2}  {NAN, NAN, NO_ROOTS } 
+{  -3,    0,    0}  {NAN, NAN, NO_ROOTS } 
+{   0,    6,    0}  {NAN, NAN, NO_ROOTS } 
+{   5,    3,    4}  {NAN, NAN, NO_ROOTS } 
+{  -2,    3,    4}  {NAN, NAN, NO_ROOTS } 
+{  -5,   -6,    4}  {NAN, NAN, NO_ROOTS } 
+{   8,    7,    8}  {NAN, NAN, NO_ROOTS } 
+{   0,    0,   -4}  {NAN, NAN, NO_ROOTS } 
+{   4,    2,    3}  {NAN, NAN, NO_ROOTS } 
+{   0,    8,    3}  {NAN, NAN, NO_ROOTS } 
+{   0,    2,    2}  {NAN, NAN, NO_ROOTS } 
+{   0,    0,   -7}  {NAN, NAN, NO_ROOTS } 
+{   0,    3,   -1}  {NAN, NAN, NO_ROOTS } 
+{  -3,    5,    5}  {NAN, NAN, NO_ROOTS } 
+{   0,    2,    0}  {NAN, NAN, NO_ROOTS } 
+{   7,    3,    0}  {NAN, NAN, NO_ROOTS } 
+{   5,    1,    6}  {NAN, NAN, NO_ROOTS } 
+{   0,    0,   -5}  {NAN, NAN, NO_ROOTS } 
+{   0,    0,    0}  {NAN, NAN, NO_ROOTS } 
+{   1,   -8,    1}  {NAN, NAN, NO_ROOTS } 
+{  -8,    0,    0}  {NAN, NAN, NO_ROOTS } 
+{   0,    0,    0}  {NAN, NAN, NO_ROOTS } 
+{   6,   -3,   -4}  {NAN, NAN, NO_ROOTS } 
+{   0,    0,    7}  {NAN, NAN, NO_ROOTS } 
+{   0,    9,    3}  {NAN, NAN, NO_ROOTS } 
+{   0,    3,    0}  {NAN, NAN, NO_ROOTS } 
+{   5,    0,    0}  {NAN, NAN, NO_ROOTS } 
+{   0,   -1,    1}  {NAN, NAN, NO_ROOTS } 
+{   0,    0,    0}  {NAN, NAN, NO_ROOTS } 
+{   0,    2,    0}  {NAN, NAN, NO_ROOTS } 
+{   0,    5,   -7}  {NAN, NAN, NO_ROOTS } 
+{   0,    0,    7}  {NAN, NAN, NO_ROOTS } 
+{   7,    0,    1}  {NAN, NAN, NO_ROOTS } 
+{   0,   -3,   -5}  {NAN, NAN, NO_ROOTS } 
+{  -1,    0,    0}  {NAN, NAN, NO_ROOTS } 
+{   0,    6,   -6}  {NAN, NAN, NO_ROOTS } 
+{   0,   -7,   -9}  {NAN, NAN, NO_ROOTS } 
+{   6,    7,   -7}  {NAN, NAN, NO_ROOTS } 
+{   5,   -3,    9}  {NAN, NAN, NO_ROOTS } 
+{   0,    6,   -3}  {NAN, NAN, NO_ROOTS } 
+{   0,    0,    7}  {NAN, NAN, NO_ROOTS } 
+{   2,    7,    0}  {NAN, NAN, NO_ROOTS } 
+{  -7,    5,    3}  {NAN, NAN, NO_ROOTS } 

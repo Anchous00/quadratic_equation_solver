@@ -22,14 +22,15 @@ enum ERROR_VALUES {
 };
 
 enum RETURN_VALUES{
-        ERROR = 0,
-        SUCCESS = 1
+        MYERROR = 0,
+        MYSUCCESS = 1
 };
 
 void clear_buffer( void );
-bool is_zero( double number );
 bool is_string_empty( void );
-const char* error_text( enum ERROR_VALUES error_value );
+bool is_zero( double number );
+const char* error_text( ERROR_VALUES error_value );
+double calc_discriminant( double a, double b, double c );
 double max( double x1, double x2 );
 double min( double x1, double x2 );
 

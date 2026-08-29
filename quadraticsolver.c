@@ -15,12 +15,15 @@ enum RETURN_VALUES solve_equations( quadratic_equation *equations, int equations
 {
     assert(equations);
 
+    if (equations_number == 0)
+        return MYERROR;
+
     for (int i = 0; i < equations_number; i++)
     {
         solve_quadratic_equation(&equations[i]);
     }
 
-    return SUCCESS;
+    return MYSUCCESS;
 }
 
 /*!
@@ -41,15 +44,16 @@ void solve_quadratic_equation( quadratic_equation *equation )
         return solve_linear_equation(equation);
     }
 
-    double discriminant = equation->coefficients[1] * equation->coefficients[1]
-                    - 4 * equation->coefficients[0] * equation->coefficients[2];
+    double discriminant = calc_discriminant(equation->coefficients[0],
+                                       equation->coefficients[1],
+                                       equation->coefficients[2]);
 
     if (is_zero(discriminant))
     {
         equation->roots[0] = -equation->coefficients[1] / (2 * equation->coefficients[0]);
         equation->roots[1] = NAN;
         equation->roots_number = ONE_ROOT;
-        return SUCCESS;
+        return;
     }
 
     if (discriminant < 0)
@@ -57,7 +61,7 @@ void solve_quadratic_equation( quadratic_equation *equation )
         equation->roots_number = NO_ROOTS;
         equation->roots[0] = NAN;
         equation->roots[1] = NAN;
-        return SUCCESS;
+        return;
     }
 
     double square_root_of_discriminant = sqrt(discriminant);
@@ -68,7 +72,7 @@ void solve_quadratic_equation( quadratic_equation *equation )
                      / (2 * equation->coefficients[0]);
     equation->roots_number = TWO_ROOTS;
 
-    return SUCCESS;
+    return;
 }
 
 

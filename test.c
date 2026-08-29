@@ -13,7 +13,7 @@ int main( int argc, char *argv[] )
 {
     char arg = '\0';
     bool test_log = false;
-//TODO getopt
+
     while (--argc > 0 && (*++argv)[0] == '-')
     {
         while ((arg = *++argv[0]))

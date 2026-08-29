@@ -17,20 +17,24 @@ void output_equations( quadratic_equation *equations, int equations_number )
 {
     assert(equations);
 
-    printf("Enter f for saving in file, c for writing in console, any key for exit\n");
+    if (equations_number == 0)
+        return;
+
+    printf("Enter f for saving in file, c for writing in console, d for drawing graphiks, any key for exit\n");
+
+    FILE *output_file = fopen(output_file_name, "w");
+
+    if (output_file == NULL)
+    {
+        printf("ERROR: cant open file");
+        return;
+    }
 
     char choice = (char)getchar();
 
     switch (choice)
     {
     case 'f':
-        FILE *output_file = fopen(output_file_name, "w");
-
-        if (output_file == NULL)
-        {
-            printf("ERROR: cant open file");
-            return;
-        }
         save_solved_equations(equations, equations_number, output_file);
 
         if (fclose(output_file) != 0)
@@ -39,6 +43,10 @@ void output_equations( quadratic_equation *equations, int equations_number )
 
     case 'c':
         save_solved_equations(equations, equations_number, stdout);
+        break;
+
+    case 'd':
+        draw_equations(equations, equations_number, 4);
         break;
 
     default:
@@ -140,6 +148,9 @@ void fprint_beautiful_equation( FILE *output_file, quadratic_equation equation )
     else if (is_zero(equation.coefficients[0] - 1))
         fprintf(output_file, "x^2");
 
+    else if (is_zero(equation.coefficients[0] + 1))
+        fprintf(output_file, "-x^2");
+
     else
         fprintf(output_file, "%lgx^2", equation.coefficients[0]);
 
@@ -150,6 +161,9 @@ void fprint_beautiful_equation( FILE *output_file, quadratic_equation equation )
 
     else if (is_zero(equation.coefficients[1] - 1))
         fprintf(output_file, "+x");
+
+    else if (is_zero(equation.coefficients[1] + 1))
+        fprintf(output_file, "-x");
 
     else
         fprintf(output_file, "%+lgx", equation.coefficients[1]);
@@ -208,8 +222,9 @@ void fprint_solution( FILE *output_file, quadratic_equation *equation )
             equation->coefficients[1],
             equation->coefficients[2]);
 
-    double discriminant = equation->coefficients[1] * equation->coefficients[1]
-                    - 4 * equation->coefficients[0] * equation->coefficients[2];
+    double discriminant = calc_discriminant(equation->coefficients[0],
+                                       equation->coefficients[1],
+                                       equation->coefficients[2]);
 
     fprintf(output_file, "Discriminant D = b * b - 4 * a * c = %lg * %lg - 4 * %lg * %lg = %lg\n",
            equation->coefficients[1],

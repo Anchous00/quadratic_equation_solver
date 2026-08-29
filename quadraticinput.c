@@ -62,7 +62,7 @@ int input_from_file( quadratic_equation *equations )
     if (input_address == NULL)
     {
         printf("Error occurred during reading file\n");
-        return ERROR;
+        return MYERROR;
     }
 
     int equations_number = read_equations_from_file(equations, input_address);
@@ -85,7 +85,8 @@ int input_from_console( quadratic_equation *equations )
 
     int equations_number = read_coefficients_from_console(equations);
 
-    printf("successful read %d equations from console\n", equations_number);
+    if (equations_number != 0)
+        printf("successful read %d equations from console\n", equations_number);
 
     return equations_number;
 }
@@ -129,19 +130,31 @@ int read_coefficients_from_console( quadratic_equation *equations )
 
     int equations_number = 0;
 
-    while((scanf("%lg%lg%lg", equations->coefficients, equations->coefficients + 1, equations->coefficients + 2) == COEFFICIENTS_AMOUNT))
+    while((scanf("%lg%lg%lg", equations->coefficients,
+                              equations->coefficients + 1,
+                              equations->coefficients + 2)
+                                == COEFFICIENTS_AMOUNT))
     {
-        printf(BLUE "Enter coefficients a, b, c, any key for end\n" WHITE);
+        if (!is_string_empty())
+            printf(RED "WARNING: unexpected input\n" WHITE);
 
-        equations_number++;
-        equations++;
+        printf(BLUE "Enter coefficients a, b, c, any key for end\n" WHITE);
+        if (isfinite(equations->coefficients[0]) &&
+            isfinite(equations->coefficients[1]) &&
+            isfinite(equations->coefficients[2]))
+            {
+                equations_number++;
+                equations++;
+            }
+        else
+            printf(RED "Inaproppriate coefficients, try again\n" WHITE);
     }
 
     return equations_number;
 }
 
 /*!
-*   \brief функция, читающая из файла уравнения в формате {a, b, c} {root1, root2, roots_number}
+*   \brief функция, читающая из файла уравнения в формате {a, b, c} {root1, root2, roots_number }
 *   \param [in, out] equations массив для записи уравнений
 *   \param [in] input_address файл для чтения
 *   \return количество записанных уравнений

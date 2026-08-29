@@ -1,9 +1,10 @@
 /*!
 * \file
-* \brief заголовочный файл макросами, енамами и прототипами функций из файлов quadraticsolver.c, quadraticinput.c, quadraticoutput.c
+* \brief заголовочный файл c макросами, енамами и прототипами функций из файлов quadraticsolver.c, quadraticinput.c, quadraticoutput.c
 */
 
 #include "utils.h"
+
 /*!
 * \brief количество корней уравнения
 * \note 3 это бесконечность
@@ -22,6 +23,7 @@ const int MAX_EQUATIONS_AMOUNT = 100;
 const int MAX_TEST_AMOUNT      = 100;
 //! максимальная длина имени файла
 const int MAX_FILE_NAME        = 100;
+
 /*!
  *  \brief     структура квадратного уравнения
  *  \details   содержит массив коэффициентов, массив корней и переменную количества корней
@@ -32,7 +34,7 @@ struct quadratic_equation {
         //! массив корней
         double roots[2];
         //! количество корней
-        enum ROOTS_NUMBER roots_number;
+        ROOTS_NUMBER roots_number;
 };
 
 //quadraticinput
@@ -42,7 +44,7 @@ int input_from_console( quadratic_equation *equations );
 int read_coefficients_from_file( quadratic_equation *equation, FILE *input_address );
 int read_coefficients_from_console( quadratic_equation *equations );
 int read_equations_from_file( quadratic_equation *equations, FILE *input_address );
-enum ROOTS_NUMBER roots_number_from_string(const char *roots_number);
+ROOTS_NUMBER roots_number_from_string(const char *roots_number);
 
 //quadraticoutput
 void output_equations( quadratic_equation *equations, int equations_number );
@@ -52,10 +54,32 @@ void fprint_answer( FILE *output_file, quadratic_equation equation );
 void fprint_beautiful_equation( FILE *output_file, quadratic_equation equation );
 void fprint_solution( FILE *output_file, quadratic_equation *equation );
 
-//quadraticsolver фтв онг
+//quadraticsolver
 void solve_quadratic_equation( quadratic_equation *equation );
 void solve_linear_equation( quadratic_equation *equation );
-enum RETURN_VALUES solve_equations( quadratic_equation *equations, int equations_number );
+RETURN_VALUES solve_equations( quadratic_equation *equations, int equations_number );
+
+//drawparabols
+struct color
+{
+    unsigned char R = 0, G = 0, B = 0;
+};
+
+#define rgbRED {255, 0, 0}
+#define rgbGREEN {0, 255, 0}
+#define rgbBLUE {0, 0, 255}
+#define rgbBLACK {0, 0, 0}
+#define rgbWHITE {255, 255, 255}
+
+
+void initialize( void );
+void draw( void );
+void add_parabol( quadratic_equation *equation, double SCALE, color clr );
+double znach( double a, double b, double c, double x );
+void putpixel( int x, int y, color cl );
+void draw_equations( quadratic_equation *equations, int equations_number, double SCALE );
+color randRGB( void );
+
 
 
 

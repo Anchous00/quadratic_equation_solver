@@ -21,19 +21,6 @@ bool is_zero( double number )
 }
 
 /*!
-* \brief функция которая съедает все символы в буффере до новой строки
-*/
-void clear_buffer( void )
-{
-    char c = 0;
-
-    while((c = (char)getchar()) != '\n' && c != EOF)
-        ;
-
-    return;
-}
-
-/*!
 * \brief функция сообщающая о наличии символов в буффере
 * \return true если буффер пуст иначе false
 */
@@ -47,6 +34,19 @@ bool is_string_empty( void )
         return true;
 
     return false;
+}
+
+/*!
+* \brief функция которая съедает все символы в буффере до новой строки
+*/
+void clear_buffer( void )
+{
+    char c = 0;
+
+    while((c = (char)getchar()) != '\n' && c != EOF)
+        ;
+
+    return;
 }
 
 /*!
@@ -88,4 +88,9 @@ const char* error_text( enum ERROR_VALUES error_value )
         default:
             return "unknown error";
     }
+}
+
+double calc_discriminant( double a, double b, double c )
+{
+    return b * b - 4 * a * c;
 }

@@ -5,47 +5,49 @@
 \DoxyCodeLine{00001\ }
 \DoxyCodeLine{00005\ }
 \DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{utils_8h}{utils.h}}"{}}}
-\DoxyCodeLine{00011\ \textcolor{keyword}{enum}\ \doxymbox{\hyperlink{quadratic_8h_aaebdf47879d48baf2a8ce6fcb97164ca}{ROOTS\_NUMBER}}\ \{}
-\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{quadratic_8h_aaebdf47879d48baf2a8ce6fcb97164caab9a321da349ac1355b717745736ad90c}{NO\_ROOTS}}\ \ =\ 0,}
-\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{quadratic_8h_aaebdf47879d48baf2a8ce6fcb97164caa6700c0f6efd23571cb22aefd2510b1cf}{ONE\_ROOT}}\ \ =\ 1,}
-\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{quadratic_8h_aaebdf47879d48baf2a8ce6fcb97164caa876622d3c0b008da13a3685c64714e81}{TWO\_ROOTS}}\ =\ 2,}
-\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{quadratic_8h_aaebdf47879d48baf2a8ce6fcb97164caa5a79e9e49077da58fe5d46a98f0b5e36}{INF\_ROOTS}}\ =\ 3}
-\DoxyCodeLine{00016\ \};}
-\DoxyCodeLine{00018\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{quadratic_8h_a045579972d89633bbc854b01a8745b2a}{COEFFICIENTS\_AMOUNT}}\ \ =\ 3;}
-\DoxyCodeLine{00020\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{quadratic_8h_a0fe54279a3446a8fe57620b4a495421c}{MAX\_EQUATIONS\_AMOUNT}}\ =\ 100;}
-\DoxyCodeLine{00022\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{quadratic_8h_ad74b98f2f2ecdcc0f7be30ba94b2adbf}{MAX\_TEST\_AMOUNT}}\ \ \ \ \ \ =\ 100;}
-\DoxyCodeLine{00024\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{quadratic_8h_a136e97a062adb82233ef0dad7545e6bd}{MAX\_FILE\_NAME}}\ \ \ \ \ \ \ \ =\ 100;}
-\DoxyCodeLine{00029\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structquadratic__equation}{quadratic\_equation}}\ \{}
-\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{structquadratic__equation_ab7eac404d3c3445f1eb59b39ab872b36}{coefficients}}[3];}
-\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{structquadratic__equation_aa0b097c9f198cd94f0c7d35296a59bf7}{roots}}[2];}
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \doxymbox{\hyperlink{quadratic_8h_aaebdf47879d48baf2a8ce6fcb97164ca}{ROOTS\_NUMBER}}\ \doxymbox{\hyperlink{structquadratic__equation_afd7c0c78266048de4371332dae46a0bf}{roots\_number}};}
-\DoxyCodeLine{00036\ \};}
-\DoxyCodeLine{00037\ }
-\DoxyCodeLine{00038\ \textcolor{comment}{//quadraticinput}}
-\DoxyCodeLine{00039\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{quadratic_8h_a6b2f76a002a7d1489e69d28cff8f914f}{input\_equations}}(\ \doxymbox{\hyperlink{structquadratic__equation}{quadratic\_equation}}\ *equations\ );}
-\DoxyCodeLine{00040\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{quadratic_8h_a09a2063bbddb9f779426745e1fc9e10b}{input\_from\_file}}(\ \doxymbox{\hyperlink{structquadratic__equation}{quadratic\_equation}}\ *equations\ );}
-\DoxyCodeLine{00041\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{quadratic_8h_a7e6e3b79937b7c530c5160d71ab0e6f4}{input\_from\_console}}(\ \doxymbox{\hyperlink{structquadratic__equation}{quadratic\_equation}}\ *equations\ );}
-\DoxyCodeLine{00042\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{quadratic_8h_a1af1242bbf29c022384f2ae2a8d9ce6e}{read\_coefficients\_from\_file}}(\ \doxymbox{\hyperlink{structquadratic__equation}{quadratic\_equation}}\ *equation,\ FILE\ *input\_address\ );}
-\DoxyCodeLine{00043\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{quadratic_8h_a3266e07c7d96f585f03581c48b86efb6}{read\_coefficients\_from\_console}}(\ \doxymbox{\hyperlink{structquadratic__equation}{quadratic\_equation}}\ *equations\ );}
-\DoxyCodeLine{00044\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{quadratic_8h_a468fa3238a2e059473a955ec39db7ee6}{read\_equations\_from\_file}}(\ \doxymbox{\hyperlink{structquadratic__equation}{quadratic\_equation}}\ *equations,\ FILE\ *input\_address\ );}
-\DoxyCodeLine{00045\ \textcolor{keyword}{enum}\ \doxymbox{\hyperlink{quadratic_8h_aaebdf47879d48baf2a8ce6fcb97164ca}{ROOTS\_NUMBER}}\ \doxymbox{\hyperlink{quadratic_8h_abbf76d487597ca0d1cd9c565f72ceed3}{roots\_number\_from\_string}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *roots\_number);}
-\DoxyCodeLine{00046\ }
-\DoxyCodeLine{00047\ \textcolor{comment}{//quadraticoutput}}
-\DoxyCodeLine{00048\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{quadratic_8h_aa09db4ffda791ee51b0cdebb1c95c491}{output\_equations}}(\ \doxymbox{\hyperlink{structquadratic__equation}{quadratic\_equation}}\ *equations,\ \textcolor{keywordtype}{int}\ equations\_number\ );}
-\DoxyCodeLine{00049\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{quadratic_8h_a55750c92fe097e8e44fb6c3e45c0186e}{print\_equation}}(\ \doxymbox{\hyperlink{structquadratic__equation}{quadratic\_equation}}\ equation\ );}
-\DoxyCodeLine{00050\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{quadratic_8h_afa9d5d329390e94eb0fe9eca4592cdfd}{save\_solved\_equations}}(\ \doxymbox{\hyperlink{structquadratic__equation}{quadratic\_equation}}\ *equations,\ \textcolor{keywordtype}{int}\ equations\_number,\ FILE\ *output\_file\ );}
-\DoxyCodeLine{00051\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{quadratic_8h_a84d30dcc1c73255ead31a930f04a4d6f}{fprint\_answer}}(\ FILE\ *output\_file,\ \doxymbox{\hyperlink{structquadratic__equation}{quadratic\_equation}}\ equation\ );}
-\DoxyCodeLine{00052\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{quadratic_8h_ac27b8c1fd8bb7c979f11493612673ed1}{fprint\_beautiful\_equation}}(\ FILE\ *output\_file,\ \doxymbox{\hyperlink{structquadratic__equation}{quadratic\_equation}}\ equation\ );}
-\DoxyCodeLine{00053\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{quadratic_8h_a0133e7e5dc41a951755aadc4160d7bbd}{fprint\_solution}}(\ FILE\ *output\_file,\ \doxymbox{\hyperlink{structquadratic__equation}{quadratic\_equation}}\ *equation\ );}
-\DoxyCodeLine{00054\ }
-\DoxyCodeLine{00055\ \textcolor{comment}{//quadraticsolver\ фтв\ онг}}
-\DoxyCodeLine{00056\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{quadratic_8h_abb157156609f7acff598c57f1d4b4d82}{solve\_quadratic\_equation}}(\ \doxymbox{\hyperlink{structquadratic__equation}{quadratic\_equation}}\ *equation\ );}
-\DoxyCodeLine{00057\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{quadratic_8h_aae7c3e6aee106bb62eafee5f0b01c008}{solve\_linear\_equation}}(\ \doxymbox{\hyperlink{structquadratic__equation}{quadratic\_equation}}\ *equation\ );}
-\DoxyCodeLine{00058\ \textcolor{keyword}{enum}\ \doxymbox{\hyperlink{utils_8h_a30036d522909f271124388aa785be999}{RETURN\_VALUES}}\ \doxymbox{\hyperlink{quadratic_8h_a59d28998f68df71388fe6ddbfe07d309}{solve\_equations}}(\ \doxymbox{\hyperlink{structquadratic__equation}{quadratic\_equation}}\ *equations,\ \textcolor{keywordtype}{int}\ equations\_number\ );}
-\DoxyCodeLine{00059\ }
-\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{enum}\ \doxymbox{\hyperlink{quadratic_8h_aaebdf47879d48baf2a8ce6fcb97164ca}{ROOTS\_NUMBER}}\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{quadratic_8h_aaebdf47879d48baf2a8ce6fcb97164caab9a321da349ac1355b717745736ad90c}{NO\_ROOTS}}\ \ =\ 0,}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{quadratic_8h_aaebdf47879d48baf2a8ce6fcb97164caa6700c0f6efd23571cb22aefd2510b1cf}{ONE\_ROOT}}\ \ =\ 1,}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{quadratic_8h_aaebdf47879d48baf2a8ce6fcb97164caa876622d3c0b008da13a3685c64714e81}{TWO\_ROOTS}}\ =\ 2,}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{quadratic_8h_aaebdf47879d48baf2a8ce6fcb97164caa5a79e9e49077da58fe5d46a98f0b5e36}{INF\_ROOTS}}\ =\ 3}
+\DoxyCodeLine{00017\ \};}
+\DoxyCodeLine{00019\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{quadratic_8h_a045579972d89633bbc854b01a8745b2a}{COEFFICIENTS\_AMOUNT}}\ \ =\ 3;}
+\DoxyCodeLine{00021\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{quadratic_8h_a0fe54279a3446a8fe57620b4a495421c}{MAX\_EQUATIONS\_AMOUNT}}\ =\ 100;}
+\DoxyCodeLine{00023\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{quadratic_8h_ad74b98f2f2ecdcc0f7be30ba94b2adbf}{MAX\_TEST\_AMOUNT}}\ \ \ \ \ \ =\ 100;}
+\DoxyCodeLine{00025\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{quadratic_8h_a136e97a062adb82233ef0dad7545e6bd}{MAX\_FILE\_NAME}}\ \ \ \ \ \ \ \ =\ 100;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{struct\ }\doxymbox{\hyperlink{structquadratic__equation}{quadratic\_equation}}\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{structquadratic__equation_ab7eac404d3c3445f1eb59b39ab872b36}{coefficients}}[3];}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \doxymbox{\hyperlink{structquadratic__equation_aa0b097c9f198cd94f0c7d35296a59bf7}{roots}}[2];}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ \doxymbox{\hyperlink{quadratic_8h_aaebdf47879d48baf2a8ce6fcb97164ca}{ROOTS\_NUMBER}}\ \doxymbox{\hyperlink{structquadratic__equation_afd7c0c78266048de4371332dae46a0bf}{roots\_number}};}
+\DoxyCodeLine{00038\ \};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{comment}{//quadraticinput}}
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{quadratic_8h_a6b2f76a002a7d1489e69d28cff8f914f}{input\_equations}}(\ \doxymbox{\hyperlink{structquadratic__equation}{quadratic\_equation}}\ *equations\ );}
+\DoxyCodeLine{00042\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{quadratic_8h_a09a2063bbddb9f779426745e1fc9e10b}{input\_from\_file}}(\ \doxymbox{\hyperlink{structquadratic__equation}{quadratic\_equation}}\ *equations\ );}
+\DoxyCodeLine{00043\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{quadratic_8h_a7e6e3b79937b7c530c5160d71ab0e6f4}{input\_from\_console}}(\ \doxymbox{\hyperlink{structquadratic__equation}{quadratic\_equation}}\ *equations\ );}
+\DoxyCodeLine{00044\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{quadratic_8h_a1af1242bbf29c022384f2ae2a8d9ce6e}{read\_coefficients\_from\_file}}(\ \doxymbox{\hyperlink{structquadratic__equation}{quadratic\_equation}}\ *equation,\ FILE\ *input\_address\ );}
+\DoxyCodeLine{00045\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{quadratic_8h_a3266e07c7d96f585f03581c48b86efb6}{read\_coefficients\_from\_console}}(\ \doxymbox{\hyperlink{structquadratic__equation}{quadratic\_equation}}\ *equations\ );}
+\DoxyCodeLine{00046\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{quadratic_8h_a468fa3238a2e059473a955ec39db7ee6}{read\_equations\_from\_file}}(\ \doxymbox{\hyperlink{structquadratic__equation}{quadratic\_equation}}\ *equations,\ FILE\ *input\_address\ );}
+\DoxyCodeLine{00047\ \textcolor{keyword}{enum}\ \doxymbox{\hyperlink{quadratic_8h_aaebdf47879d48baf2a8ce6fcb97164ca}{ROOTS\_NUMBER}}\ \doxymbox{\hyperlink{quadratic_8h_abbf76d487597ca0d1cd9c565f72ceed3}{roots\_number\_from\_string}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *roots\_number);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{comment}{//quadraticoutput}}
+\DoxyCodeLine{00050\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{quadratic_8h_aa09db4ffda791ee51b0cdebb1c95c491}{output\_equations}}(\ \doxymbox{\hyperlink{structquadratic__equation}{quadratic\_equation}}\ *equations,\ \textcolor{keywordtype}{int}\ equations\_number\ );}
+\DoxyCodeLine{00051\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{quadratic_8h_a55750c92fe097e8e44fb6c3e45c0186e}{print\_equation}}(\ \doxymbox{\hyperlink{structquadratic__equation}{quadratic\_equation}}\ equation\ );}
+\DoxyCodeLine{00052\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{quadratic_8h_afa9d5d329390e94eb0fe9eca4592cdfd}{save\_solved\_equations}}(\ \doxymbox{\hyperlink{structquadratic__equation}{quadratic\_equation}}\ *equations,\ \textcolor{keywordtype}{int}\ equations\_number,\ FILE\ *output\_file\ );}
+\DoxyCodeLine{00053\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{quadratic_8h_a84d30dcc1c73255ead31a930f04a4d6f}{fprint\_answer}}(\ FILE\ *output\_file,\ \doxymbox{\hyperlink{structquadratic__equation}{quadratic\_equation}}\ equation\ );}
+\DoxyCodeLine{00054\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{quadratic_8h_ac27b8c1fd8bb7c979f11493612673ed1}{fprint\_beautiful\_equation}}(\ FILE\ *output\_file,\ \doxymbox{\hyperlink{structquadratic__equation}{quadratic\_equation}}\ equation\ );}
+\DoxyCodeLine{00055\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{quadratic_8h_a0133e7e5dc41a951755aadc4160d7bbd}{fprint\_solution}}(\ FILE\ *output\_file,\ \doxymbox{\hyperlink{structquadratic__equation}{quadratic\_equation}}\ *equation\ );}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{comment}{//quadraticsolver\ фтв\ онг}}
+\DoxyCodeLine{00058\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{quadratic_8h_abb157156609f7acff598c57f1d4b4d82}{solve\_quadratic\_equation}}(\ \doxymbox{\hyperlink{structquadratic__equation}{quadratic\_equation}}\ *equation\ );}
+\DoxyCodeLine{00059\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{quadratic_8h_aae7c3e6aee106bb62eafee5f0b01c008}{solve\_linear\_equation}}(\ \doxymbox{\hyperlink{structquadratic__equation}{quadratic\_equation}}\ *equation\ );}
+\DoxyCodeLine{00060\ \textcolor{keyword}{enum}\ \doxymbox{\hyperlink{utils_8h_a30036d522909f271124388aa785be999}{RETURN\_VALUES}}\ \doxymbox{\hyperlink{quadratic_8h_a59d28998f68df71388fe6ddbfe07d309}{solve\_equations}}(\ \doxymbox{\hyperlink{structquadratic__equation}{quadratic\_equation}}\ *equations,\ \textcolor{keywordtype}{int}\ equations\_number\ );}
 \DoxyCodeLine{00061\ }
 \DoxyCodeLine{00062\ }
 \DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ }
 
 \end{DoxyCode}

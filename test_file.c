@@ -2,7 +2,7 @@
 
 void generate_random_equations( int equations_number );
 
-const int MAX_COEFFICIENT = 1000;
+const int MAX_COEFFICIENT = 10;
 
 int main( void )
 {
@@ -18,17 +18,21 @@ int main( void )
         return ERROR_OCCURRED_DURING_READING_FILE;
     }
 
-    int equations_number = read_coefficients_from_file(test_equations, input_address);
+    int equations_number = read_equations_from_file(test_equations, input_address);
     printf("successful read %d equations\n", equations_number);
 
     fclose(input_address);
 
-    for(int i = 0; i < equations_number; i++)
+    FILE *output_file = fopen("solved_equations.txt", "w");
+
+    if (output_file == NULL)
     {
-        solve_quadratic_equation(&test_equations[i]);
-        printf("\nEquation %d: ", i + 1);
-        print_equation(test_equations[i]);
+        printf("ERROR: cant open file");
+        return ERROR;
     }
+
+    solve_equations(test_equations, equations_number);
+    save_solved_equations(test_equations, equations_number, output_file);
 
     return SUCCESSFUL_ENDING;
 }
@@ -41,11 +45,11 @@ void generate_random_equations( int equations_number )
 
     for(int i = 0; i < equations_number; i++)
     {
-        a = rand() % MAX_COEFFICIENT;
-        b = rand() % MAX_COEFFICIENT;
-        c = rand() % MAX_COEFFICIENT;
+        a = rand() % MAX_COEFFICIENT * (rand() % 3 - 1);
+        b = rand() % MAX_COEFFICIENT * (rand() % 3 - 1);
+        c = rand() % MAX_COEFFICIENT * (rand() % 3 - 1);
 
-        fprintf(file, "%d %d %d \n", a, b, c);
+        fprintf(file, "{%4d, %4d, %4d}  {NAN, NAN, NO_ROOTS } \n", a, b, c);
     }
 
     fclose(file);
