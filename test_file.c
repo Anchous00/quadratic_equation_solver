@@ -28,7 +28,7 @@ int main( void )
     if (output_file == NULL)
     {
         printf("ERROR: cant open file");
-        return ERROR;
+        return MYERROR;
     }
 
     solve_equations(test_equations, equations_number);
@@ -45,9 +45,9 @@ void generate_random_equations( int equations_number )
 
     for(int i = 0; i < equations_number; i++)
     {
-        a = rand() % MAX_COEFFICIENT * (rand() % 3 - 1);
-        b = rand() % MAX_COEFFICIENT * (rand() % 3 - 1);
-        c = rand() % MAX_COEFFICIENT * (rand() % 3 - 1);
+        a = rand() % MAX_COEFFICIENT * (-1 + 2 * (rand() % 2));
+        b = rand() % MAX_COEFFICIENT * (-1 + 2 * (rand() % 2));
+        c = rand() % MAX_COEFFICIENT * (-1 + 2 * (rand() % 2));
 
         fprintf(file, "{%4d, %4d, %4d}  {NAN, NAN, NO_ROOTS } \n", a, b, c);
     }

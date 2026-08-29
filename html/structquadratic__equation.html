@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.18.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Quadratic solver: quadratic_equation Struct Reference</title>
+<title>QuadraticSolver: quadratic_equation Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
@@ -25,9 +25,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Quadratic solver<span id="projectnumber">&#160;1.4.2</span>
+   <div id="projectname">QuadraticSolver<span id="projectnumber">&#160;1.5</span>
    </div>
-   <div id="projectbrief">решает квадратные уравнения</div>
+   <div id="projectbrief">solves quadratic equations</div>
   </td>
  </tr>
  </tbody>
@@ -124,13 +124,31 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:ab7eac404d3c3445f1eb59b39ab872b36"><td class="mdescLeft">&#160;</td><td class="mdescRight">массив коэффициентов  <br /></td></tr>
 <tr class="memitem:aa0b097c9f198cd94f0c7d35296a59bf7" id="r_aa0b097c9f198cd94f0c7d35296a59bf7"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#aa0b097c9f198cd94f0c7d35296a59bf7">roots</a> [2]</td></tr>
 <tr class="memdesc:aa0b097c9f198cd94f0c7d35296a59bf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">массив корней  <br /></td></tr>
-<tr class="memitem:afd7c0c78266048de4371332dae46a0bf" id="r_afd7c0c78266048de4371332dae46a0bf"><td class="memItemLeft">enum <a class="el" href="quadratic_8h.html#aaebdf47879d48baf2a8ce6fcb97164ca">ROOTS_NUMBER</a>&#160;</td><td class="memItemRight"><a class="el" href="#afd7c0c78266048de4371332dae46a0bf">roots_number</a></td></tr>
-<tr class="memdesc:afd7c0c78266048de4371332dae46a0bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">количество корней  <br /></td></tr>
+<tr class="memitem:a59639bd3d57f2f19bdb6e44a9f653b9c" id="r_a59639bd3d57f2f19bdb6e44a9f653b9c"><td class="memItemLeft"><a class="el" href="quadratic_8h.html#aaebdf47879d48baf2a8ce6fcb97164ca">ROOTS_NUMBER</a>&#160;</td><td class="memItemRight"><a class="el" href="#a59639bd3d57f2f19bdb6e44a9f653b9c">roots_number</a></td></tr>
+<tr class="memdesc:a59639bd3d57f2f19bdb6e44a9f653b9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">количество корней  <br /></td></tr>
+<tr class="memitem:abc70f82a0d183890cee97f0e5d822c72" id="r_abc70f82a0d183890cee97f0e5d822c72"><td class="memItemLeft"><a class="el" href="structcolor.html">color</a>&#160;</td><td class="memItemRight"><a class="el" href="#abc70f82a0d183890cee97f0e5d822c72">clr</a></td></tr>
+<tr class="memdesc:abc70f82a0d183890cee97f0e5d822c72"><td class="mdescLeft">&#160;</td><td class="mdescRight">цвет  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>структура квадратного уравнения </p>
 <p>содержит массив коэффициентов, массив корней и переменную количества корней </p>
 </div><a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="abc70f82a0d183890cee97f0e5d822c72" name="abc70f82a0d183890cee97f0e5d822c72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc70f82a0d183890cee97f0e5d822c72">&#9670;&#160;</a></span>clr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcolor.html">color</a> quadratic_equation::clr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>цвет </p>
+
+</div>
+</div>
 <a id="ab7eac404d3c3445f1eb59b39ab872b36" name="ab7eac404d3c3445f1eb59b39ab872b36"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab7eac404d3c3445f1eb59b39ab872b36">&#9670;&#160;</a></span>coefficients</h2>
 
@@ -163,14 +181,14 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="afd7c0c78266048de4371332dae46a0bf" name="afd7c0c78266048de4371332dae46a0bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd7c0c78266048de4371332dae46a0bf">&#9670;&#160;</a></span>roots_number</h2>
+<a id="a59639bd3d57f2f19bdb6e44a9f653b9c" name="a59639bd3d57f2f19bdb6e44a9f653b9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59639bd3d57f2f19bdb6e44a9f653b9c">&#9670;&#160;</a></span>roots_number</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="quadratic_8h.html#aaebdf47879d48baf2a8ce6fcb97164ca">ROOTS_NUMBER</a> quadratic_equation::roots_number</td>
+          <td class="memname"><a class="el" href="quadratic_8h.html#aaebdf47879d48baf2a8ce6fcb97164ca">ROOTS_NUMBER</a> quadratic_equation::roots_number</td>
         </tr>
       </table>
 </div><div class="memdoc">

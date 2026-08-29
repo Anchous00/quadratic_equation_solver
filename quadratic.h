@@ -23,6 +23,11 @@ const int MAX_EQUATIONS_AMOUNT = 100;
 const int MAX_TEST_AMOUNT      = 100;
 //! максимальная длина имени файла
 const int MAX_FILE_NAME        = 100;
+//! цвет в формате RGB, содержит три значения от 0 до 255
+struct color
+{
+    unsigned char R = 0, G = 0, B = 0;
+};
 
 /*!
  *  \brief     структура квадратного уравнения
@@ -35,6 +40,8 @@ struct quadratic_equation {
         double roots[2];
         //! количество корней
         ROOTS_NUMBER roots_number;
+        //! цвет
+        color clr;
 };
 
 //quadraticinput
@@ -44,7 +51,7 @@ int input_from_console( quadratic_equation *equations );
 int read_coefficients_from_file( quadratic_equation *equation, FILE *input_address );
 int read_coefficients_from_console( quadratic_equation *equations );
 int read_equations_from_file( quadratic_equation *equations, FILE *input_address );
-ROOTS_NUMBER roots_number_from_string(const char *roots_number);
+ROOTS_NUMBER roots_number_from_string( const char *roots_number );
 
 //quadraticoutput
 void output_equations( quadratic_equation *equations, int equations_number );
@@ -60,11 +67,6 @@ void solve_linear_equation( quadratic_equation *equation );
 RETURN_VALUES solve_equations( quadratic_equation *equations, int equations_number );
 
 //drawparabols
-struct color
-{
-    unsigned char R = 0, G = 0, B = 0;
-};
-
 #define rgbRED {255, 0, 0}
 #define rgbGREEN {0, 255, 0}
 #define rgbBLUE {0, 0, 255}
@@ -72,12 +74,12 @@ struct color
 #define rgbWHITE {255, 255, 255}
 
 
-void initialize( void );
+void draw_equations( quadratic_equation *equations, int equations_number );
+void initialize( double SCALE );
 void draw( void );
-void add_parabol( quadratic_equation *equation, double SCALE, color clr );
-double znach( double a, double b, double c, double x );
+void add_parabol( quadratic_equation *equation, double SCALE );
 void putpixel( int x, int y, color cl );
-void draw_equations( quadratic_equation *equations, int equations_number, double SCALE );
+double znach( double a, double b, double c, double x );
 color randRGB( void );
 
 

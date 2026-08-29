@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['fprint_5fanswer_0',['fprint_answer',['../quadratic_8h.html#a84d30dcc1c73255ead31a930f04a4d6f',1,'fprint_answer(FILE *output_file, quadratic_equation equation):&#160;quadraticoutput.c'],['../quadraticoutput_8c.html#a84d30dcc1c73255ead31a930f04a4d6f',1,'fprint_answer(FILE *output_file, quadratic_equation equation):&#160;quadraticoutput.c']]],
-  ['fprint_5fbeautiful_5fequation_1',['fprint_beautiful_equation',['../quadratic_8h.html#ac27b8c1fd8bb7c979f11493612673ed1',1,'fprint_beautiful_equation(FILE *output_file, quadratic_equation equation):&#160;quadraticoutput.c'],['../quadraticoutput_8c.html#ac27b8c1fd8bb7c979f11493612673ed1',1,'fprint_beautiful_equation(FILE *output_file, quadratic_equation equation):&#160;quadraticoutput.c']]],
-  ['fprint_5fsolution_2',['fprint_solution',['../quadratic_8h.html#a0133e7e5dc41a951755aadc4160d7bbd',1,'fprint_solution(FILE *output_file, quadratic_equation *equation):&#160;quadraticoutput.c'],['../quadraticoutput_8c.html#a0133e7e5dc41a951755aadc4160d7bbd',1,'fprint_solution(FILE *output_file, quadratic_equation *equation):&#160;quadraticoutput.c']]]
+  ['draw_0',['draw',['../drawparabols_8c.html#ad2e97e7b54d0bf35e406b91fbdd2f256',1,'draw(void):&#160;drawparabols.c'],['../quadratic_8h.html#ad2e97e7b54d0bf35e406b91fbdd2f256',1,'draw(void):&#160;drawparabols.c']]],
+  ['draw_5fequations_1',['draw_equations',['../drawparabols_8c.html#a0cc265353f00daf88cfb3528f97295e2',1,'draw_equations(quadratic_equation *equations, int equations_number):&#160;drawparabols.c'],['../quadratic_8h.html#a0cc265353f00daf88cfb3528f97295e2',1,'draw_equations(quadratic_equation *equations, int equations_number):&#160;drawparabols.c']]],
+  ['drawparabols_2ec_2',['drawparabols.c',['../drawparabols_8c.html',1,'']]]
 ];

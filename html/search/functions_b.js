@@ -1,0 +1,7 @@
+var searchData=
+[
+  ['save_5fsolved_5fequations_0',['save_solved_equations',['../quadratic_8h.html#afa9d5d329390e94eb0fe9eca4592cdfd',1,'save_solved_equations(quadratic_equation *equations, int equations_number, FILE *output_file):&#160;quadraticoutput.c'],['../quadraticoutput_8c.html#afa9d5d329390e94eb0fe9eca4592cdfd',1,'save_solved_equations(quadratic_equation *equations, int equations_number, FILE *output_file):&#160;quadraticoutput.c']]],
+  ['solve_5fequations_1',['solve_equations',['../quadratic_8h.html#ad47bcb8ec5a6daff6a22b70485636dd5',1,'solve_equations(quadratic_equation *equations, int equations_number):&#160;quadraticsolver.c'],['../quadraticsolver_8c.html#a59d28998f68df71388fe6ddbfe07d309',1,'solve_equations(quadratic_equation *equations, int equations_number):&#160;quadraticsolver.c']]],
+  ['solve_5flinear_5fequation_2',['solve_linear_equation',['../quadratic_8h.html#aae7c3e6aee106bb62eafee5f0b01c008',1,'solve_linear_equation(quadratic_equation *equation):&#160;quadraticsolver.c'],['../quadraticsolver_8c.html#aae7c3e6aee106bb62eafee5f0b01c008',1,'solve_linear_equation(quadratic_equation *equation):&#160;quadraticsolver.c']]],
+  ['solve_5fquadratic_5fequation_3',['solve_quadratic_equation',['../quadratic_8h.html#abb157156609f7acff598c57f1d4b4d82',1,'solve_quadratic_equation(quadratic_equation *equation):&#160;quadraticsolver.c'],['../quadraticsolver_8c.html#abb157156609f7acff598c57f1d4b4d82',1,'solve_quadratic_equation(quadratic_equation *equation):&#160;quadraticsolver.c']]]
+];

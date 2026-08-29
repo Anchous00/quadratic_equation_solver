@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['no_5froots_0',['NO_ROOTS',['../quadratic_8h.html#aaebdf47879d48baf2a8ce6fcb97164caab9a321da349ac1355b717745736ad90c',1,'quadratic.h']]]
+  ['myerror_0',['MYERROR',['../utils_8h.html#a30036d522909f271124388aa785be999aec29ec2354cbe7a2efb27fb92fc1661a',1,'utils.h']]],
+  ['mysuccess_1',['MYSUCCESS',['../utils_8h.html#a30036d522909f271124388aa785be999adcfe7a238d3d6e463e3a5f124be735fe',1,'utils.h']]]
 ];

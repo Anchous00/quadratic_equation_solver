@@ -22,31 +22,32 @@ void output_equations( quadratic_equation *equations, int equations_number )
 
     printf("Enter f for saving in file, c for writing in console, d for drawing graphiks, any key for exit\n");
 
-    FILE *output_file = fopen(output_file_name, "w");
-
-    if (output_file == NULL)
-    {
-        printf("ERROR: cant open file");
-        return;
-    }
-
     char choice = (char)getchar();
 
     switch (choice)
     {
-    case 'f':
-        save_solved_equations(equations, equations_number, output_file);
+        case 'f':
+        {
+            FILE *output_file = fopen(output_file_name, "w");
 
-        if (fclose(output_file) != 0)
-            printf(RED "WARNING: cant close file\n" WHITE);
-        break;
+            if (output_file == NULL)
+            {
+                printf("ERROR: cant open file");
+                return;
+            }
+            save_solved_equations(equations, equations_number, output_file);
+
+            if (fclose(output_file) != 0)
+                printf(RED "WARNING: cant close file\n" WHITE);
+            break;
+        }
 
     case 'c':
         save_solved_equations(equations, equations_number, stdout);
         break;
 
     case 'd':
-        draw_equations(equations, equations_number, 4);
+        draw_equations(equations, equations_number);
         break;
 
     default:

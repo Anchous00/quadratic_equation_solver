@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['blue_0',['BLUE',['../utils_8h.html#a79d10e672abb49ad63eeaa8aaef57c38',1,'utils.h']]]
+  ['add_5fparabol_0',['add_parabol',['../drawparabols_8c.html#a3a1ea8dec6a8250e6a89081c7c86d388',1,'add_parabol(quadratic_equation *equation, double SCALE):&#160;drawparabols.c'],['../quadratic_8h.html#a3a1ea8dec6a8250e6a89081c7c86d388',1,'add_parabol(quadratic_equation *equation, double SCALE):&#160;drawparabols.c']]]
 ];

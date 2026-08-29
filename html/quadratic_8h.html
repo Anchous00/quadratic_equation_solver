@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.18.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Quadratic solver: C:/Users/vivan/.vscode/projects/helloworld/quadratic_equation_solver/quadratic.h File Reference</title>
+<title>QuadraticSolver: C:/Users/vivan/.vscode/projects/helloworld/quadratic_equation_solver/quadratic.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
@@ -25,9 +25,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Quadratic solver<span id="projectnumber">&#160;1.4.2</span>
+   <div id="projectname">QuadraticSolver<span id="projectnumber">&#160;1.5</span>
    </div>
-   <div id="projectbrief">решает квадратные уравнения</div>
+   <div id="projectbrief">solves quadratic equations</div>
   </td>
  </tr>
  </tbody>
@@ -121,8 +121,18 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('quadratic_8h.h
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-nested-classes" class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:color" id="r_color"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structcolor.html">color</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">цвет в формате RGB, содержит три значения от 0 до 255  <a href="structcolor.html#details">More...</a><br /></td></tr>
 <tr class="memitem:quadratic_5Fequation" id="r_quadratic_5Fequation"><td class="memItemLeft">struct &#160;</td><td class="memItemRight"><a class="el" href="structquadratic__equation.html">quadratic_equation</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">структура квадратного уравнения  <a href="structquadratic__equation.html#details">More...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-define-members" class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a4a91aa5d90cb868432f029d425151290" id="r_a4a91aa5d90cb868432f029d425151290"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a4a91aa5d90cb868432f029d425151290">rgbRED</a>&#160;&#160;&#160;{255, 0, 0}</td></tr>
+<tr class="memitem:ac5bbe8d5d3f08fc84ec0c1948efc0b08" id="r_ac5bbe8d5d3f08fc84ec0c1948efc0b08"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#ac5bbe8d5d3f08fc84ec0c1948efc0b08">rgbGREEN</a>&#160;&#160;&#160;{0, 255, 0}</td></tr>
+<tr class="memitem:a75cc6eef06c4a544673e8b36a2ffc7ee" id="r_a75cc6eef06c4a544673e8b36a2ffc7ee"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#a75cc6eef06c4a544673e8b36a2ffc7ee">rgbBLUE</a>&#160;&#160;&#160;{0, 0, 255}</td></tr>
+<tr class="memitem:aaccfc2eb84500d7f17b7888e147086b2" id="r_aaccfc2eb84500d7f17b7888e147086b2"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aaccfc2eb84500d7f17b7888e147086b2">rgbBLACK</a>&#160;&#160;&#160;{0, 0, 0}</td></tr>
+<tr class="memitem:aecfb8e04c98217b46f40ff5654fb2dee" id="r_aecfb8e04c98217b46f40ff5654fb2dee"><td class="memItemLeft">#define&#160;</td><td class="memItemRight"><a class="el" href="#aecfb8e04c98217b46f40ff5654fb2dee">rgbWHITE</a>&#160;&#160;&#160;{255, 255, 255}</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-enum-members" class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -147,8 +157,8 @@ Functions</h2></td></tr>
 <tr class="memdesc:a3266e07c7d96f585f03581c48b86efb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">функция, читающая из консоли коэффициенты уравнений через пробелы или пробельные символы  <br /></td></tr>
 <tr class="memitem:a468fa3238a2e059473a955ec39db7ee6" id="r_a468fa3238a2e059473a955ec39db7ee6"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a468fa3238a2e059473a955ec39db7ee6">read_equations_from_file</a> (<a class="el" href="structquadratic__equation.html">quadratic_equation</a> *equations, FILE *input_address)</td></tr>
 <tr class="memdesc:a468fa3238a2e059473a955ec39db7ee6"><td class="mdescLeft">&#160;</td><td class="mdescRight">функция, читающая из файла уравнения в формате {a, b, c} {root1, root2, roots_number }  <br /></td></tr>
-<tr class="memitem:abbf76d487597ca0d1cd9c565f72ceed3" id="r_abbf76d487597ca0d1cd9c565f72ceed3"><td class="memItemLeft">enum <a class="el" href="#aaebdf47879d48baf2a8ce6fcb97164ca">ROOTS_NUMBER</a>&#160;</td><td class="memItemRight"><a class="el" href="#abbf76d487597ca0d1cd9c565f72ceed3">roots_number_from_string</a> (const char *roots_number)</td></tr>
-<tr class="memdesc:abbf76d487597ca0d1cd9c565f72ceed3"><td class="mdescLeft">&#160;</td><td class="mdescRight">функция расшифровывающая строку из файла в enum количества корней  <br /></td></tr>
+<tr class="memitem:aa479ee0d617c15dff636936f58dd498f" id="r_aa479ee0d617c15dff636936f58dd498f"><td class="memItemLeft"><a class="el" href="#aaebdf47879d48baf2a8ce6fcb97164ca">ROOTS_NUMBER</a>&#160;</td><td class="memItemRight"><a class="el" href="#aa479ee0d617c15dff636936f58dd498f">roots_number_from_string</a> (const char *roots_number)</td></tr>
+<tr class="memdesc:aa479ee0d617c15dff636936f58dd498f"><td class="mdescLeft">&#160;</td><td class="mdescRight">функция расшифровывающая строку из файла в enum количества корней  <br /></td></tr>
 <tr class="memitem:aa09db4ffda791ee51b0cdebb1c95c491" id="r_aa09db4ffda791ee51b0cdebb1c95c491"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa09db4ffda791ee51b0cdebb1c95c491">output_equations</a> (<a class="el" href="structquadratic__equation.html">quadratic_equation</a> *equations, int equations_number)</td></tr>
 <tr class="memdesc:aa09db4ffda791ee51b0cdebb1c95c491"><td class="mdescLeft">&#160;</td><td class="mdescRight">функция выбора пути вывода решенных уравнений  <br /></td></tr>
 <tr class="memitem:a55750c92fe097e8e44fb6c3e45c0186e" id="r_a55750c92fe097e8e44fb6c3e45c0186e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a55750c92fe097e8e44fb6c3e45c0186e">print_equation</a> (<a class="el" href="structquadratic__equation.html">quadratic_equation</a> equation)</td></tr>
@@ -164,8 +174,22 @@ Functions</h2></td></tr>
 <tr class="memdesc:abb157156609f7acff598c57f1d4b4d82"><td class="mdescLeft">&#160;</td><td class="mdescRight">функция, решающая одно квадратное уравнение  <br /></td></tr>
 <tr class="memitem:aae7c3e6aee106bb62eafee5f0b01c008" id="r_aae7c3e6aee106bb62eafee5f0b01c008"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aae7c3e6aee106bb62eafee5f0b01c008">solve_linear_equation</a> (<a class="el" href="structquadratic__equation.html">quadratic_equation</a> *equation)</td></tr>
 <tr class="memdesc:aae7c3e6aee106bb62eafee5f0b01c008"><td class="mdescLeft">&#160;</td><td class="mdescRight">функция, решающая линейный случай квадратного уравнения  <br /></td></tr>
-<tr class="memitem:a59d28998f68df71388fe6ddbfe07d309" id="r_a59d28998f68df71388fe6ddbfe07d309"><td class="memItemLeft">enum <a class="el" href="utils_8h.html#a30036d522909f271124388aa785be999">RETURN_VALUES</a>&#160;</td><td class="memItemRight"><a class="el" href="#a59d28998f68df71388fe6ddbfe07d309">solve_equations</a> (<a class="el" href="structquadratic__equation.html">quadratic_equation</a> *equations, int equations_number)</td></tr>
-<tr class="memdesc:a59d28998f68df71388fe6ddbfe07d309"><td class="mdescLeft">&#160;</td><td class="mdescRight">функция, решающая массив квадратных уравнений  <br /></td></tr>
+<tr class="memitem:ad47bcb8ec5a6daff6a22b70485636dd5" id="r_ad47bcb8ec5a6daff6a22b70485636dd5"><td class="memItemLeft"><a class="el" href="utils_8h.html#a30036d522909f271124388aa785be999">RETURN_VALUES</a>&#160;</td><td class="memItemRight"><a class="el" href="#ad47bcb8ec5a6daff6a22b70485636dd5">solve_equations</a> (<a class="el" href="structquadratic__equation.html">quadratic_equation</a> *equations, int equations_number)</td></tr>
+<tr class="memdesc:ad47bcb8ec5a6daff6a22b70485636dd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">функция, решающая массив квадратных уравнений  <br /></td></tr>
+<tr class="memitem:a0cc265353f00daf88cfb3528f97295e2" id="r_a0cc265353f00daf88cfb3528f97295e2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0cc265353f00daf88cfb3528f97295e2">draw_equations</a> (<a class="el" href="structquadratic__equation.html">quadratic_equation</a> *equations, int equations_number)</td></tr>
+<tr class="memdesc:a0cc265353f00daf88cfb3528f97295e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">функция отрисовки массива уравнений  <br /></td></tr>
+<tr class="memitem:a1dbb285273b3f7703e59265ff903b994" id="r_a1dbb285273b3f7703e59265ff903b994"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1dbb285273b3f7703e59265ff903b994">initialize</a> (double SCALE)</td></tr>
+<tr class="memdesc:a1dbb285273b3f7703e59265ff903b994"><td class="mdescLeft">&#160;</td><td class="mdescRight">функция, заполняюща экран черным и рисующая оси  <br /></td></tr>
+<tr class="memitem:ad2e97e7b54d0bf35e406b91fbdd2f256" id="r_ad2e97e7b54d0bf35e406b91fbdd2f256"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ad2e97e7b54d0bf35e406b91fbdd2f256">draw</a> (void)</td></tr>
+<tr class="memdesc:ad2e97e7b54d0bf35e406b91fbdd2f256"><td class="mdescLeft">&#160;</td><td class="mdescRight">функция отрисовки массива field  <br /></td></tr>
+<tr class="memitem:a3a1ea8dec6a8250e6a89081c7c86d388" id="r_a3a1ea8dec6a8250e6a89081c7c86d388"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3a1ea8dec6a8250e6a89081c7c86d388">add_parabol</a> (<a class="el" href="structquadratic__equation.html">quadratic_equation</a> *equation, double SCALE)</td></tr>
+<tr class="memdesc:a3a1ea8dec6a8250e6a89081c7c86d388"><td class="mdescLeft">&#160;</td><td class="mdescRight">функция, добавляющая в field одно уравнение  <br /></td></tr>
+<tr class="memitem:ae6499705ad3709cbdee20852ac293af9" id="r_ae6499705ad3709cbdee20852ac293af9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae6499705ad3709cbdee20852ac293af9">putpixel</a> (int x, int y, <a class="el" href="structcolor.html">color</a> cl)</td></tr>
+<tr class="memdesc:ae6499705ad3709cbdee20852ac293af9"><td class="mdescLeft">&#160;</td><td class="mdescRight">функция, добавляющая в field один пиксель  <br /></td></tr>
+<tr class="memitem:ae424109985e6c33096a90f7a4160f2bd" id="r_ae424109985e6c33096a90f7a4160f2bd"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#ae424109985e6c33096a90f7a4160f2bd">znach</a> (double a, double b, double c, double x)</td></tr>
+<tr class="memdesc:ae424109985e6c33096a90f7a4160f2bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">функция, вычисляющая значение квадратного многочлена в определенной точке  <br /></td></tr>
+<tr class="memitem:a6a757a627f73f81028426bb84ec435a8" id="r_a6a757a627f73f81028426bb84ec435a8"><td class="memItemLeft"><a class="el" href="structcolor.html">color</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6a757a627f73f81028426bb84ec435a8">randRGB</a> (void)</td></tr>
+<tr class="memdesc:a6a757a627f73f81028426bb84ec435a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">функция генерации случайного цвета  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -180,7 +204,78 @@ Variables</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>заголовочный файл c макросами, енамами и прототипами функций из файлов <a class="el" href="quadraticsolver_8c.html" title="файл с функциями, отвечающими за решение уравнений">quadraticsolver.c</a>, <a class="el" href="quadraticinput_8c.html" title="файл с функциями, отвечающими за ввод уравнений">quadraticinput.c</a>, <a class="el" href="quadraticoutput_8c.html" title="файл с функциями, отвечающими за вывод уравнений">quadraticoutput.c</a> </p>
-</div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Enumeration Type Documentation</h2>
+</div><a name="doc-define-members" id="doc-define-members"></a><h2 id="header-doc-define-members" class="groupheader">Macro Definition Documentation</h2>
+<a id="aaccfc2eb84500d7f17b7888e147086b2" name="aaccfc2eb84500d7f17b7888e147086b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaccfc2eb84500d7f17b7888e147086b2">&#9670;&#160;</a></span>rgbBLACK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define rgbBLACK&#160;&#160;&#160;{0, 0, 0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a75cc6eef06c4a544673e8b36a2ffc7ee" name="a75cc6eef06c4a544673e8b36a2ffc7ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75cc6eef06c4a544673e8b36a2ffc7ee">&#9670;&#160;</a></span>rgbBLUE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define rgbBLUE&#160;&#160;&#160;{0, 0, 255}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac5bbe8d5d3f08fc84ec0c1948efc0b08" name="ac5bbe8d5d3f08fc84ec0c1948efc0b08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5bbe8d5d3f08fc84ec0c1948efc0b08">&#9670;&#160;</a></span>rgbGREEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define rgbGREEN&#160;&#160;&#160;{0, 255, 0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4a91aa5d90cb868432f029d425151290" name="a4a91aa5d90cb868432f029d425151290"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a91aa5d90cb868432f029d425151290">&#9670;&#160;</a></span>rgbRED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define rgbRED&#160;&#160;&#160;{255, 0, 0}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aecfb8e04c98217b46f40ff5654fb2dee" name="aecfb8e04c98217b46f40ff5654fb2dee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecfb8e04c98217b46f40ff5654fb2dee">&#9670;&#160;</a></span>rgbWHITE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define rgbWHITE&#160;&#160;&#160;{255, 255, 255}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Enumeration Type Documentation</h2>
 <a id="aaebdf47879d48baf2a8ce6fcb97164ca" name="aaebdf47879d48baf2a8ce6fcb97164ca"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaebdf47879d48baf2a8ce6fcb97164ca">&#9670;&#160;</a></span>ROOTS_NUMBER</h2>
 
@@ -205,6 +300,85 @@ Variables</h2></td></tr>
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
+<a id="a3a1ea8dec6a8250e6a89081c7c86d388" name="a3a1ea8dec6a8250e6a89081c7c86d388"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a1ea8dec6a8250e6a89081c7c86d388">&#9670;&#160;</a></span>add_parabol()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void add_parabol </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structquadratic__equation.html">quadratic_equation</a> *</td>          <td class="paramname"><span class="paramname"><em>equation</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>SCALE</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>функция, добавляющая в field одно уравнение </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">equation</td><td>уравнение </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">SCALE</td><td>масштаб </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad2e97e7b54d0bf35e406b91fbdd2f256" name="ad2e97e7b54d0bf35e406b91fbdd2f256"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2e97e7b54d0bf35e406b91fbdd2f256">&#9670;&#160;</a></span>draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void draw </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>функция отрисовки массива field </p>
+
+</div>
+</div>
+<a id="a0cc265353f00daf88cfb3528f97295e2" name="a0cc265353f00daf88cfb3528f97295e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cc265353f00daf88cfb3528f97295e2">&#9670;&#160;</a></span>draw_equations()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void draw_equations </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structquadratic__equation.html">quadratic_equation</a> *</td>          <td class="paramname"><span class="paramname"><em>equations</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>equations_number</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>функция отрисовки массива уравнений </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">equations</td><td>массив уравнений </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">equations_number</td><td>количество уравнений </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a84d30dcc1c73255ead31a930f04a4d6f" name="a84d30dcc1c73255ead31a930f04a4d6f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a84d30dcc1c73255ead31a930f04a4d6f">&#9670;&#160;</a></span>fprint_answer()</h2>
 
@@ -289,6 +463,31 @@ Variables</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">equation</td><td>уравнение для вывода </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">output_file</td><td>файл для записи </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1dbb285273b3f7703e59265ff903b994" name="a1dbb285273b3f7703e59265ff903b994"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dbb285273b3f7703e59265ff903b994">&#9670;&#160;</a></span>initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void initialize </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>SCALE</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>функция, заполняюща экран черным и рисующая оси </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">SCALE</td><td>масштаб (количество пикселей на одну условную единицу длины) </td></tr>
   </table>
   </dd>
 </dl>
@@ -420,6 +619,63 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="ae6499705ad3709cbdee20852ac293af9" name="ae6499705ad3709cbdee20852ac293af9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6499705ad3709cbdee20852ac293af9">&#9670;&#160;</a></span>putpixel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void putpixel </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>x</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>y</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structcolor.html">color</a></td>          <td class="paramname"><span class="paramname"><em>cl</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>функция, добавляющая в field один пиксель </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>координата x пикселя </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">y</td><td>координата y пикселя </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cl</td><td>цвет пикселя </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>происходит перевод из системы координат, где 0;0 в левом верхнем углу и оси направлены вправо и вниз, в систему координат, где 0;0 в центре и оси направлены вправо и вверх </dd></dl>
+
+</div>
+</div>
+<a id="a6a757a627f73f81028426bb84ec435a8" name="a6a757a627f73f81028426bb84ec435a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a757a627f73f81028426bb84ec435a8">&#9670;&#160;</a></span>randRGB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcolor.html">color</a> randRGB </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>функция генерации случайного цвета </p>
+<dl class="section return"><dt>Returns</dt><dd>случайный цвет </dd></dl>
+
+</div>
+</div>
 <a id="a3266e07c7d96f585f03581c48b86efb6" name="a3266e07c7d96f585f03581c48b86efb6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3266e07c7d96f585f03581c48b86efb6">&#9670;&#160;</a></span>read_coefficients_from_console()</h2>
 
@@ -508,14 +764,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="abbf76d487597ca0d1cd9c565f72ceed3" name="abbf76d487597ca0d1cd9c565f72ceed3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abbf76d487597ca0d1cd9c565f72ceed3">&#9670;&#160;</a></span>roots_number_from_string()</h2>
+<a id="aa479ee0d617c15dff636936f58dd498f" name="aa479ee0d617c15dff636936f58dd498f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa479ee0d617c15dff636936f58dd498f">&#9670;&#160;</a></span>roots_number_from_string()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="#aaebdf47879d48baf2a8ce6fcb97164ca">ROOTS_NUMBER</a> roots_number_from_string </td>
+          <td class="memname"><a class="el" href="#aaebdf47879d48baf2a8ce6fcb97164ca">ROOTS_NUMBER</a> roots_number_from_string </td>
           <td>(</td>
           <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>roots_number</em></span></td><td>)</td>
           <td></td>
@@ -571,14 +827,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a59d28998f68df71388fe6ddbfe07d309" name="a59d28998f68df71388fe6ddbfe07d309"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a59d28998f68df71388fe6ddbfe07d309">&#9670;&#160;</a></span>solve_equations()</h2>
+<a id="ad47bcb8ec5a6daff6a22b70485636dd5" name="ad47bcb8ec5a6daff6a22b70485636dd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad47bcb8ec5a6daff6a22b70485636dd5">&#9670;&#160;</a></span>solve_equations()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="utils_8h.html#a30036d522909f271124388aa785be999">RETURN_VALUES</a> solve_equations </td>
+          <td class="memname"><a class="el" href="utils_8h.html#a30036d522909f271124388aa785be999">RETURN_VALUES</a> solve_equations </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structquadratic__equation.html">quadratic_equation</a> *</td>          <td class="paramname"><span class="paramname"><em>equations</em></span>, </td>
         </tr>
@@ -648,6 +904,49 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ae424109985e6c33096a90f7a4160f2bd" name="ae424109985e6c33096a90f7a4160f2bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae424109985e6c33096a90f7a4160f2bd">&#9670;&#160;</a></span>znach()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double znach </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>c</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>x</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>функция, вычисляющая значение квадратного многочлена в определенной точке </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>коэффициент при х^2 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>коэффициент при x </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>свободный член </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x</td><td>точка, в которой вычисляется значение </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>значение функции </dd></dl>
 
 </div>
 </div>

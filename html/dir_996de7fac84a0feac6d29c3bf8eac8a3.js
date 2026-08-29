@@ -1,5 +1,6 @@
 var dir_996de7fac84a0feac6d29c3bf8eac8a3 =
 [
+    [ "drawparabols.c", "drawparabols_8c.html", "drawparabols_8c" ],
     [ "main.c", "main_8c.html", "main_8c" ],
     [ "quadratic.h", "quadratic_8h.html", "quadratic_8h" ],
     [ "quadraticinput.c", "quadraticinput_8c.html", "quadraticinput_8c" ],

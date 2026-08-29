@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main_2ec_0',['main.c',['../main_8c.html',1,'']]]
+  ['drawparabols_2ec_0',['drawparabols.c',['../drawparabols_8c.html',1,'']]]
 ];

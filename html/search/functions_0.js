@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['clear_5fbuffer_0',['clear_buffer',['../utils_8c.html#a876d5723d0511f25736dcd24ef3fd437',1,'clear_buffer(void):&#160;utils.c'],['../utils_8h.html#a876d5723d0511f25736dcd24ef3fd437',1,'clear_buffer(void):&#160;utils.c']]]
+  ['add_5fparabol_0',['add_parabol',['../drawparabols_8c.html#a3a1ea8dec6a8250e6a89081c7c86d388',1,'add_parabol(quadratic_equation *equation, double SCALE):&#160;drawparabols.c'],['../quadratic_8h.html#a3a1ea8dec6a8250e6a89081c7c86d388',1,'add_parabol(quadratic_equation *equation, double SCALE):&#160;drawparabols.c']]]
 ];
