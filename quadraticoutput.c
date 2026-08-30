@@ -141,7 +141,7 @@ void print_equation( quadratic_equation equation )//дебажная фигня
 */
 void fprint_beautiful_equation( FILE *output_file, quadratic_equation equation )
 {
-    assert(output_file); // 0 1 1 -> +x+1 != x + 1
+    assert(output_file);
 
     if (is_zero(equation.coefficients[0]))
         ;
@@ -161,7 +161,7 @@ void fprint_beautiful_equation( FILE *output_file, quadratic_equation equation )
         ;
 
     else if (is_zero(equation.coefficients[1] - 1))
-        fprintf(output_file, "+x");
+        fprintf(output_file, is_zero(equation.coefficients[0]) ? "x" : "+x");
 
     else if (is_zero(equation.coefficients[1] + 1))
         fprintf(output_file, "-x");

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['initialize_0',['initialize',['../drawparabols_8c.html#a1dbb285273b3f7703e59265ff903b994',1,'initialize(double SCALE):&#160;drawparabols.c'],['../quadratic_8h.html#a1dbb285273b3f7703e59265ff903b994',1,'initialize(double SCALE):&#160;drawparabols.c']]],
+  ['initialize_0',['initialize',['../drawparabols_8c.html#a9754462f7e4ac09992f1f270bb159eda',1,'initialize(double SCALE, double xcntr, double ycntr):&#160;drawparabols.c'],['../quadratic_8h.html#a9754462f7e4ac09992f1f270bb159eda',1,'initialize(double SCALE, double xcntr, double ycntr):&#160;drawparabols.c']]],
   ['input_5fequations_1',['input_equations',['../quadratic_8h.html#a6b2f76a002a7d1489e69d28cff8f914f',1,'input_equations(quadratic_equation *equations):&#160;quadraticinput.c'],['../quadraticinput_8c.html#a6b2f76a002a7d1489e69d28cff8f914f',1,'input_equations(quadratic_equation *equations):&#160;quadraticinput.c']]],
   ['input_5ffrom_5fconsole_2',['input_from_console',['../quadratic_8h.html#a7e6e3b79937b7c530c5160d71ab0e6f4',1,'input_from_console(quadratic_equation *equations):&#160;quadraticinput.c'],['../quadraticinput_8c.html#a7e6e3b79937b7c530c5160d71ab0e6f4',1,'input_from_console(quadratic_equation *equations):&#160;quadraticinput.c']]],
   ['input_5ffrom_5ffile_3',['input_from_file',['../quadratic_8h.html#a09a2063bbddb9f779426745e1fc9e10b',1,'input_from_file(quadratic_equation *equations):&#160;quadraticinput.c'],['../quadraticinput_8c.html#a09a2063bbddb9f779426745e1fc9e10b',1,'input_from_file(quadratic_equation *equations):&#160;quadraticinput.c']]],

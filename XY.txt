@@ -1,0 +1,10 @@
+{0,   2,    100}      {NAN, NAN,   NO_ROOTS }
+{0,  -2,   -100}      {NAN, NAN,   NO_ROOTS }
+
+{1,   0,    0}        {NAN, NAN,   NO_ROOTS }
+{0,   10,  -35}       {NAN, NAN,   NO_ROOTS }
+
+{1,  -100,  2400}     {NAN, NAN,   NO_ROOTS }
+{1,  -100,  2560}     {NAN, NAN,   NO_ROOTS }
+{0,   100,  -6250}      {NAN, NAN, NO_ROOTS }
+

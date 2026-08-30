@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "QuadraticSolver", "index.html", [
+  [ "quadratic solver", "index.html", [
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],

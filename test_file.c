@@ -8,7 +8,7 @@ int main( void )
 {
     quadratic_equation test_equations[MAX_TEST_AMOUNT];
 
-    generate_random_equations(100);
+    generate_random_equations(1000);
 
     FILE *input_address = fopen("random_equations.txt", "r");
 

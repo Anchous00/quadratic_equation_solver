@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.18.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QuadraticSolver: C:/Users/vivan/.vscode/projects/helloworld/quadratic_equation_solver/drawparabols.c File Reference</title>
+<title>quadratic solver: C:/Users/vivan/.vscode/projects/quadratic_equation_solver/drawparabols.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">QuadraticSolver<span id="projectnumber">&#160;1.5</span>
+   <div id="projectname">quadratic solver<span id="projectnumber">&#160;2.0</span>
    </div>
    <div id="projectbrief">solves quadratic equations</div>
   </td>
@@ -120,12 +120,12 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('drawparabols_8
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a1dbb285273b3f7703e59265ff903b994" id="r_a1dbb285273b3f7703e59265ff903b994"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1dbb285273b3f7703e59265ff903b994">initialize</a> (double SCALE)</td></tr>
-<tr class="memdesc:a1dbb285273b3f7703e59265ff903b994"><td class="mdescLeft">&#160;</td><td class="mdescRight">функция, заполняюща экран черным и рисующая оси  <br /></td></tr>
+<tr class="memitem:a9754462f7e4ac09992f1f270bb159eda" id="r_a9754462f7e4ac09992f1f270bb159eda"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9754462f7e4ac09992f1f270bb159eda">initialize</a> (double SCALE, double xcntr, double ycntr)</td></tr>
+<tr class="memdesc:a9754462f7e4ac09992f1f270bb159eda"><td class="mdescLeft">&#160;</td><td class="mdescRight">функция, заполняющая экран черным и рисующая оси  <br /></td></tr>
 <tr class="memitem:a0cc265353f00daf88cfb3528f97295e2" id="r_a0cc265353f00daf88cfb3528f97295e2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0cc265353f00daf88cfb3528f97295e2">draw_equations</a> (<a class="el" href="structquadratic__equation.html">quadratic_equation</a> *equations, int equations_number)</td></tr>
 <tr class="memdesc:a0cc265353f00daf88cfb3528f97295e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">функция отрисовки массива уравнений  <br /></td></tr>
-<tr class="memitem:a3a1ea8dec6a8250e6a89081c7c86d388" id="r_a3a1ea8dec6a8250e6a89081c7c86d388"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3a1ea8dec6a8250e6a89081c7c86d388">add_parabol</a> (<a class="el" href="structquadratic__equation.html">quadratic_equation</a> *equation, double SCALE)</td></tr>
-<tr class="memdesc:a3a1ea8dec6a8250e6a89081c7c86d388"><td class="mdescLeft">&#160;</td><td class="mdescRight">функция, добавляющая в field одно уравнение  <br /></td></tr>
+<tr class="memitem:a0767aca7d5ca168db60e42ca629b92e7" id="r_a0767aca7d5ca168db60e42ca629b92e7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a0767aca7d5ca168db60e42ca629b92e7">add_parabol</a> (<a class="el" href="structquadratic__equation.html">quadratic_equation</a> *equation, double SCALE, double xcntr, double ycntr)</td></tr>
+<tr class="memdesc:a0767aca7d5ca168db60e42ca629b92e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">функция, добавляющая в field одно уравнение  <br /></td></tr>
 <tr class="memitem:ae424109985e6c33096a90f7a4160f2bd" id="r_ae424109985e6c33096a90f7a4160f2bd"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#ae424109985e6c33096a90f7a4160f2bd">znach</a> (double a, double b, double c, double x)</td></tr>
 <tr class="memdesc:ae424109985e6c33096a90f7a4160f2bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">функция, вычисляющая значение квадратного многочлена в определенной точке  <br /></td></tr>
 <tr class="memitem:ae6499705ad3709cbdee20852ac293af9" id="r_ae6499705ad3709cbdee20852ac293af9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae6499705ad3709cbdee20852ac293af9">putpixel</a> (int x, int y, <a class="el" href="structcolor.html">color</a> cl)</td></tr>
@@ -134,6 +134,10 @@ Functions</h2></td></tr>
 <tr class="memdesc:ad2e97e7b54d0bf35e406b91fbdd2f256"><td class="mdescLeft">&#160;</td><td class="mdescRight">функция отрисовки массива field  <br /></td></tr>
 <tr class="memitem:a6a757a627f73f81028426bb84ec435a8" id="r_a6a757a627f73f81028426bb84ec435a8"><td class="memItemLeft"><a class="el" href="structcolor.html">color</a>&#160;</td><td class="memItemRight"><a class="el" href="#a6a757a627f73f81028426bb84ec435a8">randRGB</a> (void)</td></tr>
 <tr class="memdesc:a6a757a627f73f81028426bb84ec435a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">функция генерации случайного цвета  <br /></td></tr>
+<tr class="memitem:a55bbd17c8be8405e608b8c8e8f877bcc" id="r_a55bbd17c8be8405e608b8c8e8f877bcc"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a55bbd17c8be8405e608b8c8e8f877bcc">MouseX</a> (void)</td></tr>
+<tr class="memdesc:a55bbd17c8be8405e608b8c8e8f877bcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">функция возвращающая координату курсора в нормальной системе координат  <br /></td></tr>
+<tr class="memitem:a8e7d0fd25fb68008d8ec1b448c8f9f06" id="r_a8e7d0fd25fb68008d8ec1b448c8f9f06"><td class="memItemLeft">double&#160;</td><td class="memItemRight"><a class="el" href="#a8e7d0fd25fb68008d8ec1b448c8f9f06">MouseY</a> (void)</td></tr>
+<tr class="memdesc:a8e7d0fd25fb68008d8ec1b448c8f9f06"><td class="mdescLeft">&#160;</td><td class="mdescRight">функция возвращающая координату курсора в нормальной системе координат  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-var-members" class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -146,8 +150,8 @@ Variables</h2></td></tr>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>файл с функциями, отвечающими за отрисовку уравнений </p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
-<a id="a3a1ea8dec6a8250e6a89081c7c86d388" name="a3a1ea8dec6a8250e6a89081c7c86d388"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a1ea8dec6a8250e6a89081c7c86d388">&#9670;&#160;</a></span>add_parabol()</h2>
+<a id="a0767aca7d5ca168db60e42ca629b92e7" name="a0767aca7d5ca168db60e42ca629b92e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0767aca7d5ca168db60e42ca629b92e7">&#9670;&#160;</a></span>add_parabol()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -160,7 +164,17 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>SCALE</em></span>&#160;)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>SCALE</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>xcntr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>ycntr</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -170,6 +184,8 @@ Variables</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">equation</td><td>уравнение </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">SCALE</td><td>масштаб </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">xcntr</td><td>координата нового центра экрана </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ycntr</td><td>координата нового центра экрана </td></tr>
   </table>
   </dd>
 </dl>
@@ -218,15 +234,17 @@ Variables</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">equations</td><td>массив уравнений </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">equations_number</td><td>количество уравнений </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">equations_number</td><td>количество уравнений</td></tr>
   </table>
   </dd>
 </dl>
+<p>По нажатию стрелочек вправо/влево масштабируется отновсительно начала координат</p>
+<p>По нажатию стрелочек вверх/вниз масштабируется относительно текущего положения курсора </p><dl class="section warning"><dt>Warning</dt><dd>МАСШТАБИРОВАНИЕ ОТНОСИТЕЛЬНО КУРСОРА ОТВРАТИТЕЛЬНО ХУЕВОЕ </dd></dl>
 
 </div>
 </div>
-<a id="a1dbb285273b3f7703e59265ff903b994" name="a1dbb285273b3f7703e59265ff903b994"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1dbb285273b3f7703e59265ff903b994">&#9670;&#160;</a></span>initialize()</h2>
+<a id="a9754462f7e4ac09992f1f270bb159eda" name="a9754462f7e4ac09992f1f270bb159eda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9754462f7e4ac09992f1f270bb159eda">&#9670;&#160;</a></span>initialize()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -234,19 +252,70 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void initialize </td>
           <td>(</td>
-          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>SCALE</em></span></td><td>)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>SCALE</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>xcntr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>ycntr</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>функция, заполняющая экран черным и рисующая оси </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">SCALE</td><td>масштаб (количество пикселей на одну условную единицу длины) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">xcntr</td><td>координата нового центра экрана </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ycntr</td><td>координата нового центра экрана </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a55bbd17c8be8405e608b8c8e8f877bcc" name="a55bbd17c8be8405e608b8c8e8f877bcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55bbd17c8be8405e608b8c8e8f877bcc">&#9670;&#160;</a></span>MouseX()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double MouseX </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>функция, заполняюща экран черным и рисующая оси </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">SCALE</td><td>масштаб (количество пикселей на одну условную единицу длины) </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>функция возвращающая координату курсора в нормальной системе координат </p>
+<dl class="section return"><dt>Returns</dt><dd>х </dd></dl>
+
+</div>
+</div>
+<a id="a8e7d0fd25fb68008d8ec1b448c8f9f06" name="a8e7d0fd25fb68008d8ec1b448c8f9f06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e7d0fd25fb68008d8ec1b448c8f9f06">&#9670;&#160;</a></span>MouseY()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double MouseY </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>функция возвращающая координату курсора в нормальной системе координат </p>
+<dl class="section return"><dt>Returns</dt><dd>у </dd></dl>
 
 </div>
 </div>
@@ -410,7 +479,7 @@ Variables</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a href="dir_2ab5a5abce2d08e5cbc87b3429c62554.html">vivan</a></li><li class="navelem"><a href="dir_8deaa44a1174628aeab32ab94c487ff5.html">.vscode</a></li><li class="navelem"><a href="dir_9d1d751f7ae9c824f63bb1cd5ff58050.html">projects</a></li><li class="navelem"><a href="dir_b7d77fe21214edaf5323c4f62775a0ba.html">helloworld</a></li><li class="navelem"><a href="dir_996de7fac84a0feac6d29c3bf8eac8a3.html">quadratic_equation_solver</a></li><li class="navelem"><a href="drawparabols_8c.html">drawparabols.c</a></li>
+    <li class="navelem"><a href="dir_d522931ffa1371640980b621734a4381.html">Users</a></li><li class="navelem"><a href="dir_2ab5a5abce2d08e5cbc87b3429c62554.html">vivan</a></li><li class="navelem"><a href="dir_8deaa44a1174628aeab32ab94c487ff5.html">.vscode</a></li><li class="navelem"><a href="dir_9d1d751f7ae9c824f63bb1cd5ff58050.html">projects</a></li><li class="navelem"><a href="dir_2fd9c6696c6e041e168622fccc56b9a3.html">quadratic_equation_solver</a></li><li class="navelem"><a href="drawparabols_8c.html">drawparabols.c</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.18.0 </li>
   </ul>
 </div>

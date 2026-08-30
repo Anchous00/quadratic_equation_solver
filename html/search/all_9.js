@@ -8,6 +8,8 @@ var searchData=
   ['max_5ffile_5fname_5',['MAX_FILE_NAME',['../quadratic_8h.html#a136e97a062adb82233ef0dad7545e6bd',1,'quadratic.h']]],
   ['max_5ftest_5famount_6',['MAX_TEST_AMOUNT',['../quadratic_8h.html#ad74b98f2f2ecdcc0f7be30ba94b2adbf',1,'quadratic.h']]],
   ['min_7',['min',['../utils_8c.html#ac4bd06eeca25b1f7bb4de45df91666b5',1,'min(double x1, double x2):&#160;utils.c'],['../utils_8h.html#ac4bd06eeca25b1f7bb4de45df91666b5',1,'min(double x1, double x2):&#160;utils.c']]],
-  ['myerror_8',['MYERROR',['../utils_8h.html#a30036d522909f271124388aa785be999aec29ec2354cbe7a2efb27fb92fc1661a',1,'utils.h']]],
-  ['mysuccess_9',['MYSUCCESS',['../utils_8h.html#a30036d522909f271124388aa785be999adcfe7a238d3d6e463e3a5f124be735fe',1,'utils.h']]]
+  ['mousex_8',['MouseX',['../drawparabols_8c.html#a55bbd17c8be8405e608b8c8e8f877bcc',1,'MouseX(void):&#160;drawparabols.c'],['../quadratic_8h.html#a55bbd17c8be8405e608b8c8e8f877bcc',1,'MouseX(void):&#160;drawparabols.c']]],
+  ['mousey_9',['MouseY',['../drawparabols_8c.html#a8e7d0fd25fb68008d8ec1b448c8f9f06',1,'MouseY(void):&#160;drawparabols.c'],['../quadratic_8h.html#a8e7d0fd25fb68008d8ec1b448c8f9f06',1,'MouseY(void):&#160;drawparabols.c']]],
+  ['myerror_10',['MYERROR',['../utils_8h.html#a30036d522909f271124388aa785be999aec29ec2354cbe7a2efb27fb92fc1661a',1,'utils.h']]],
+  ['mysuccess_11',['MYSUCCESS',['../utils_8h.html#a30036d522909f271124388aa785be999adcfe7a238d3d6e463e3a5f124be735fe',1,'utils.h']]]
 ];

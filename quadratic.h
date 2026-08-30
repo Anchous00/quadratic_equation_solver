@@ -75,12 +75,14 @@ RETURN_VALUES solve_equations( quadratic_equation *equations, int equations_numb
 
 
 void draw_equations( quadratic_equation *equations, int equations_number );
-void initialize( double SCALE );
+void initialize( double SCALE, double xcntr, double ycntr );
 void draw( void );
-void add_parabol( quadratic_equation *equation, double SCALE );
+void add_parabol( quadratic_equation *equation, double SCALE, double xcntr, double ycntr );
 void putpixel( int x, int y, color cl );
 double znach( double a, double b, double c, double x );
 color randRGB( void );
+double MouseY( void );
+double MouseX( void );
 
 
 

@@ -130,7 +130,7 @@ int read_coefficients_from_console( quadratic_equation *equations )
 
     int equations_number = 0;
 
-    while((scanf("%lg%lg%lg", equations->coefficients,
+    while(equations_number < 100 && (scanf("%lg%lg%lg", equations->coefficients,
                               equations->coefficients + 1,
                               equations->coefficients + 2)
                                 == COEFFICIENTS_AMOUNT))
@@ -167,7 +167,7 @@ int read_equations_from_file( quadratic_equation *equations, FILE *input_address
     int equations_number = 0;
     char roots_number[10] = "";
 
-    while((fscanf(input_address, "{%lg, %lg, %lg} {%lg, %lg, %s }\n",
+    while(equations_number < 100 && (fscanf(input_address, "{%lg, %lg, %lg} {%lg, %lg, %s }\n",
                   equations->coefficients,
                   equations->coefficients + 1,
                   equations->coefficients + 2,
